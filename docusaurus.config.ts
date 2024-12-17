@@ -66,12 +66,18 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'OpenUEM',
+      title: '',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
       },
       items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'tutorialSidebar',
+          position: 'left',
+          label: 'What is OpenUEM',
+        },
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
@@ -129,7 +135,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Miguel Ángel Álvarez Cabrerizo. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} OpenUEM - Miguel Ángel Álvarez Cabrerizo. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
