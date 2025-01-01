@@ -13,6 +13,13 @@ steps:
     image: golang
     commands:
       - ./publish.sh
+    environment:
+      SFTP_USER:
+        from_secret: sftp_user
+      SFTP_PASS:
+        from_secret: sftp_password
+      SFTP_HOST:
+        from_secret: sftp_address
   notify:
     image: appleboy/drone-discord
     settings:
