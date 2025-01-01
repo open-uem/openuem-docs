@@ -12,7 +12,8 @@ steps:
   publish:
     image: golang
     commands:
-      - ls -l /woodpecker/build
+      - ls -l /woodpecker
+      - ls -l /woodpecker/src
   notify:
     image: appleboy/drone-discord
     settings:
