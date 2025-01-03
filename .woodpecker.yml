@@ -1,0 +1,35 @@
+when:
+  - event: [push, manual]
+    branch: main
+
+steps:
+  build:
+    image: node:latest
+    commands:
+      - npm install yarn
+      - yarn
+      - yarn build
+  publish:
+    image: golang
+    commands:
+      - ./publish.sh
+    environment:
+      SFTP_USER:
+        from_secret: sftp_user
+      SFTP_PASS:
+        from_secret: sftp_password
+      SFTP_HOST:
+        from_secret: sftp_address
+  notify:
+    image: appleboy/drone-discord
+    settings:
+      webhook_id:
+        from_secret: discord_webhook_id
+      webhook_token:
+        from_secret: discord_webhook_token
+      message: >
+        {{#success build.status}}
+          repo {{repo.name}} build {{build.number}} succeeded. Good job.
+        {{else}}
+          repo {{repo.name}} build {{build.number}} failed. Fix me please.
+        {{/success}}
