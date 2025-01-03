@@ -88,47 +88,20 @@ const config: Config = {
           label: "GitHub",
           position: "right",
         },
+        {
+          href: "https://discord.gg/7Wjpeqws",
+          label: "Discord",
+          position: "right",
+        },
+        {
+          href: "https://x.com/open_uem",
+          label: "X",
+          position: "right",
+        },
       ],
     },
     footer: {
       style: "dark",
-      links: [
-        {
-          title: "Docs",
-          items: [
-            {
-              label: "Tutorial",
-              to: "/docs/intro",
-            },
-          ],
-        },
-        {
-          title: "Community",
-          items: [
-            {
-              label: "Discord",
-              href: "https://discord.gg/7Wjpeqws",
-            },
-            {
-              label: "X",
-              href: "https://x.com/open_uem",
-            },
-          ],
-        },
-        {
-          title: "More",
-          items: [
-            {
-              label: "Blog",
-              to: "/blog",
-            },
-            {
-              label: "GitHub",
-              href: "https://github.com/open-uem",
-            },
-          ],
-        },
-      ],
       copyright: `Copyright © ${new Date().getFullYear()} OpenUEM - Miguel Ángel Álvarez Cabrerizo. Built with Docusaurus.`,
     },
     prism: {
