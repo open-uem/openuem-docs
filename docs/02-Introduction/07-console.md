@@ -1,7 +1,3 @@
----
-sidebar_position: 7
----
-
 # Console
 
 The Console is OpenUEM's Web User Interface

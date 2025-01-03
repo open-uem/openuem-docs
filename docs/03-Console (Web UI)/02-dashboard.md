@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Dashboard
 
 OpenUEM dashboard offers some charts about the last time the agents reported (in the last 24 hours), in which platform they are running and which operating system version is used

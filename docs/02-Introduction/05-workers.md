@@ -1,7 +1,3 @@
----
-sidebar_position: 5
----
-
 # Workers
 
 OpenUEM uses different workers to process asynchronous tasks. Right now there are three workers:

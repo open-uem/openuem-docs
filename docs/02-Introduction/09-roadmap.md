@@ -1,7 +1,3 @@
----
-sidebar_position: 9
----
-
 # Roadmap
 
 OpenUEM will have the following improvements soon (in no order):

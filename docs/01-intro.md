@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Welcome to OpenUEM?
+# Welcome to OpenUEM
 
 OpenUEM is an **open-source unified endpoint manager** which keeps an inventory of your IT assets reported by agents installed on your endpoints.
 

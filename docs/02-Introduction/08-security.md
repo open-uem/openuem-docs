@@ -1,7 +1,3 @@
----
-sidebar_position: 8
----
-
 # Security by design
 
 **OpenUEM uses digital certificates** (this is not optional) for several purposes:

@@ -1,7 +1,3 @@
----
-sidebar_position: 2
----
-
 # Features
 
 Right now, you can do the following with OpenUEM:

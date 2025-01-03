@@ -1,7 +1,3 @@
----
-sidebar_position: 3
----
-
 # Sidebar menu
 
 OpenUEM provides a sidebar menu that allows you to visit the following sections:

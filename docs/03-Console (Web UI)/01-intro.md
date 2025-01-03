@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Log In to the console
 
 OpenUEM comes with a web user interface named **OpenUEM Console**

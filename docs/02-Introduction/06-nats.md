@@ -1,7 +1,3 @@
----
-sidebar_position: 6
----
-
 # NATS Server
 
 As [NATS official page](https://docs.nats.io/nats-concepts/what-is-nats) states:
