@@ -10,12 +10,11 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/monitor.svg').default,
+    title: 'Open Source',
+    Svg: require('@site/static/img/source.svg').default,
     description: (
       <>
-        OpenUEM was designed from the ground up to be easily installed and
-        used to manage your IT assets thanks to its agents.
+        OpenUEM's source code is open-source (Apache 2.0 License) so you can contribute to help evolving the project.
       </>
     ),
   },
@@ -24,7 +23,8 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/search-check.svg').default,
     description: (
       <>
-        OpenUEM lets you focus on your assets and your users with a clean and concise interface.
+        OpenUEM was designed from the ground up to be easily installed and
+        lets you focus on your IT assets with a clean and concise interface.
       </>
     ),
   },

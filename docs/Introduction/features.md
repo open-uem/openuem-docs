@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Features
 
-Right now, you can do the following:
+Right now, you can do the following with OpenUEM:
 
 - View **what is installed on your endpoints** (memory, logical disks, shared resources, printers, network adapters, software…)
 - Know if your windows systems have all the **windows updates** applied and browse the updates history

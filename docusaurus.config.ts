@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "OpenUEM",
-  tagline: "An Open Source Unified Endpoint Manager",
+  tagline: "An Open Source Unified Endpoint Manager that lets you manage your IT assets thanks to its agents",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -76,13 +76,7 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "What is OpenUEM",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Tutorial",
+          label: "Docs",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
@@ -108,16 +102,12 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            },
-            {
               label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              href: "https://discord.gg/7Wjpeqws",
             },
             {
-              label: "Twitter",
-              href: "https://twitter.com/docusaurus",
+              label: "X",
+              href: "https://x.com/open-uem",
             },
           ],
         },
@@ -130,7 +120,7 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/open-uem",
             },
           ],
         },

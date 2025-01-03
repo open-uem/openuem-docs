@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 # Security by design
@@ -11,6 +11,6 @@ sidebar_position: 7
 - The SFTP server requires a certificate to log in
 - The VNC session uses secure web sockets thanks to TLS
 
-A tool to create your own Certificate Authority (cert-manager) is provided with OpenUEM and can it can generate the required certificates during the setup, but you can use proven tools like [CFSSL](https://github.com/cloudflare/cfssl) to generate them too.
+A tool to create your own Certificate Authority (cert-manager) is provided with OpenUEM and can generate the required certificates during the setup, but you can use proven tools like [CFSSL](https://github.com/cloudflare/cfssl) to generate them too.
 
-Remote assistance works thanks to VNC but as we know VNC servers use to set a fixed password for remote connections. OpenUEM will start the chosen VNC server only when the remote assistance is needed, set a onetime password and shutdown the server when it’s no longer needed.
+Remote assistance works thanks to VNC but, as we know, VNC servers use to set a fixed password for remote connections. Yo improve security with VNC connections, OpenUEM will start the chosen VNC server only when the remote assistance is needed, set a onetime password and shutdown the server when it’s no longer needed. Also secure web sockets are used between the Console and the VNC server.

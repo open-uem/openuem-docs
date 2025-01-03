@@ -8,7 +8,7 @@ As [NATS official page](https://docs.nats.io/nats-concepts/what-is-nats) states:
 
 > Software applications and services need to exchange data. NATS is an infrastructure that allows such data exchange, segmented in the form of messages.
 
-OpenUEM uses NATS so its components can communicate. For example, NATS messages are exchanged for the following actions:
+OpenUEM uses NATS so its components can communicate using messages. For example, NATS messages are exchanged for the following actions:
 
 - Enable/disable an agent
 - Ask an agent to run a report
@@ -22,5 +22,3 @@ OpenUEM is ready to use a NATS cluster which should contain 3 or 5 servers. When
 :::note
 
 If you're installing OpenUEM for the first time or you'll have less than a hundred agents, you may start without a NATS cluster for a quicker and simpler setup
-
-Please, visit the Cluster page in the Advanced Topics section to know how to configure a NATS Cluster for OpenUEM.
