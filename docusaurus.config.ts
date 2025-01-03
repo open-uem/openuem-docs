@@ -107,7 +107,7 @@ const config: Config = {
             },
             {
               label: "X",
-              href: "https://x.com/open-uem",
+              href: "https://x.com/open_uem",
             },
           ],
         },
