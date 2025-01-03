@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Welcome to OpenUEM
 
-OpenUEM is an **open-source unified endpoint manager** which keeps an inventory of your IT assets reported by agents installed on your endpoints.
+OpenUEM is an **open-source [unified endpoint manager](https://en.wikipedia.org/wiki/Unified_endpoint_management)** which keeps an inventory of your IT assets reported by agents installed on your endpoints.
 
-This project could also be named OpenRMM as it shares many features with a Remote Monitoring and Management tool, but the name was already picked.
+This project could also be named OpenRMM as it shares many features with a [Remote Monitoring and Management](https://en.wikipedia.org/wiki/Remote_monitoring_and_management) tool, but the name was already picked.
 
 # Why OpenUEM?
 
