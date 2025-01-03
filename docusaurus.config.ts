@@ -62,6 +62,10 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    'docusaurus-plugin-matomo',
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
@@ -130,6 +134,12 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    matomo: {
+      matomoUrl: 'https://matomo.comovoy.eu/',
+      siteId: '5',
+      phpLoader: 'matomo.php',
+      jsLoader: 'matomo.js',
     },
   } satisfies Preset.ThemeConfig,
 };

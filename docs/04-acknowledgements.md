@@ -1,6 +1,6 @@
 # Acknowledgments
 
-OpenUEM stands on the shoulders of giants. OpenUEM is offered to you thanks to the work of the following projects and their contributors (in no specific order). Please consider giving a star on GitHub or donating to these projects.
+OpenUEM stands on the shoulders of giants. OpenUEM is offered to you thanks to the work of the following projects and their contributors (in no specific order). Please consider giving a 🌟 on GitHub or donating to these projects.
 
 - [Go](https://github.com/golang/go). The Go programming language
 - [NATS](https://github.com/nats-io). NATS is a simple, secure and performant communications system and data layer for digital systems, services and devices
@@ -31,8 +31,8 @@ OpenUEM stands on the shoulders of giants. OpenUEM is offered to you thanks to t
 - [go-ole](https://github.com/go-ole/go-ole). WIN32 ole implementation for golang
 - [comshim](https://github.com/scjalliance/comshim). Ensures that at least one thread within a Go process maintains an initialized connection to COM
 - [wmi](https://github.com/yusufpapurcu/wmi). WMI for Go
-- [go-playground](github.com/go-playground). Multiple packages, libraries and programs to further the advancement of Go!
-- [markdown](github.com/gomarkdown/markdown). Markdown parser and HTML renderer for Go
+- [go-playground](https://github.com/go-playground). Multiple packages, libraries and programs to further the advancement of Go!
+- [markdown](https://github.com/gomarkdown/markdown). Markdown parser and HTML renderer for Go
 - [locales](https://github.com/gohugoio/locales). A set of locales generated from the CLDR Project which can be used independently or within an i18n package
 - [jwt](https://github.com/golang-jwt/jwt). Go implementation of JSON Web Tokens (JWT)
 - [pgx](https://github.com/jackc/pgx). PostgreSQL driver and toolkit for Go
