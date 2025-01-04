@@ -67,6 +67,13 @@ const config: Config = {
   ],
 
   themeConfig: {
+    metadata: [
+      {name: 'description', content: 'An Open Source Unified Endpoint Manager that lets you manage your IT assets thanks to its agents'},
+      {name: 'keywords', content: 'operating systems, assets manager'},
+      {name: 'twitter:card', content: 'An Open Source Unified Endpoint Manager that lets you manage your IT assets thanks to its agents'},
+      {name: 'twitter:card', content: '@open-uem'},
+      {name: 'twitter:image', content: "https://openuem.eu/img/openuem_logo.png"},
+    ],
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {

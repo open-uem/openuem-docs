@@ -144,7 +144,7 @@ In the logs folder you should check the `openuem-log.txt` that should explain th
 
 - Maybe your NATS server is not running
 - Maybe you specified the wrong path for the required certificates. You can copy the certificates by hand using the required names or uninstall the agent and install it again.
-- Maybe you specified the wrong name for the NATS serveror the port. You can edit the `config\openuem.ini` file and change the domain name or port and restart the OpenUEM Agent service.
+- Maybe you specified the wrong name for the NATS server or the port. You can edit the `config\openuem.ini` file and change the domain name or port and restart the OpenUEM Agent service.
 
 :::warning
 
