@@ -16,7 +16,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "open-uem", // Usually your GitHub org/user name.
-  projectName: "openuem-docs", // Usually your repo name.
+  projectName: "", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -114,7 +114,7 @@ const config: Config = {
           ]
         },
         {
-          href: "https://github.com/open-uem/openuem-docs",
+          href: "https://github.com/open-uem",
           label: "GitHub",
           position: "right",
         },
