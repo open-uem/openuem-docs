@@ -24,7 +24,7 @@ SHA256          FD776CF58E2667089CDF6929332D7E6DD0E8BB2506798CD4DA7F9BF0577C3033
 
 :::warning
 
-As OpenUEM is a new project, Microsoft SmartScreen or Microsoft Edge can warn you that it cannot be trusted by Microsoft as it's a file that is not downloaded commonly and you'll have to force the browser to keep that file to download it. Hopefully in the near future, this will change and this warning will disappear.
+As OpenUEM is a new project, Microsoft SmartScreen or Microsoft Edge can warn you that it cannot be trusted by Microsoft as it's a file that is not downloaded commonly and you'll have to force the browser to keep that file to download it. Hopefully in the near future, this will change, and this warning will disappear.
 
 :::
 
@@ -34,14 +34,23 @@ The agent can be installed silently from the command-line or using the wizard
 
 ## 2.1 Silent installation from the command-line
 
-To install the agent from the command-line you must place the following certificate and private key files in the same location where the openuem-agent-setup.exe is located:
+The agent requires some certificates that you can either place them next to the installer or use the installer flags to specify the location.
 
-- ca.cer, this is the Certification Authority file. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\ca\ca.cer`
+If you want to place the certificates next to the installer, you must place the following certificate and private key files in the same location where the openuem-agent-setup.exe is located:
+
+- ca.cer, this is the Certification Authority certificate file. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\ca\ca.cer`
 - sftp.cer, this is the public part of SFTP certificate that the console will use to authenticate SFTP connections. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\console\sftp.cer`
 - agent.cer, this is the certificate that allows the agent to connect with the NATS server. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\agents\agent.cer`
 - agent.key, this is the private key that allows the agent to connect with the NATS server. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\agents\agent.key`
 
 ![Place certs next to the installer](/img/agent/certs.png)
+
+If you want to use the installer's flags:
+
+- /cacert=path, this is the flag for the Certification Authority certificate file. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\ca\ca.cer`
+- /cert=path, this is the flag for the public part of SFTP certificate that the console will use to authenticate SFTP connections. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\console\sftp.cer`
+- /key=path, this is the flag for the certificate that allows the agent to connect with the NATS server. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\agents\agent.cer`
+- /sftpcert=path, this is flag for the private key that allows the agent to connect with the NATS server. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\agents\agent.key`
 
 Once you've copied the required certificates next to the setup, you'll have to run the setup command **with administrator privileges** using the available flags:
 
@@ -51,7 +60,7 @@ Change the server's name and port for the /server flag to specify where the NATS
 
 Change the SFTP port using the /sftp flag or the VNC proxy port using the /vnc flag
 
-Don't forget to use the /SILENT and /VERYSILENT flags
+Don't forget to use the /VERYSILENT flag
 
 :::
 
@@ -59,7 +68,7 @@ Here's an example:
 
 ```(bash)
 
-openuem-agent-setup.exe /server=lothlorien.local.openuem.eu:4433 /sftp=2022 /vnc=1443 /SILENT /VERYSILENT
+openuem-agent-setup.exe /server=lothlorien.local.openuem.eu:4433 /sftp=2022 /vnc=1443 VERYSILENT
 
 ```
 
@@ -137,4 +146,4 @@ In the logs folder you should check the `openuem-log.txt` that should explain th
 - Maybe you specified the wrong path for the required certificates. You can copy the certificates by hand using the required names or uninstall the agent and install it again.
 - Maybe you specified the wrong name for the NATS serveror the port. You can edit the `config\openuem.ini` file and change the domain name or port and restart the OpenUEM Agent service.
 
-Need more help? open an issue in GitHub or send a message in Discord!
+Need more help?, Open an issue in GitHub or send a message in Discord!
