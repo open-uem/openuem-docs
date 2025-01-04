@@ -10,7 +10,7 @@ While the agent can be installed on a Windows Server endpoint, note that the sup
 
 ## 1. Download the Windows installer
 
-You can visit the [Downloads section](/docs/Installation/Agent/windows#) located either on the sidebar or on the navbar and select the Windows option to get the download link.
+You can visit the [Downloads section](/docs/Downloads/windows) located either on the sidebar or on the navbar and select the Windows option to get the download link.
 
 Download your prefered version and note that you can check if the checksum matches using Powershell's Get-FileHash:
 
@@ -19,7 +19,7 @@ Get-FileHash openuem-agent-setup.exe
 
 Algorithm       Hash                                                                   Path
 ---------       ----                                                                   ----
-SHA256          FD776CF58E2667089CDF6929332D7E6DD0E8BB2506798CD4DA7F9BF0577C3033       C:\Users\doncicuto\Downloads\openuem....
+SHA256          7BE3B26D219552412BD08CEC5F62AFA5AB10DD7F5DB5AC7DF1031ED401286E25       C:\Users\doncicuto\Downloads\openuem....
 ```
 
 :::warning
@@ -106,7 +106,7 @@ The Agent has an SFTP server used to browse, update or delete files from the con
 
 ![SFTP Server](/img/agent/sftp_server.png)
 
-The Agent can use a VNC Proxy if you install a supported VNC server. If no VNC app is installed this port won't be used. Specify the port number for the proxy (default: 1443)
+The Agent can use a VNC Proxy if you install a [supported VNC server](/docs/Advanced%20Topics/vnc). If no VNC app is installed this port won't be used. Specify the port number for the proxy (default: 1443)
 
 ![VNC Proxy](/img/agent/vnc_proxy.png)
 
@@ -145,5 +145,11 @@ In the logs folder you should check the `openuem-log.txt` that should explain th
 - Maybe your NATS server is not running
 - Maybe you specified the wrong path for the required certificates. You can copy the certificates by hand using the required names or uninstall the agent and install it again.
 - Maybe you specified the wrong name for the NATS serveror the port. You can edit the `config\openuem.ini` file and change the domain name or port and restart the OpenUEM Agent service.
+
+:::warning
+
+Note that the installer creates firewall rules for Microsoft's firewall. If you use a different firewall check that your agent can connect to the NATS server port, and that your endpoint has the VNC and SFTP ports enabled for incoming connections from the console to the endpoint.
+
+:::
 
 Need more help?, Open an issue in GitHub or send a message in Discord!
