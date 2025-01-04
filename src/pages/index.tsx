@@ -33,7 +33,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description="An Open Source Unified Endpoint Manager that lets you manage your IT assets thanks to its agents">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
