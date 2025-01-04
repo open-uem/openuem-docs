@@ -83,6 +83,17 @@ const config: Config = {
           label: "Docs",
         },
         { to: "/blog", label: "Blog", position: "left" },
+        { 
+          type: 'dropdown',
+          label: "Downloads", 
+          position: "left",
+          items: [
+            {
+              label: 'Windows',
+              to: "/docs/Downloads/windows", 
+            },
+          ]
+        },
         {
           href: "https://github.com/open-uem/openuem-docs",
           label: "GitHub",

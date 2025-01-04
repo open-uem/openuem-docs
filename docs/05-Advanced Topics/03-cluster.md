@@ -1,1 +1,1 @@
-# Using a NATS cluster
+# 🏢 Using a NATS cluster
