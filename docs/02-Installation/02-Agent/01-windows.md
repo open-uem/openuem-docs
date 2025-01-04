@@ -19,7 +19,7 @@ Get-FileHash openuem-agent-setup.exe
 
 Algorithm       Hash                                                                   Path
 ---------       ----                                                                   ----
-SHA256          7BE3B26D219552412BD08CEC5F62AFA5AB10DD7F5DB5AC7DF1031ED401286E25       C:\Users\doncicuto\Downloads\openuem....
+SHA256          7AD7CD9A39703605C7D44AF44F5CAF67442FE24A2D5F4746B913451EB2D61C5B       C:\Users\doncicuto\Downloads\openuem....
 ```
 
 :::warning
