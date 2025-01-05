@@ -110,6 +110,10 @@ const config: Config = {
               label: 'Windows',
               to: "/docs/Downloads/windows", 
             },
+            {
+              label: 'Linux',
+              to: "/docs/Downloads/linux", 
+            },
           ]
         },
         {
