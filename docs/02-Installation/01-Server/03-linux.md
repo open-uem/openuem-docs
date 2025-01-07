@@ -1,4 +1,4 @@
-# 🐧 Linux
+# 🐧 Debian/Ubuntu Linux
 
 The OpenUEM server components can be installed on a Debian/Ubuntu machine using .deb packages available in OpenUEM repository.
 
@@ -115,7 +115,7 @@ If OpenUEM has been selected to generate certificates automatically you've the c
 Once, all the questions are answered the package will be installed.
 
 :::warning
-Installation may take some minutes if it must generate certificates so if you see that progress stalls for some minutes (generally at 88%), please be patient as cryptographic operations are heavy, database schema is created, and hundreds of megabytes are copied.
+Installation may take some minutes if it must generate certificates so if you see that progress stalls for some minutes (generally at 60% or 80%), please be patient as cryptographic operations are heavy, database schema is created, and hundreds of megabytes are copied.
 :::
 
 :::info
@@ -149,7 +149,7 @@ OpenUEM will install and enable the following services on your server:
 - openuem-console, see [Console](/docs/Introduction/console) for more information
 - openuem-nats-service, see [NATS](/docs/Introduction/nats) for more information
 - openuem-notification-worker, see [Workers](/docs/Introduction/workers) for more information
-- openuem-ocsp-responder, see [OCSP Responder](<(/docs/Introduction/ocsp)>) for more information
+- openuem-ocsp-responder, see [OCSP Responder](/docs/Introduction/ocsp) for more information
 - openuem-server-updater, that is responsible for updating the server components from the console
 
 :::warning
