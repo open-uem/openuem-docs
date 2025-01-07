@@ -130,9 +130,9 @@ Finally, click the Install button and wait for the installation to finish
 
 ![Installation finished](/img/agent/installation_finished.png)
 
-## 2.3 Following steps and troubleshooting
+## 2.3 Next steps and troubleshooting
 
-After the agent installation, if eeverything goes fine you should see the agent in the console's agents' view ready to be admitted
+After the agent installation, if everything goes fine you should see the agent in the console's agents' view ready to be admitted
 
 ![Admit agent](/img/agent/admit_agent.png)
 

@@ -80,7 +80,7 @@ const config: Config = {
 
   themeConfig: {
     metadata: [
-      {name: 'keywords', content: 'operating systems, assets manager'},
+      {name: 'keywords', content: 'operating systems, assets manager, uem, unified endpoint manager, rmm, remote monitoring and management'},
       {name: 'twitter:card', content: 'An Open Source Unified Endpoint Manager that lets you manage your IT assets thanks to its agents'},
       {name: 'twitter:site', content: '@open-uem'},
       {name: 'twitter:image', content: "https://openuem.eu/img/openuem_logo.png"},
