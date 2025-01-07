@@ -22,12 +22,8 @@ The file must be named .env without extension and with a dot before the env word
 
 In the `.env` file, edit the environment variables that docker compose will use to build and get the containers up and running.
 
-:::info
-You can set the Postgres database user and password in the `init.sh` file inside the `postgres\build` folder but note, that if you modify this file, the script expects lines ending in LF and not in CRLF (Windows) so please ensure that you use a suitable editor like Notepad++, Sublime Text or VSCode to use the right EOL format.
-
-![LF end of line](/img/docker/lf_eol.png)
-
-This warning is also valid for the create-certs.sh and generate-nats-conf.sh files.
+:::note
+You can set the Postgres database user and password in the `init.sh` file inside the `postgres\build`
 :::
 
 Here are the possible environment variables that can appear in the .env file.
@@ -80,6 +76,10 @@ Once we run that command, we should see that the database service is healthy and
 Also, we should see that a certificates folder has been created containing all the required certificates:
 
 ![Certificates folder](/img/docker/certificates_folder.png)
+
+:::warning
+The generation of certificates can take some time, don't go to the next step until you check that certificates have been indeed created. If you find two files under the agents folder and one pfx file inside the users folder, you're good to go.
+:::
 
 Now, it's time to start OpenUEM's components
 
