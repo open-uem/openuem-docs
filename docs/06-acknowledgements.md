@@ -62,3 +62,7 @@ OpenUEM stands on the shoulders of giants. OpenUEM is offered to you thanks to t
 - [jakubzerdzicki's images at Pexels](https://www.pexels.com/@jakubzerdzicki/). Splash image used in OpenUEM's console
 
 Please, see go modules definitions for more information, and please contact me if some repository is missing
+
+## Logos and trademarks
+
+All logos and trademarks of software manufacturers and publishers are property of their respective owners and are only used in OpenUEM for informational purposes without any relationship between their owners and this project.
