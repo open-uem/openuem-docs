@@ -1,5 +1,5 @@
 ---
-title: Windows downloads
+title: 🪟 Windows downloads
 description: Download agent and server installers for Windows
 keywords:
   [
@@ -16,7 +16,7 @@ keywords:
   ]
 ---
 
-# Windows downloads
+# 🪟 Windows downloads
 
 This page contains the links and checksums associated with the windows installers
 
