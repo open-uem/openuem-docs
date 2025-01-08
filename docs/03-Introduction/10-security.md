@@ -1,3 +1,19 @@
+---
+title: OpenUEM Security
+description: OpenUEM Security
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    security,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # Security by design
 
 **OpenUEM uses digital certificates** (this is not optional) for several purposes:

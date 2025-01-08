@@ -1,3 +1,19 @@
+---
+title: OpenUEM Roadmap
+description: OpenUEM Roadmap
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    roadmap,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # Roadmap
 
 OpenUEM will have the following improvements soon (in no order):

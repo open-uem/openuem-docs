@@ -1,6 +1,6 @@
 ---
-title: OpenUEM Server - Windows Install
-description: How to install OpenUEM server components in Windows
+title: OpenUEM Console - Computers
+description: OpenUEM Computers
 keywords:
   [
     IT assets,
@@ -8,12 +8,11 @@ keywords:
     openuem,
     uem,
     rmm,
-    windows,
+    console,
+    computers,
     unified endpoint manager,
     remote monitoring and management,
   ]
 ---
 
-# 🪟 Windows
-
-TBD
+# Computers

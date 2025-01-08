@@ -1,4 +1,15 @@
 ---
+title: Home
+description: An Open Source Unified Endpoint Manager that lets you manage your IT assets thanks to its agents
+keywords:
+  [
+    IT assets,
+    inventory,
+    uem,
+    rmm,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
 sidebar_position: 1
 ---
 

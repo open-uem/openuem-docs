@@ -1,3 +1,19 @@
+---
+title: OpenUEM Console - Log In
+description: Log in the OpenUEM Console
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    console,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # Log In / Log Out
 
 ## Log In

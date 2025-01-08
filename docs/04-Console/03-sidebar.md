@@ -1,3 +1,20 @@
+---
+title: OpenUEM Console - Sidebar
+description: OpenUEM Sidebar menu
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    console,
+    sidebar,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # Sidebar menu
 
 OpenUEM provides a sidebar menu that allows you to visit the following sections:

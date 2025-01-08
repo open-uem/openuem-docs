@@ -1,3 +1,20 @@
+---
+title: OpenUEM - Acknowledgements
+description: Acknowledgements
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    acknowledgements,
+    thanks,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # Acknowledgments
 
 OpenUEM stands on the shoulders of giants. OpenUEM is offered to you thanks to the work of the following projects and their contributors (**in no specific order**). Please consider giving a 🌟 on GitHub or donating to these projects.

@@ -1,3 +1,19 @@
+---
+title: OpenUEM - Install Windows agent
+description: How to install OpenUEM agent in Windows
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    windows agent,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # 🕵️ Windows Agent
 
 OpenUEM agents are responsible for inspecting your endpoints information and offer additional services like file browsing and VNC connections.

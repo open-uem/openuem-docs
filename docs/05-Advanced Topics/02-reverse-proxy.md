@@ -1,3 +1,21 @@
+---
+title: OpenUEM - Advanced Topics (Reverse Proxy)
+description: How to use a reverse proxy with OpenUEM
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    nginx,
+    caddy,
+    revers proxy,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # 🌐 Use a reverse proxy
 
 While it's possible to use the console directly visiting the associated url, **it’s advisable to run OpenUEM's console behind a reverse proxy**. For now, in this section you can find working configuration files for two popular reverse proxies, **[Caddy](https://caddyserver.com/)** and **[NGINX](https://nginx.org/en/)**.

@@ -1,3 +1,19 @@
+---
+title: OpenUEM NATS
+description: OpenUEM NATS server
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    nats,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # NATS Server
 
 As [NATS official page](https://docs.nats.io/nats-concepts/what-is-nats) states:

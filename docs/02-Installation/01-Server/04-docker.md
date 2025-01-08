@@ -1,3 +1,19 @@
+---
+title: OpenUEM Server - Docker
+description: How to deploy OpenUEM server components using Docker
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    unified endpoint manager,
+    remote monitoring and management,
+    docker,
+  ]
+---
+
 # 🐳 Docker
 
 OpenUEM can be tested using Docker containers that are hosted in [Docker Hub](https://hub.docker.com/u/openuem)

@@ -1,3 +1,19 @@
+---
+title: OpenUEM Agents
+description: OpenUEM Agents
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    agents,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # Agents
 
 Agents are responsible for **gathering and reporting information** about the endpoints to OpenUEM. Agents are also responsible for providing an SFTP server and a VNC proxy.

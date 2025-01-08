@@ -1,3 +1,21 @@
+---
+title: OpenUEM Console
+description: OpenUEM Console
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    console,
+    web ui,
+    web user interface,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # Console
 
 The Console is OpenUEM's Web User Interface

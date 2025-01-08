@@ -1,3 +1,19 @@
+---
+title: OpenUEM Workers
+description: OpenUEM Workers
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    workers,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # Workers
 
 OpenUEM uses different workers to process asynchronous tasks. Right now there are three workers:

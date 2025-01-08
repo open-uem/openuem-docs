@@ -1,3 +1,21 @@
+---
+title: OpenUEM Server - Debian/Ubuntu Install
+description: How to install OpenUEM server components in Debian/Ubuntu Linux
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    unified endpoint manager,
+    remote monitoring and management,
+    debian,
+    ubuntu,
+    linux,
+  ]
+---
+
 # 🐧 Debian/Ubuntu Linux
 
 The OpenUEM server components can be installed on a Debian/Ubuntu machine using .deb packages available in OpenUEM repository.

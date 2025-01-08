@@ -1,3 +1,19 @@
+---
+title: OpenUEM Features
+description: OpenUEM Features
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    features,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # Features
 
 Right now, you can do the following with OpenUEM:

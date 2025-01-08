@@ -1,3 +1,23 @@
+---
+title: OpenUEM - Linux downloads
+description: Debian and Ubuntu repository for OpenUEM
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    linux,
+    debian,
+    ubuntu,
+    server,
+    installers,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # Linux downloads
 
 # 1. Debian/Linux

@@ -1,3 +1,18 @@
+---
+title: OpenUEM Requirements
+description: Requirements to install OpenUEM
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # ⚠️ Requirements
 
 OpenUEM can be installed in Windows (Desktop or Server versions) or Linux (.deb packages or binaries) but there are two requirements:

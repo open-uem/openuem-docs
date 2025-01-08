@@ -1,3 +1,20 @@
+---
+title: OpenUEM - Advanced Topics (NATS Cluster)
+description: How to use a NATS cluster with OpenUEM
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    nats,
+    cluster,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # 🏢 Using a NATS cluster
 
 OpenUEM is ready to use a NATS cluster. NATS supports running each server in clustered mode. You can cluster servers together for high volume messaging systems and resiliency and high availability. When you install the OpenUEM component you'll be asked if you want to use a cluster.

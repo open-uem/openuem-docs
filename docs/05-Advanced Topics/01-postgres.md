@@ -1,3 +1,19 @@
+---
+title: OpenUEM - Advanced Topics (Postgres)
+description: How to set a Postgres database for OpenUEM
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    postgres,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # 🐘 Setting the Postgres database
 
 ## 1. Install the Postgres database server

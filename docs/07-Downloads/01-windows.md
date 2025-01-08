@@ -1,3 +1,21 @@
+---
+title: OpenUEM - Windows downloads
+description: Download agent and server installers for Windows
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    agent,
+    server,
+    installers,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # Windows downloads
 
 This page contains the links and checksums associated with the windows installers

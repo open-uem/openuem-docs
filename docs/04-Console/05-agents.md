@@ -1,3 +1,20 @@
+---
+title: OpenUEM Console - Agents
+description: OpenUEM Agents view
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    console,
+    agents,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # Agents
 
 The agents gather information about your endpoints and report it back to the OpenUEM server.
@@ -52,3 +69,5 @@ If the agent is in the **"Enabled""** state, you have the following actions:
 - Delete. You can delete the agent but note that, unless you uninstall the agent, it'll keep trying to send new information.
 
 ![More actions for enabled agent](/img/console/more_actions_enabled_agent.png)
+
+If you click on the hostname associated with the agent you'll visit the Computers view

@@ -1,3 +1,22 @@
+---
+title: OpenUEM - Advanced Topics (VNC)
+description: How to configure supported VNC servers with OpenUEM
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    vnc,
+    tightvnc,
+    ultravnc,
+    tigervnc,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # 🕹️ VNC
 
 OpenUEM allows you to initiate remote assistance sessions using VNC if your endpoint has a supported VNC server.

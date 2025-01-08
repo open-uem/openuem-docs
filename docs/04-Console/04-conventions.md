@@ -1,3 +1,20 @@
+---
+title: OpenUEM Console - UI Conventions
+description: OpenUEM User Interface conventions
+keywords:
+  [
+    IT assets,
+    inventory,
+    openuem,
+    uem,
+    rmm,
+    console,
+    ui,
+    unified endpoint manager,
+    remote monitoring and management,
+  ]
+---
+
 # User Interface Conventions
 
 Before we talk about the different sections, let’s discuss some conventions about the user interface.
