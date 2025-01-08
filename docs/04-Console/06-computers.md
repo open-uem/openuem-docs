@@ -1,5 +1,5 @@
 ---
-title: Computers
+title: 💻 Computers
 description: OpenUEM Computers
 keywords:
   [
@@ -15,7 +15,7 @@ keywords:
   ]
 ---
 
-# Computers
+# 💻 Computers
 
 The computer’s view shows you the inventory of computers for your organization reported by the agents that have contacted OpenUEM and have been enabled.
 

@@ -1,5 +1,5 @@
 ---
-title: Sidebar menu
+title: 📃 Sidebar menu
 description: OpenUEM Sidebar menu
 keywords:
   [
@@ -15,7 +15,7 @@ keywords:
   ]
 ---
 
-# Sidebar menu
+# 📃 Sidebar menu
 
 OpenUEM provides a sidebar menu that allows you to visit the following sections:
 

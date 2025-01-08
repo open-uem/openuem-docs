@@ -1,6 +1,6 @@
 ---
-title: 📦 Package deployment
-description: OpenUEM Package deployment view
+title: Update Servers
+description: OpenUEM Update Servers
 keywords:
   [
     IT assets,
@@ -9,13 +9,13 @@ keywords:
     uem,
     rmm,
     console,
-    package deployment,
-    winget,
+    admin,
+    update servers,
     unified endpoint manager,
     remote monitoring and management,
   ]
 ---
 
-# 📦 Package deployment
+# Update Servers
 
 TBD

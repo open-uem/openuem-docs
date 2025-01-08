@@ -1,6 +1,6 @@
 ---
-title: 📦 Package deployment
-description: OpenUEM Package deployment view
+title: Update Agents
+description: OpenUEM Update Agents
 keywords:
   [
     IT assets,
@@ -9,13 +9,13 @@ keywords:
     uem,
     rmm,
     console,
-    package deployment,
-    winget,
+    admin,
+    update agents,
     unified endpoint manager,
     remote monitoring and management,
   ]
 ---
 
-# 📦 Package deployment
+# Update Agents
 
 TBD

@@ -1,5 +1,5 @@
 ---
-title: Software
+title: 💾 Software
 description: OpenUEM Software's view
 keywords:
   [
@@ -15,7 +15,7 @@ keywords:
   ]
 ---
 
-# Software
+# 💾 Software
 
 OpenUEM agents gather information about the software that is installed on a computer according to Windows registry.
 

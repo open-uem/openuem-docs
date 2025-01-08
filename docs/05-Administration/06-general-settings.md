@@ -1,6 +1,6 @@
 ---
-title: 📦 Package deployment
-description: OpenUEM Package deployment view
+title: General Settings
+description: OpenUEM General Settings
 keywords:
   [
     IT assets,
@@ -9,13 +9,13 @@ keywords:
     uem,
     rmm,
     console,
-    package deployment,
-    winget,
+    admin,
+    settings,
     unified endpoint manager,
     remote monitoring and management,
   ]
 ---
 
-# 📦 Package deployment
+# General Settings
 
 TBD

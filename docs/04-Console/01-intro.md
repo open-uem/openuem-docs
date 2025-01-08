@@ -1,5 +1,5 @@
 ---
-title: Log In / Log Out
+title: 🛂 Log In / Log Out
 description: Log in the OpenUEM Console
 keywords:
   [
@@ -14,7 +14,7 @@ keywords:
   ]
 ---
 
-# Log In / Log Out
+# 🛂 Log In / Log Out
 
 ## Log In
 

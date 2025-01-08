@@ -1,5 +1,5 @@
 ---
-title: Security
+title: 🔒 Security
 description: OpenUEM Security view
 keywords:
   [
@@ -17,7 +17,7 @@ keywords:
   ]
 ---
 
-# Security
+# 🔒 Security
 
 OpenUEM agents gather information about the security status of the endpoint where the agent is installed.
 

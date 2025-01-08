@@ -1,5 +1,5 @@
 ---
-title: User Interface Conventions
+title: 🎨 User Interface Conventions
 description: OpenUEM User Interface conventions
 keywords:
   [
@@ -15,7 +15,7 @@ keywords:
   ]
 ---
 
-# User Interface Conventions
+# 🎨 User Interface Conventions
 
 Before we talk about the different sections, let’s discuss some conventions about the user interface.
 
@@ -80,3 +80,7 @@ Now, let's start with the Agents section.
 If you find three dots in table’s rows, that’s a button that offers more actions to perform on the element enclosed in that row.
 
 ![Three dots](/img/console/three_dots.png)
+
+## 4. Go back
+
+You can use the back button of your browser to go back to a previous page or section. OpenUEM is not a [Single Page Application](https://developer.mozilla.org/en-US/docs/Glossary/SPA) and uses [HTMX](https://htmx.org/) to build an user interface with hypertext.

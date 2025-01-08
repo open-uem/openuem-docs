@@ -1,5 +1,5 @@
 ---
-title: Agents
+title: 🕵 Agents
 description: OpenUEM Agents view
 keywords:
   [
@@ -15,7 +15,7 @@ keywords:
   ]
 ---
 
-# Agents
+# 🕵 Agents
 
 The agents gather information about your endpoints and report it back to the OpenUEM server.
 

@@ -1,6 +1,6 @@
 ---
-title: 📦 Package deployment
-description: OpenUEM Package deployment view
+title: Certificates
+description: OpenUEM Certificates
 keywords:
   [
     IT assets,
@@ -9,13 +9,13 @@ keywords:
     uem,
     rmm,
     console,
-    package deployment,
-    winget,
+    admin,
+    certificates,
     unified endpoint manager,
     remote monitoring and management,
   ]
 ---
 
-# 📦 Package deployment
+# Certificates
 
 TBD
