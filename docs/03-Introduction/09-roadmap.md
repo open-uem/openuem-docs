@@ -1,5 +1,5 @@
 ---
-title: Roadmap
+title: 🗺️ Roadmap
 description: OpenUEM Roadmap
 keywords:
   [
@@ -14,7 +14,7 @@ keywords:
   ]
 ---
 
-# Roadmap
+# 🗺️ Roadmap
 
 OpenUEM will have the following improvements soon (in no order):
 

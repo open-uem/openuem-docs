@@ -1,5 +1,5 @@
 ---
-title: Console
+title: 🖥️ Console
 description: OpenUEM Console
 keywords:
   [
@@ -16,7 +16,7 @@ keywords:
   ]
 ---
 
-# Console
+# 🖥️ Console
 
 The Console is OpenUEM's Web User Interface
 

@@ -1,5 +1,5 @@
 ---
-title: Security by design
+title: 🔒 Security by design
 description: OpenUEM Security
 keywords:
   [
@@ -14,7 +14,7 @@ keywords:
   ]
 ---
 
-# Security by design
+# 🔒 Security by design
 
 **OpenUEM uses digital certificates** (this is not optional) for several purposes:
 

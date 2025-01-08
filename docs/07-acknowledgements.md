@@ -1,6 +1,6 @@
 ---
-title: Acknowledgements
-description: Acknowledgements
+title: About the project
+description: About the project
 keywords:
   [
     IT assets,
@@ -15,7 +15,7 @@ keywords:
   ]
 ---
 
-# Acknowledgments
+## Acknowledgements
 
 OpenUEM stands on the shoulders of giants. OpenUEM is offered to you thanks to the work of the following projects and their contributors (**in no specific order**). Please consider giving a 🌟 on GitHub or donating to these projects.
 
@@ -60,9 +60,15 @@ OpenUEM stands on the shoulders of giants. OpenUEM is offered to you thanks to t
 - [wincred](https://github.com/danieljoos/wincred). Go wrapper around the Windows Credential Manager API functions
 - [Direction font](https://font.download/font/direction). Font used to create OpenUEM logos
 - [jakubzerdzicki's images at Pexels](https://www.pexels.com/@jakubzerdzicki/). Splash image used in OpenUEM's console
+- [Simple Icons fonts](https://github.com/simple-icons/simple-icons-font). Free SVG icon font for popular brands
+- [Lucide Icons](https://github.com/lucide-icons/lucide). Beautiful & consistent icon toolkit made by the community.
 
 Please, see go modules definitions for more information, and please contact me if some repository is missing
 
 ## Logos and trademarks
 
 All logos and trademarks of software manufacturers and publishers are property of their respective owners and are only used in OpenUEM for informational purposes without any relationship between their owners and this project.
+
+## About me
+
+I'm Miguel Cabrerizo, a freelance DevOps engineer located in Spain. If you like this project, consider giving it a star in GitHub or visit my [GitHub profile](https://github.com/doncicuto) and follow me 😀

@@ -1,5 +1,5 @@
 ---
-title: Workers
+title: ⚙️ Workers
 description: OpenUEM Workers
 keywords:
   [
@@ -14,7 +14,7 @@ keywords:
   ]
 ---
 
-# Workers
+# ⚙️ Workers
 
 OpenUEM uses different workers to process asynchronous tasks. Right now there are three workers:
 

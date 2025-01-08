@@ -1,5 +1,5 @@
 ---
-title: NATS Server
+title: 📫 NATS Server
 description: OpenUEM NATS server
 keywords:
   [
@@ -14,7 +14,7 @@ keywords:
   ]
 ---
 
-# NATS Server
+# 📫 NATS Server
 
 As [NATS official page](https://docs.nats.io/nats-concepts/what-is-nats) states:
 

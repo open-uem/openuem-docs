@@ -1,5 +1,5 @@
 ---
-title: Features
+title: ✅ Features
 description: OpenUEM Features
 keywords:
   [
@@ -14,7 +14,7 @@ keywords:
   ]
 ---
 
-# Features
+# ✅ Features
 
 Right now, you can do the following with OpenUEM:
 
