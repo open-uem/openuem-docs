@@ -1,5 +1,5 @@
 ---
-title: 📨 SMTP Settings
+title: 📧 SMTP Settings
 description: OpenUEM SMTP
 keywords:
   [
@@ -16,7 +16,7 @@ keywords:
   ]
 ---
 
-# 📨 SMTP Settings
+# 📧 SMTP Settings
 
 OpenUEM has a [**notification worker**](/docs/Introduction/workers) which is responsible for sending emails to users. This worker requires an administrator to introduce the SMTP settings before it can try to send messages.
 
