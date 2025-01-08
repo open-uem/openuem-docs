@@ -202,6 +202,10 @@ If the VNC connection can be established, we’ll see the user’s screen.
 
 When we are finished we can click on the **Disconnect** button and click the on the **Close window** button.
 
+:::tip
+If the VNC screen is too big, try to zoom on your browser or press F11 to get your browser in full screen.
+:::
+
 ### 2.11 Wake on LAN
 
 You can send a Wake On LAN magic packet that will boot the computer up, if the computer is in the same LAN as the console server, and if the computer has been configured to boot with WOL (UEFI setting and/or updated network drivers).
