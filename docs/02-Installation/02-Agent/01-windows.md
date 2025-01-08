@@ -1,5 +1,5 @@
 ---
-title: OpenUEM - Install Windows agent
+title: 🕵️ Windows Agent
 description: How to install OpenUEM agent in Windows
 keywords:
   [

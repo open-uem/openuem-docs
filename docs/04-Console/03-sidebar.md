@@ -1,5 +1,5 @@
 ---
-title: OpenUEM Console - Sidebar
+title: Sidebar menu
 description: OpenUEM Sidebar menu
 keywords:
   [

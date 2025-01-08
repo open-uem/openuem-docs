@@ -1,5 +1,5 @@
 ---
-title: OpenUEM Server - Docker
+title: 🐳 Docker
 description: How to deploy OpenUEM server components using Docker
 keywords:
   [

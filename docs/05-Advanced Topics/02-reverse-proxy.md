@@ -1,5 +1,5 @@
 ---
-title: OpenUEM - Advanced Topics (Reverse Proxy)
+title: 🌐 Use a reverse proxy
 description: How to use a reverse proxy with OpenUEM
 keywords:
   [

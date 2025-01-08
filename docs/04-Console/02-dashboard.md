@@ -1,5 +1,5 @@
 ---
-title: OpenUEM Console - Dashboard
+title: Dashboard
 description: OpenUEM Dashboard
 keywords:
   [

@@ -1,5 +1,5 @@
 ---
-title: OpenUEM - Advanced Topics (VNC)
+title: 🕹️ VNC
 description: How to configure supported VNC servers with OpenUEM
 keywords:
   [

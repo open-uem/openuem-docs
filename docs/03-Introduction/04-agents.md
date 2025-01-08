@@ -1,5 +1,5 @@
 ---
-title: OpenUEM Agents
+title: Agents
 description: OpenUEM Agents
 keywords:
   [

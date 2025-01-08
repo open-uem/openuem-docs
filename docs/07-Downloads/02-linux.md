@@ -1,5 +1,5 @@
 ---
-title: OpenUEM - Linux downloads
+title: Linux downloads
 description: Debian and Ubuntu repository for OpenUEM
 keywords:
   [

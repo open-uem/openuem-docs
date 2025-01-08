@@ -1,5 +1,5 @@
 ---
-title: OpenUEM Console - UI Conventions
+title: User Interface Conventions
 description: OpenUEM User Interface conventions
 keywords:
   [

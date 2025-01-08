@@ -1,5 +1,5 @@
 ---
-title: OpenUEM Console
+title: Console
 description: OpenUEM Console
 keywords:
   [

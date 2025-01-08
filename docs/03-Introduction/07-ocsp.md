@@ -1,5 +1,5 @@
 ---
-title: OpenUEM OCSP Responder
+title: OCSP Responder
 description: OpenUEM OCSP Responder
 keywords:
   [

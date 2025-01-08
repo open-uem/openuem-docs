@@ -1,5 +1,5 @@
 ---
-title: OpenUEM NATS
+title: NATS Server
 description: OpenUEM NATS server
 keywords:
   [

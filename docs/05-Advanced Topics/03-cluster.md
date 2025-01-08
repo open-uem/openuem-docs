@@ -1,5 +1,5 @@
 ---
-title: OpenUEM - Advanced Topics (NATS Cluster)
+title: 🏢 Using a NATS cluster
 description: How to use a NATS cluster with OpenUEM
 keywords:
   [

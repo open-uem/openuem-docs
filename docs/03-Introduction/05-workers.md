@@ -1,5 +1,5 @@
 ---
-title: OpenUEM Workers
+title: Workers
 description: OpenUEM Workers
 keywords:
   [

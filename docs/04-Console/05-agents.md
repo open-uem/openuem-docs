@@ -1,5 +1,5 @@
 ---
-title: OpenUEM Console - Agents
+title: Agents
 description: OpenUEM Agents view
 keywords:
   [

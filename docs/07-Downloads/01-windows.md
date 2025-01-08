@@ -1,5 +1,5 @@
 ---
-title: OpenUEM - Windows downloads
+title: Windows downloads
 description: Download agent and server installers for Windows
 keywords:
   [

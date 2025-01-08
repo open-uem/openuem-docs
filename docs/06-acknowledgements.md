@@ -1,5 +1,5 @@
 ---
-title: OpenUEM - Acknowledgements
+title: Acknowledgements
 description: Acknowledgements
 keywords:
   [

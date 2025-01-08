@@ -1,5 +1,5 @@
 ---
-title: OpenUEM Features
+title: Features
 description: OpenUEM Features
 keywords:
   [

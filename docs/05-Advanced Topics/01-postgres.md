@@ -1,5 +1,5 @@
 ---
-title: OpenUEM - Advanced Topics (Postgres)
+title: 🐘 Setting the Postgres database
 description: How to set a Postgres database for OpenUEM
 keywords:
   [

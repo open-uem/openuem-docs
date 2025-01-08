@@ -1,5 +1,5 @@
 ---
-title: OpenUEM - Advanced Topics (Digital certificates)
+title: 🔐 Certificates
 description: How to configure digital certificates for OpenUEM
 keywords:
   [

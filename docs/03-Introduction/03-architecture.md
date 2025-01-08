@@ -1,5 +1,5 @@
 ---
-title: OpenUEM Architecture
+title: Architecture
 description: OpenUEM Architecture
 keywords:
   [

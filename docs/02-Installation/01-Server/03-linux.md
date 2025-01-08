@@ -1,5 +1,5 @@
 ---
-title: OpenUEM Server - Debian/Ubuntu Install
+title: 🐧 Debian/Ubuntu Linux
 description: How to install OpenUEM server components in Debian/Ubuntu Linux
 keywords:
   [

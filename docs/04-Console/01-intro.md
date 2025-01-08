@@ -1,5 +1,5 @@
 ---
-title: OpenUEM Console - Log In
+title: Log In / Log Out
 description: Log in the OpenUEM Console
 keywords:
   [

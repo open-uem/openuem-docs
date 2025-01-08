@@ -1,5 +1,5 @@
 ---
-title: OpenUEM Console - Computers
+title: Computers
 description: OpenUEM Computers
 keywords:
   [
