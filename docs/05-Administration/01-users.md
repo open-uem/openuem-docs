@@ -27,7 +27,7 @@ OpenUEM will have roles and there’s an open issue for that feature in the proj
 As an administrator you can add more users, or you can approve [register requests](/docs/04-Console/10-register.md) that users have requested.
 
 :::warning
-Don’t forget to add [SMTP settings](/docs/05-Administration/04-smtp.md) so users cato send the email with the certificate to the user
+Don’t forget to add [SMTP settings](/docs/05-Administration/04-smtp.md) so users can receive emails about the registration
 :::
 
 ## 1. Create a new user
