@@ -206,6 +206,10 @@ When we are finished we can click on the **Disconnect** button and click the on 
 If the VNC screen is too big, try to zoom on your browser or press F11 to get your browser in full screen.
 :::
 
+:::warning
+The NoVNC proxy may have an issue with the services mmc snap-in (maybe you can find this issue with other snap-ins). If you click on that window you may stop seeing the mouse cursor moving through the page. In that case, it's enough to fix the issue if the services windows is minimized.
+:::
+
 ### 2.11 Wake on LAN
 
 You can send a Wake On LAN magic packet that will boot the computer up, if the computer is in the same LAN as the console server, and if the computer has been configured to boot with WOL (UEFI setting and/or updated network drivers).
