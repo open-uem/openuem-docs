@@ -63,7 +63,7 @@ Then you must accept the Apache 2.0 Open-Source license clicking on "I accept th
 You must select which OpenUEM server component do you want to install.
 
 :::note
-In this page we’re assuming that you’re installing all the components in the same machine but remember that you can distribute the component in different machines.
+In this page we’re assuming that you’re installing all the components in the same machine but remember that you can distribute the components in different machines.
 :::
 
 ![Select components](/img/windows/select_components.png)
@@ -184,7 +184,7 @@ Just in case, you’ll find the administrator certificate in the users folder.
 
 ### 3.4 Logs
 
-OpenUEM logs are stored in `C:\Program Files\OpenUEM Server\logs` and you’ll find a log for every OpenUEM component that has been installed on that server. You’ll need root privileges to see the logs content.
+OpenUEM logs are stored in `C:\Program Files\OpenUEM Server\logs` and you’ll find a log for every OpenUEM component that has been installed on that server.
 
 ![Logs](/img/windows/logs.png)
 
