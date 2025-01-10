@@ -33,12 +33,14 @@ Get-FileHash openuem-server-setup-0.1.0.exe
 
 Algorithm       Hash                                                                   Path
 ---------       ----                                                                   ----
-SHA256          B028D2E682BB29D1FB008134F1B62482DC89B70DE13CABE0B31B9D0FE8769AC6       C:\Users\doncicuto\Downloads\openuem....
+SHA256          01B9A91F58E4986AD0674558D73B89038AFB40A71B171C7AEE5EDF8097928D9D       C:\Users\doncicuto\Downloads\openuem....
 ```
 
 ## 2. Install OpenUEM server
 
 ## 2.1 Silent installation
+
+TBD
 
 ## 2.2 Wizard installation
 
@@ -120,6 +122,7 @@ Installation may take some minutes if it must generate certificates so if you se
 
 :::warning
 The installer will try to add the Certificate Authority certificate to the trusted root certificate authority’s store. You’ll receive a warning to confirm that you want to add the certificate.
+:::
 
 ![CA certificate import warning](/img/windows/ca_import_warning.png)
 
