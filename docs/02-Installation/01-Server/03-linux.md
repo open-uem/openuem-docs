@@ -96,7 +96,7 @@ Now, you'll have to answer a few questions about your organization. These answer
 
 ![Organization address](/img/linux/org_address.png)
 
-It’s time to specify in which port the NATS server will listen to:
+It’s time to specify which port will be used by the NATS server:
 
 ![NATS server port](/img/linux/nats_port.png)
 
@@ -108,7 +108,7 @@ Introduce the port used by the [OCSP Responder](/docs/Introduction/ocsp)
 
 ![OCSP Responder port](/img/linux/ocsp_responder.png)
 
-You'll have to specify the DNS domain name used by the server that hosts the console service, and the ports used by the web server and the authentication server
+You'll have to specify the DNS domain name used by the server that hosts the console service, and the ports used by the web server and the authentication server.
 
 ![Console DNS name](/img/linux/console_dns_name.png)
 

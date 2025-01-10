@@ -28,14 +28,14 @@ While the agent can be installed on a Windows Server endpoint, note that the sup
 
 You can visit the [Downloads section](/docs/Downloads/windows) located either on the sidebar or on the navbar and select the Windows option to get the download link.
 
-Download your prefered version and note that you can check if the checksum matches using Powershell's Get-FileHash:
+Download your preferred version and note that you can check if the checksum matches using Powershell's Get-FileHash:
 
 ```(powershell)
 Get-FileHash openuem-agent-setup.exe
 
 Algorithm       Hash                                                                   Path
 ---------       ----                                                                   ----
-SHA256          7AD7CD9A39703605C7D44AF44F5CAF67442FE24A2D5F4746B913451EB2D61C5B       C:\Users\doncicuto\Downloads\openuem....
+SHA256          349DF052C62B144493A7E7F632A199A29B10C39D2E70833885A3F693959DB942       C:\Users\doncicuto\Downloads\openuem....
 ```
 
 :::warning
