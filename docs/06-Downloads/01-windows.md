@@ -26,7 +26,7 @@ OpenUEM uses semver versions X.Y.Z. When you download an agent choose the latest
 
 | Type  | Version | Arch  | Link                                                                                        | Checksum                                                                 |
 | ----- | ------- | ----- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Agent | 0.1.0   | amd64 | [Download](https://downloads.openuem.eu/agents/0.1.0/windows/amd64/openuem-agent-setup.exe) | SHA256: 10ED4B61BED4192CC65D91E3D44D878610EAEE1EB4C45976A9ADE207E079C6FC |
+| Agent | 0.1.0   | amd64 | [Download](https://downloads.openuem.eu/agents/0.1.0/windows/amd64/openuem-agent-setup.exe) | SHA256: 349DF052C62B144493A7E7F632A199A29B10C39D2E70833885A3F693959DB942 |
 
 :::warning
 As OpenUEM is a new project, Microsoft SmartScreen or Microsoft Edge can warn you that it cannot be trusted by Microsoft as it's a file that is not downloaded commonly and you'll have to force the browser to keep that file to download it. Hopefully in the near future, this will change, and this warning will disappear.
