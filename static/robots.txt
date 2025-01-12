@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://openuem.eu/sitemap.xml.gz
+Sitemap: https://openuem.eu/sitemap.xml
