@@ -16,6 +16,8 @@ keywords:
 
 # ✅ Features
 
+OpenUEM is a self-hosted solution.
+
 Right now, you can do the following with OpenUEM:
 
 - View **what is installed on your endpoints** (memory, logical disks, shared resources, printers, network adapters, software…)

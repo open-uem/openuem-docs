@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "OpenUEM",
-  tagline: "An Open Source Unified Endpoint Manager that lets you manage your IT assets thanks to its agents",
+  tagline: "An Open-Source Unified Endpoint Manager that is self-hosted and lets you manage your IT assets thanks to its agents",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -81,7 +81,7 @@ const config: Config = {
   themeConfig: {
     metadata: [
       {name: 'keywords', content: 'operating systems, assets manager, uem, unified endpoint manager, rmm, remote monitoring and management'},
-      {name: 'twitter:card', content: 'An Open Source Unified Endpoint Manager that lets you manage your IT assets thanks to its agents'},
+      {name: 'twitter:card', content: 'An Open-Source Unified Endpoint Manager that is self-hosted and lets you manage your IT assets thanks to its agents'},
       {name: 'twitter:site', content: '@open-uem'},
       {name: 'twitter:image', content: "https://openuem.eu/img/openuem_logo.png"},
     ],
