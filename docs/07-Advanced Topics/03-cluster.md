@@ -38,3 +38,19 @@ Then you must specify the port where the server will listen to cluster messages.
 Finally, you must specify which are the other members of the cluster (excluding the server we’re currently configuring) using a comma-separated list of the server names and their cluster ports.
 
 ![Cluster's other members](/img/linux/cluster_members.png)
+
+## 2. Windows installer
+
+If you want to run a cluster and you’re using the Windows installation, you’ll have to answer some questions.
+
+You must set the cluster name
+
+![Cluster name](/img/windows/openuem_cluster.png)
+
+Then you must specify the port where the server will listen to cluster messages. This port should be different than the NATS server port.
+
+![Server's cluster port](/img/windows/openuem_cluster_port.png)
+
+Finally, you must specify which are the other members of the cluster (excluding the server we’re currently configuring) using a comma-separated list of the server names and their cluster ports.
+
+![Cluster's other members](/img/windows/openuem_cluster_other_servers.png)

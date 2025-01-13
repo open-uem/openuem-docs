@@ -96,7 +96,9 @@ Now, you'll have to answer a few questions about your organization. These answer
 
 ![Organization address](/img/linux/org_address.png)
 
-It’s time to specify which port will be used by the NATS server:
+It’s time to specify which domain name and port will be used by the NATS server:
+
+![NATS server domain name](/img/linux/nats_server.png)
 
 ![NATS server port](/img/linux/nats_port.png)
 
@@ -104,7 +106,9 @@ If you want to use a [NATS cluster](/docs/Advanced%20Topics/cluster), answer Yes
 
 ![NATS cluster selection](/img/linux/nats_cluster_selection.png)
 
-Introduce the port used by the [OCSP Responder](/docs/Introduction/ocsp)
+Introduce the domain name and the port used by the [OCSP Responder](/docs/Introduction/ocsp)
+
+![OCSP Responder server](/img/linux/ocsp_server.png)
 
 ![OCSP Responder port](/img/linux/ocsp_responder.png)
 
