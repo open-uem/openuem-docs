@@ -35,14 +35,8 @@ Get-FileHash openuem-agent-setup.exe
 
 Algorithm       Hash                                                                   Path
 ---------       ----                                                                   ----
-SHA256          349DF052C62B144493A7E7F632A199A29B10C39D2E70833885A3F693959DB942       C:\Users\doncicuto\Downloads\openuem....
+SHA256          82FDD3CDE80AE51A021AF66E8FC7D1A007DF698431D61926D9490E518DE648E8       C:\Users\doncicuto\Downloads\openuem....
 ```
-
-:::warning
-
-As OpenUEM is a new project, Microsoft SmartScreen or Microsoft Edge can warn you that it cannot be trusted by Microsoft as it's a file that is not downloaded commonly and you'll have to force the browser to keep that file to download it. Hopefully in the near future, this will change, and this warning will disappear.
-
-:::
 
 ## 2. Install the agent
 
@@ -98,9 +92,9 @@ Now go to the [2.3 section](/docs/Installation/Agent/windows#23-following-steps-
 
 If you install the agent using the wizard you must introduce some information about the OpenUEM server and specify the location for the certificates required by the agent.
 
-:::warning
+:::note
 
-Right now, the agent windows installer is not signed, so Windows will warn you about the executable file to be from an unknown source. A certificate is on the go to avoid this warning.
+The agent windows installer is digitally signed. Microsoft Windows will show you the following information about the installer.
 
 ![Setup warning](/img/agent/setup_warning.png)
 

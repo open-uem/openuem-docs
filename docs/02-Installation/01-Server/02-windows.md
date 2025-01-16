@@ -33,7 +33,7 @@ Get-FileHash openuem-server-setup-0.1.0.exe
 
 Algorithm       Hash                                                                   Path
 ---------       ----                                                                   ----
-SHA256          9A3F59D732235EB9C98F9737A7C47E34D60D5439715CAE510D56D594503EFD1E       C:\Users\doncicuto\Downloads\openuem....
+SHA256          643091D5A60A17EDE6E2C248FA7198CE9B0C6CC18590D542A8A60F1BEA94F052       C:\Users\doncicuto\Downloads\openuem....
 ```
 
 ## 2. Install OpenUEM server
@@ -126,10 +126,12 @@ If you are not generating the certificates automatically and you want to skip th
 
 If you install the server using the wizard you must introduce some information about the OpenUEM server components to be installed.
 
-:::warning
-Right now, the server windows installer is not signed, so Windows will warn you about the executable file to be from an unknown source. A certificate is on the go to avoid this warning.
+:::note
 
-![Setup warning](/img/agent/setup_warning.png)
+The agent windows installer is digitally signed. Microsoft Windows will show you the following information about the installer.
+
+![Setup warning](/img/windows/setup_warning.png)
+
 :::
 
 Once the installer starts you must select the language (English or Spanish).
