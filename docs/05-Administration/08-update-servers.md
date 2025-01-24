@@ -51,3 +51,13 @@ If you’re connected to the console, you may lost connection for a while, pleas
 :::
 
 If you’re in the need of rolling back to a previous version, you may select the release from the dropdown menu and update the server again.
+
+:::warning
+If you're using Docker, this feature won't work. In order to update the components, use docker compose:
+
+```(bash)
+docker compose pull
+docker compose --profile openuem up --force-recreate -d --build
+```
+
+:::
