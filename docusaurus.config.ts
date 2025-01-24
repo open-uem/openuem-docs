@@ -86,7 +86,7 @@ const config: Config = {
       {name: 'twitter:image', content: "https://openuem.eu/img/openuem_logo.png"},
     ],
     // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/openuem-social-card.jpg",
     navbar: {
       title: "",
       logo: {
