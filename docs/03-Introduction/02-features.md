@@ -31,3 +31,4 @@ Right now, you can do the following with OpenUEM:
 - **Tag your assets** and use the tags for filtering your inventory
 - Add **your own metadata** to your assets so you can align OpenUEM to your organization’s needs
 - **Take notes** about your assets
+- OpenUEM is translated into English and Spanish, but you can contribute to [translate it](/docs/09-Development/02-localization.md) to your favorite language.
