@@ -62,6 +62,7 @@ OpenUEM stands on the shoulders of giants. OpenUEM is offered to you thanks to t
 - [jakubzerdzicki's images at Pexels](https://www.pexels.com/@jakubzerdzicki/). Splash image used in OpenUEM's console
 - [Simple Icons fonts](https://github.com/simple-icons/simple-icons-font). Free SVG icon font for popular brands
 - [Lucide Icons](https://github.com/lucide-icons/lucide). Beautiful & consistent icon toolkit made by the community.
+- [Maroto](https://github.com/johnfercher/maroto). A maroto way to create PDFs. Maroto is inspired in Bootstrap and uses gofpdf.
 
 Please, see go modules definitions for more information, and please contact me if some repository is missing
 

@@ -210,9 +210,9 @@ If the VNC screen is too big, try to zoom on your browser or press F11 to get yo
 The NoVNC proxy may have an issue with the services mmc snap-in (maybe you can find this issue with other snap-ins). If you click on that window you may stop seeing the mouse cursor moving through the page. In that case, it's enough to fix the issue if the services windows is minimized.
 :::
 
-### 2.11 Wake on LAN
+### 2.11 Power Management (🎯 0.2.0)
 
-You can send a Wake On LAN magic packet that will boot the computer up, if the computer is in the same LAN as the console server, and if the computer has been configured to boot with WOL (UEFI setting and/or updated network drivers).
+You can schedule a computer's power off or reboot action. Also, you can send a Wake On LAN magic packet that will boot the computer up, if the computer is in the same LAN as the console server, and if the computer has been configured to boot with WOL (UEFI setting and/or updated network drivers).
 
 ![WOL](/img/console/wol.png)
 
@@ -239,3 +239,13 @@ You must create metadata first in Admin -> Metadata adding a name for metadata a
 Once you create metadata, you’ll see it is available for every endpoint.
 
 ![Metadata](/img/console/metadata.png)
+
+## 3. PDF Report (🎯 0.2.0)
+
+You can generate a PDF report that lists your computers and preserves your filters and sorting using the PDF button in the section header.
+
+![Computers report button](/img/console/computers_report_button.png)
+
+Here’s a sample of the generated report.
+
+![Computers report sample](/img/console/computers_report_sample.png)
