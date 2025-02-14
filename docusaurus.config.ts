@@ -122,7 +122,7 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "https://discord.gg/7Wjpeqws",
+          href: "https://discord.com/invite/UQNBuNej5u",
           label: "Discord",
           position: "right",
         },
