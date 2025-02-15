@@ -33,7 +33,7 @@ Get-FileHash openuem-server-setup-0.2.0.exe
 
 Algorithm       Hash                                                                   Path
 ---------       ----                                                                   ----
-SHA256          F3D56033B508DB121B276C6E38242ED4395B91DA02A178BE3FD71D68DDA419E0       C:\Users\doncicuto\Downloads\openuem....
+SHA256          DDF7F86DFF8AF99567C2A257B04BAC571EE1F00AF4C04F4B16C125E5EE75F619       C:\Users\doncicuto\Downloads\openuem....
 ```
 
 ## 2. Install OpenUEM server
