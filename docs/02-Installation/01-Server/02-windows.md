@@ -29,11 +29,11 @@ Visit the [Downloads section](/docs/06-Downloads/01-windows.md) and choose the d
 Download your preferred version and note that you can check if the checksum matches using Powershell's Get-FileHash:
 
 ```(powershell)
-Get-FileHash openuem-server-setup-0.1.0.exe
+Get-FileHash openuem-server-setup-0.2.0.exe
 
 Algorithm       Hash                                                                   Path
 ---------       ----                                                                   ----
-SHA256          643091D5A60A17EDE6E2C248FA7198CE9B0C6CC18590D542A8A60F1BEA94F052       C:\Users\doncicuto\Downloads\openuem....
+SHA256          F3D56033B508DB121B276C6E38242ED4395B91DA02A178BE3FD71D68DDA419E0       C:\Users\doncicuto\Downloads\openuem....
 ```
 
 ## 2. Install OpenUEM server
@@ -45,7 +45,7 @@ OpenUEM server can be installed silently.
 Here's an example to install all the components in the same server:
 
 ```(bash)
-openuem-server-setup-0.1.0.exe /console=yes /ocsp=yes /nats=yes /agent-worker=yes /notification-worker=yes /cert-manager-worker=yes /dbhost=localhost /dbport=5432 /dbuser=test /dbpassword=test /dbname=openuem /domain=local.openuem.eu /gencerts=yes /orgname=OpenUEM /orgcountry=ES /orgprovince=Valladolid /orglocality=Valladolid /natsserver=lothlorien.local.openuem.eu /natsport=4433 /natscluster=no /ocspserver=lothlorien.local.openuem.eu /ocspport=8000 /consoleserver=lothlorien.local.openuem.eu /consoleport=1323 /authport=1324 /jwtkey=alongsecretkey /VERYSILENT
+openuem-server-setup-0.2.0.exe /console=yes /ocsp=yes /nats=yes /agent-worker=yes /notification-worker=yes /cert-manager-worker=yes /dbhost=localhost /dbport=5432 /dbuser=test /dbpassword=test /dbname=openuem /domain=local.openuem.eu /gencerts=yes /orgname=OpenUEM /orgcountry=ES /orgprovince=Valladolid /orglocality=Valladolid /natsserver=lothlorien.local.openuem.eu /natsport=4433 /natscluster=no /ocspserver=lothlorien.local.openuem.eu /ocspport=8000 /consoleserver=lothlorien.local.openuem.eu /consoleport=1323 /authport=1324 /jwtkey=alongsecretkey /VERYSILENT
 ```
 
 :::note

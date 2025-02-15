@@ -2,3 +2,13 @@ openuem:
   label: OpenUEM
   permalink: /openuem
   description: OpenUEM
+
+docker:
+  label: Docker
+  permalink: /docker
+  description: Docker
+
+releases:
+  label: Releases
+  permalink: /releases
+  description: Releases
