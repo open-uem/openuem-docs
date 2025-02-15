@@ -165,3 +165,13 @@ Finally, log in user your admin certificate and read how to install and add your
 :::note
 If you see any certificates error, please ensure that you've imported the right certificates in the right certificate stores of your browser
 :::
+
+## 6. Update
+
+To update the Docker containers, use docker compose:
+
+```(bash)
+docker compose pull
+
+docker compose --profile openuem up --force-recreate -d --build
+```
