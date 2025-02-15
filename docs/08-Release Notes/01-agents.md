@@ -19,3 +19,7 @@ keywords:
 ## 0.1.0
 
 This is the first release of the OpenUEM agent.
+
+## 0.2.0
+
+- Feat: Agent should reboot or shutdown the computer

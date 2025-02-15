@@ -71,3 +71,13 @@ If the agent is in the **"Enabled""** state, you have the following actions:
 ![More actions for enabled agent](/img/console/more_actions_enabled_agent.png)
 
 If you click on the hostname associated with the agent you'll visit the Computers view
+
+## 3. PDF Report (🎯 0.2.0)
+
+You can generate a PDF report that lists your agents and preserves your filters and sorting using the PDF button in the section header.
+
+![Agents report button](/img/console/agents_report_button.png)
+
+Here’s a sample of the generated report.
+
+![Agents report sample](/img/console/agents_report_sample.png)
