@@ -16,6 +16,12 @@ keywords:
 
 # Server
 
+## 0.2.1 (16/02/2025)
+
+- Fix: console could not find the WinGet database (index.db) in Docker when searching for WinGet packages
+- Fix: an error was shown about CGO_ENABLED when searching for WinGet packages
+- Fix: authentication port was overwritten with console port in server update task
+
 ## 0.2.0 (15/02/2025)
 
 - Feat: Agent should reboot or shutdown the computer. A new Power Management section allows you to power off or reboot a computer (added to existing WOL option)
