@@ -122,6 +122,11 @@ const config: Config = {
           position: "right",
         },
         {
+          href: "https://hub.docker.com/u/openuem",
+          label: "Docker Hub",
+          position: "right",
+        },
+        {
           href: "https://discord.com/invite/UQNBuNej5u",
           label: "Discord",
           position: "right",
@@ -129,6 +134,11 @@ const config: Config = {
         {
           href: "https://x.com/open_uem",
           label: "X",
+          position: "right",
+        },
+        {
+          href: "https://bsky.app/profile/openuem.bsky.social",
+          label: "Bluesky",
           position: "right",
         },
       ],
