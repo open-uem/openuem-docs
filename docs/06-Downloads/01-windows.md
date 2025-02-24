@@ -28,6 +28,7 @@ OpenUEM uses semver versions X.Y.Z. When you download an agent choose the latest
 
 | Type  | Version | Arch  | Link                                                                                        | Checksum                                                                 |
 | ----- | ------- | ----- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Agent | 0.2.1   | amd64 | [Download](https://downloads.openuem.eu/agents/0.2.1/windows/amd64/openuem-agent-setup.exe) | SHA256: 00A2CEED98EDCC4608AD97D9515ED750DC1F002F3BA2BB59550C49240BDBCFAB |
 | Agent | 0.2.0   | amd64 | [Download](https://downloads.openuem.eu/agents/0.2.0/windows/amd64/openuem-agent-setup.exe) | SHA256: 67F20B2ABDE2ABE2EB0974057532FB1D928943D112D33D2D08F78BDB19648FC0 |
 | Agent | 0.1.0   | amd64 | [Download](https://downloads.openuem.eu/agents/0.1.0/windows/amd64/openuem-agent-setup.exe) | SHA256: 82FDD3CDE80AE51A021AF66E8FC7D1A007DF698431D61926D9490E518DE648E8 |
 

@@ -16,10 +16,14 @@ keywords:
 
 # Agents
 
-## 0.1.0
+## 0.2.1
 
-This is the first release of the OpenUEM agent.
+- Fix: Add updated URL for Agent messages CSS
 
 ## 0.2.0
 
 - Feat: Agent should reboot or shutdown the computer
+
+## 0.1.0
+
+This is the first release of the OpenUEM agent.
