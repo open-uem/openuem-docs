@@ -81,3 +81,11 @@ You can generate a PDF report that lists your agents and preserves your filters 
 Here’s a sample of the generated report.
 
 ![Agents report sample](/img/console/agents_report_sample.png)
+
+## 4. Remote agents (🎯 0.3.0)
+
+OpenUEM uses DNS and the reported active IP address to identify agents that are not located in our LAN, assuming that the associated endpoints are used by remote workers.
+
+OpenUEM uses a plane icon to indicate that the agent is in a remote location. This is important because remote file browsing, remote assistance and WOL (Wake On Lan) are currently not possible as those endpoints are not reachable from the LAN.
+
+![Agents remote location](/img/console/remote_location.png)

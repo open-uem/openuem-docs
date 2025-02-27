@@ -39,6 +39,12 @@ By clicking on the three dots button, you can show a menu with possible actions
 
 If you click on the hostname or use the view action, you’ll visit the computer’s details.
 
+:::tip
+OpenUEM (🎯 0.3.0) uses DNS and the reported active IP address to identify endpoints that are not located in our LAN, assuming that the associated endpoints are used by remote workers.
+
+OpenUEM uses a plane icon to indicate that the agent is in a remote location. This is important because remote file browsing, remote assistance and WOL (Wake On Lan) are currently not possible as those endpoints are not reachable from the LAN.
+:::
+
 ## 2. Computer's details
 
 The information reported by an agent is distributed in several tabs so it’s easier for you to browse the information. Let’s see what is shown and what you can do.

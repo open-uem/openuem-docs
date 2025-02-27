@@ -16,6 +16,15 @@ keywords:
 
 # Server
 
+## 0.3.0 (27/02/2025)
+
+- Feat: add version info and icon if new release. [Issue](https://github.com/open-uem/openuem-console/issues/22)
+- Feat: identify which agents are reporting from a remote location. [Issue](https://github.com/open-uem/openuem-console/issues/25)
+- Feat: add a new general setting to add a tag for recently admitted agents. [Issue](https://github.com/open-uem/openuem-console/issues/19)
+- Feat: add filtering capabilities for endpoint software table. [Issue](https://github.com/open-uem/openuem-console/issues/32)
+- Fix: some issues while filtering and paginating (method not allowed messages or asking to repeat recent action). [Issue](https://github.com/open-uem/openuem-console/issues/26)
+- Security: update esbuild (3rd party lib) due to security bug. [Issue](https://github.com/open-uem/openuem-console/issues/35)
+
 ## 0.2.1 (16/02/2025)
 
 - Fix: console could not find the WinGet database (index.db) in Docker when searching for WinGet packages

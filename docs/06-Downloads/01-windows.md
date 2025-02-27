@@ -36,6 +36,7 @@ OpenUEM uses semver versions X.Y.Z. When you download an agent choose the latest
 
 | Type   | Version | Arch  | Link                                                                            | Checksum                                                                 |
 | ------ | ------- | ----- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Server | 0.3.0   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.2.0.exe) | SHA256: D607EC1E7A5C4F3F46A4393E0FCB3D9A5B81711971CE11F732749CE0A8CFF4C2 |
 | Server | 0.2.1   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.2.0.exe) | SHA256: 332B9FAEC0A6282AE4028D341483E7B2F626E094EE94E0762A07E22D537D28D1 |
 | Server | 0.2.0   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.2.0.exe) | SHA256: DDF7F86DFF8AF99567C2A257B04BAC571EE1F00AF4C04F4B16C125E5EE75F619 |
 | Server | 0.1.1   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.1.1.exe) | SHA256: 834F0927635D43B0BDCB203FB493A87043550E2A0BDA6D0919820DD39C925F95 |
