@@ -86,7 +86,7 @@ As the installation is silent wait a couple of minutes and check if you see the 
 
 ![Application installed](/img/agent/installed.png)
 
-Now go to the [2.3 section](/docs/Installation/Agent/windows#23-following-steps-and-troubleshooting) to know about the following steps
+Now go to the [2.3 section](/docs/Installation/Agent/windows#23-next-steps-and-troubleshooting) to know about the following steps
 
 ## 2.2 Wizard installation
 
