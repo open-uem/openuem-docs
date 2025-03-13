@@ -67,6 +67,44 @@ The OpenUEM database and the associated user should be ready.
 When you install OpenUEM (server components or agent) you'll have to specify the database url. Following the previous example the database url should be `postgres://test:test@localhost:5432/openuem`
 :::
 
+### 2.2 Windows
+
+Once you’ve installed Postgres on Windows using the default installation you must create a database for OpenUEM and add a user with privileges on that database.
+
+In this section **we’re going to use pgAdmin** to manage the database with a user interface. Open pgAdmin and log in to the database with your superuser password. Now, let’s create the user.
+
+Open pgAdmin and log in to the database with your superuser password. Now, let’s create the user from Login/Group Roles. **Right click on Login/Group Roles and select Create > Login/Group Role...**
+
+![Create Postgres login](/img/postgres/postgres_create_user_1.png)
+
+In the new windows give the account a username.
+
+![Give postgres account a username](/img/postgres/postgres_create_user_2.png)
+
+Click on the Definition tab to set a password for the account.
+
+![Give postgres account a password](/img/postgres/postgres_create_user_3.png)
+
+Click on the Privileges tab and enable that the user can login to the database.
+
+![Allow postgres account to log in](/img/postgres/postgres_create_user_4.png)
+
+Finally click on **Save** to create the account
+
+Now let’s create the database. Right click on Databases and select Create > Database…
+
+![Create the database](/img/postgres/postgres_create_database_1.png)
+
+Give the database a name and assign the owner to the account that you’ve created previously.
+
+![Give the database a name](/img/postgres/postgres_create_database_2.png)
+
+Click on the **Security** tab and set all privileges to the account.
+
+![Assign permissions to database](/img/postgres/postgres_create_database_3.png)
+
+Finally, click on **Save** to create the database.
+
 ## 3. Remove the database tables
 
 If you need to perform a clean installation, you should remove the database tables. First you must open a psql session:

@@ -33,4 +33,5 @@ Right now, you can do the following with OpenUEM:
 - Add **your own metadata** to your assets so you can align OpenUEM to your organization’s needs
 - **Take notes** about your assets
 - Generate a PDF report for agents, computers, security or software views (🎯 Version 0.2.0)
+- Identify which of your endpoints are in a remote location (🎯 Version 0.3.0)
 - OpenUEM is translated into English and Spanish, but you can contribute to [translate it](/docs/09-Development/02-i18n.md) to your favorite language.
