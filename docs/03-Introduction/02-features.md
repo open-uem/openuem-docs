@@ -27,6 +27,7 @@ Right now, you can do the following with OpenUEM:
 - **Install Windows applications** using Microsoft’s **Winget** and its repositories
 - **Browse, download and upload files** contained in your endpoints logical disks using SFTP
 - Offering **remote assistance** to your users thanks to **VNC**
+- **Create configuration profiles with automated tasks that can be applied to your endpoints**. You can select packages to install or uninstall using WinGet and manage registry keys, local users and local groups (more features incoming). Use these profiles to perform post-install tasks (🎯 Version 0.4.0)
 - Wake computers in your LAN using **WOL**
 - Schedule a computer’s power off or reboot action (🎯 Version 0.2.0)
 - **Tag your assets** and use the tags for filtering your inventory

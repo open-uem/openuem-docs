@@ -36,3 +36,4 @@ Right now, here’s the table of settings and the default value
 | Agents report frequency      | Agents will send new reports periodically according to the frequence set in minutes          | 60            |
 | Request VNC PIN to user      | When a VNC session starts, it's required to ask the user the PIN that is shown in the screen | true          |
 | Add a tag to admitted agents | When an agent is admitted add the following tag to it automatically (🎯 Version 0.3.0)       | no tag        |
+| Profile application frequency | Agents will apply endpoints profiles according to the frequence set in minutes (🎯 Version 0.4.0)       | 30        |
