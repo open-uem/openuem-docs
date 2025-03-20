@@ -16,6 +16,14 @@ keywords:
 
 # Server
 
+## 0.4.1 (20/03/2025)
+
+- Fix: fix minor issues with database when saving a profile issue and deployment info from winget
+
+## 0.4.0 (19/03/2025)
+
+- Feat: support for profiles that allows admins to apply several configurations to different endpoints for OpenUEM server versions (agent 0.3.X must be installed to apply profiles)
+
 ## 0.3.0 (27/02/2025)
 
 - Feat: add version info and icon if new release. [Issue](https://github.com/open-uem/openuem-console/issues/22)

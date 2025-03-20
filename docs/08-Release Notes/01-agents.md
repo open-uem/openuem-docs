@@ -16,6 +16,14 @@ keywords:
 
 # Agents
 
+## 0.3.1
+
+- Feat: Add Microsoft Visual C++ Redistributable required in clean Windows installations required by WinGet
+
+## 0.3.0
+
+- Feat: support for profiles that allows admins to apply several configurations to different endpoints for OpenUEM server versions >= 0.4.0
+
 ## 0.2.1
 
 - Fix: Add updated URL for Agent messages CSS

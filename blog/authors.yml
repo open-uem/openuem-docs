@@ -1,11 +1,11 @@
 doncicuto:
   name: Miguel Cabrerizo
   title: OpenUEM maintainer
-  url: https://sebastienlorber.com
+  url: https://openuem.eu
   image_url: https://github.com/doncicuto.png
   page:
     # customize the url of the author page at /blog/authors/<permalink>
     permalink: "/all-doncicuto-articles"
   socials:
-    x: solodevops
-    github: doncicuto
+    x: open_uem
+    github: open-uem

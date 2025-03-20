@@ -1,0 +1,23 @@
+---
+slug: profiles
+title: New feature, profiles
+authors: [doncicuto]
+tags: [openuem, releases]
+---
+
+OpenUEM has a new feature: profiles. Profiles allow you to create a group of tasks that will be performed at your endpoints so you can automate many configuration steps.
+Profiles can be used with OpenUEM Server 0.4.0 and OpenUEM Agent 0.3.X
+
+![OpenUEM Profiles](/img/blog/openuem_profiles.png)
+
+<!-- truncate -->
+
+A profile is a group of tasks. You can apply a profile to every endpoint or to endpoints that have a tag. OpenUEM uses WinGet to apply a configuration file which can contain the following tasks:
+-	Install or uninstall software packages
+-	Add registry keys, values, update a key’s default value or delete keys or values.
+-	Add or remove a local user
+-	Add or remove a local group. Add users to a group or remove user from a group.
+
+Every 30 minutes the agents will contact the Agent Worker to check if profiles are ready to apply to the endpoint.
+
+You can learn more about this feature reading: [https://openuem.eu/docs/Console/profiles](https://openuem.eu/docs/Console/profiles)
