@@ -56,6 +56,8 @@ You can set the state of an agent to **"Disabled""** which means that the agent 
 
 ## 2. More actions
 
+![More actions for enabled agent](/img/console/more_actions_enabled_agent.png)
+
 If the agent is in the **"Waiting for admission"** state, you can only admit it or delete it.
 
 If the agent is in the **"Enabled""** state, you have the following actions:
@@ -64,13 +66,23 @@ If the agent is in the **"Enabled""** state, you have the following actions:
 - Disable the agent to avoid receiving new reports.
 - Regenerate a certificate. A request is made to generate new certificates for the agent's SFTP and VNC proxy servers.
 - Force restart. If you think that the agent may not be working fine or that it could have been hung up, you can try to force a restart of the service.
-- Remote assistance. You can try to open a remote assistance session using VNC.
-- Wake on Lan. If your endpoint is in the same LAN where the OpenUEM server lives, you can try to send a magic packet to boot it up.
+
+
+The following actions are available no matter which state is:
+
 - Delete. You can delete the agent but note that, unless you uninstall the agent, it'll keep trying to send new information.
+- Enable/Disable debug mode (🎯 0.5.0). You can enable or disable the debug mode for the agent. Debug mode shows more verbose log messages.
 
-![More actions for enabled agent](/img/console/more_actions_enabled_agent.png)
+:::note
+If you enable the debug mode for the agent, the size of the log file may get bigger quickly so a warning will be shown next to the hostname if the debug mode has been enabled
 
-If you click on the hostname associated with the agent you'll visit the Computers view
+![Debug mode enabled for agent](/img/console/agent_debug_mode_enabled.png)
+
+:::
+
+
+Finally, if you click on the hostname associated with the agent you'll visit the Computers view
+
 
 ## 3. PDF Report (🎯 0.2.0)
 

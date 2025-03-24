@@ -16,6 +16,11 @@ keywords:
 
 # Server
 
+## 0.5.0 ()
+
+- Feat: enable or disable debug mode for an agent on demand
+- Feat: show percentage for disk usage for the current bar
+
 ## 0.4.1 (20/03/2025)
 
 - Fix: fix minor issues with database when saving a profile issue and deployment info from winget

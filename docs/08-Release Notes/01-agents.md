@@ -16,6 +16,10 @@ keywords:
 
 # Agents
 
+## 0.4.0
+
+- Feat: enable or disable debug mode for an agent on demand
+
 ## 0.3.1
 
 - Feat: Add Microsoft Visual C++ Redistributable required in clean Windows installations required by WinGet
