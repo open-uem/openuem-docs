@@ -57,7 +57,7 @@ Here are the possible environment variables that can appear in the .env file.
 | NATS_PORT            | The port used by the NATS server                                              | no       | 4433                                            |
 | NATS_SERVERS         | The NATS service url                                                          | no       | nats-server:4433                                |
 | REVERSE_PROXY_SERVER | If you want to use a reverse proxy, set its domain name                       | yes      | console.example.com                             |
-| OCSP                 | The OCSP url                                                                  | no       | http://ocsp-responder:8000                      |
+| OCSP_SERVER_NAME     | The server name where the OCSP responder is hosted                            | no       | server.example.com                              |
 | DOMAIN               | Your DNS domain                                                               | no       | example.com                                     |
 | SERVER_NAME          | The name of the server where the console is hosted                            | no       | server.example.com                              |
 | CONSOLE_PORT         | The port used by the console                                                  | no       | 1323                                            |
@@ -65,7 +65,9 @@ Here are the possible environment variables that can appear in the .env file.
 | JWT_KEY              | The key used to encrypt JWT tokens for user registration                      | no       | averylongsecret                                 |
 
 :::note
-openuem-db-1, nats-server and ocsp-responder are the names of the services once Docker start them so you shouldn't change them
+openuem-db-1 and nats-server and ocsp-responder are the names of the services once Docker start them so you shouldn't change them
+
+server.example.com should be resolved by your DNS service if you want remote agents to be able to contact OpenUEM components
 :::
 
 :::danger

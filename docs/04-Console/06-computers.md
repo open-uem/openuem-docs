@@ -175,10 +175,11 @@ You can **update** that package later **or remove** it from the computer using t
 
 ### 2.10 Remote Assistance
 
-OpenUEM allows you to open a remote assistance session using VNC if two requirements are fulfilled:
+OpenUEM allows you to open a remote assistance session using VNC if three requirements are fulfilled:
 
 - The computer has a supported VNC server installed
-- The agent received the server.cer and server.key files when the agent was admitted
+- The agent received the server.cer and server.key files when the [agent was admitted](/docs/Console/agents#1-agents-life-cycle) or when you requested to [regenerate them](/docs/Console/agents#2-more-actions)
+- You've restarted the agent after you've given admission to the agent or when the certificates were regenerated so the new certificates can be used
 
 If VNC connectivity is available, you can click on the **Open session in a new tab** button.
 
