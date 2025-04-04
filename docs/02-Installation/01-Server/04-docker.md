@@ -55,9 +55,9 @@ Here are the possible environment variables that can appear in the .env file.
 | COUNTRY              | Your organization's country                                                   | no       | ES                                              |
 | OCSP_PORT            | The port used by the OCSP responder                                           | no       | 8000                                            |
 | NATS_PORT            | The port used by the NATS server                                              | no       | 4433                                            |
-| NATS_SERVERS         | The NATS service url                                                          | no       | nats-server:4433                                |
+| NATS_SERVERS         | The NATS service url                                                          | no       | \$\{SERVER_NAME\}:\$\{NATS_PORT\} for example: server.example.com:4433                                |
 | REVERSE_PROXY_SERVER | If you want to use a reverse proxy, set its domain name                       | yes      | console.example.com                             |
-| OCSP_SERVER_NAME     | The server name where the OCSP responder is hosted                            | no       | server.example.com                              |
+| OCSP                 | The URL for the OCSP responder service                                        | no       | http://\$\{SERVER_NAME\}:\$\{OCSP_PORT\} for example: http://server.example.com:8000           |
 | DOMAIN               | Your DNS domain                                                               | no       | example.com                                     |
 | SERVER_NAME          | The name of the server where the console is hosted                            | no       | server.example.com                              |
 | CONSOLE_PORT         | The port used by the console                                                  | no       | 1323                                            |
@@ -65,8 +65,6 @@ Here are the possible environment variables that can appear in the .env file.
 | JWT_KEY              | The key used to encrypt JWT tokens for user registration                      | no       | averylongsecret                                 |
 
 :::note
-openuem-db-1 and nats-server and ocsp-responder are the names of the services once Docker start them so you shouldn't change them
-
 server.example.com should be resolved by your DNS service if you want remote agents to be able to contact OpenUEM components
 :::
 
