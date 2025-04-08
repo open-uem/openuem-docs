@@ -44,25 +44,25 @@ You can set the Postgres database user and password in the `init.sh` file inside
 
 Here are the possible environment variables that can appear in the .env file.
 
-| Name                 | Description                                                                   | Optional | Example value                                   |
-| -------------------- | ----------------------------------------------------------------------------- | -------- | ----------------------------------------------- |
-| POSTGRES_PORT        | The port number where the database service should be found                    | no       | 5432                                            |
-| DATABASE_URL         | The database url in format postgres://user:password@openuem-db-1:port/openuem | no       | postgres://test:test@openuem-db-1:5432/openuem" |
-| ORGNAME              | Your organization's name                                                      | no       | OpenUEM                                         |
-| ORGPROVINCE          | Your organization's province                                                  | yes      | Valladolid                                      |
-| ORGLOCALITY          | Your organization's locality                                                  | yes      | Valladolid                                      |
-| ORGADDRESS           | Your organization's address                                                   | yes      | My org's address                                |
-| COUNTRY              | Your organization's country                                                   | no       | ES                                              |
-| OCSP_PORT            | The port used by the OCSP responder                                           | no       | 8000                                            |
-| NATS_PORT            | The port used by the NATS server                                              | no       | 4433                                            |
-| NATS_SERVERS         | The NATS service url                                                          | no       | \$\{SERVER_NAME\}:\$\{NATS_PORT\} for example: server.example.com:4433                                |
-| REVERSE_PROXY_SERVER | If you want to use a reverse proxy, set its domain name                       | yes      | console.example.com                             |
-| OCSP                 | The URL for the OCSP responder service                                        | no       | http://\$\{SERVER_NAME\}:\$\{OCSP_PORT\} for example: http://server.example.com:8000           |
-| DOMAIN               | Your DNS domain                                                               | no       | example.com                                     |
-| SERVER_NAME          | The name of the server where the console is hosted                            | no       | server.example.com                              |
-| CONSOLE_PORT         | The port used by the console                                                  | no       | 1323                                            |
-| AUTH_PORT            | The port used by the auth server                                              | no       | 1324                                            |
-| JWT_KEY              | The key used to encrypt JWT tokens for user registration                      | no       | averylongsecret                                 |
+| Name                 | Description                                                                   | Optional | Example value                                  |
+| -------------------- | ----------------------------------------------------------------------------- | -------- | ---------------------------------------------- |
+| SERVER_NAME          | The name of the server where the console is hosted                            | no       | server.example.com                             |
+| POSTGRES_PORT        | The port number where the database service should be found                    | no       | 5432                                           |
+| DATABASE_URL         | The database url in format postgres://user:password@openuem-db-1:port/openuem | no       | postgres://test:test@openuem-db-1:5432/openuem |
+| ORGNAME              | Your organization's name                                                      | no       | OpenUEM                                        |
+| ORGPROVINCE          | Your organization's province                                                  | yes      | Valladolid                                     |
+| ORGLOCALITY          | Your organization's locality                                                  | yes      | Valladolid                                     |
+| ORGADDRESS           | Your organization's address                                                   | yes      | My org's address                               |
+| COUNTRY              | Your organization's country                                                   | no       | ES                                             |
+| OCSP_PORT            | The port used by the OCSP responder                                           | no       | 8000                                           |
+| NATS_PORT            | The port used by the NATS server                                              | no       | 4433                                           |
+| NATS_SERVERS         | The NATS service url                                                          | no       | server.example.com:4433                        |
+| REVERSE_PROXY_SERVER | If you want to use a reverse proxy, set its domain name                       | yes      | console.example.com                            |
+| OCSP                 | The URL for the OCSP responder service                                        | no       | http://server.example.com:8000                 |
+| DOMAIN               | Your DNS domain                                                               | no       | example.com                                    |
+| CONSOLE_PORT         | The port used by the console                                                  | no       | 1323                                           |
+| AUTH_PORT            | The port used by the auth server                                              | no       | 1324                                           |
+| JWT_KEY              | The key used to encrypt JWT tokens for user registration                      | no       | averylongsecret                                |
 
 :::note
 server.example.com should be resolved by your DNS service if you want remote agents to be able to contact OpenUEM components

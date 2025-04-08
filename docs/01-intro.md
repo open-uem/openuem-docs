@@ -21,5 +21,23 @@ This project could also be named OpenRMM as it shares many features with a [Remo
 
 # Why OpenUEM?
 
-I’ve managed IT systems for many years and I’ve to admit that the tasks involved are hard and not sexy. IT Admins deserve the more help they can get to do their job.
-While there are some nice commercial and open-source tools out there, I found that some of these tools offered too much information or were too bloated and I wanted something different that would give me a clean and concise view of what I must manage.
+OpenUEM has [features](/docs/Introduction/features) that could categorize it as:
+
+- An IT assets inventory
+- A unified endpoint management tool (UEM)
+- A remote monitoring and management tool (RMM)
+- A mobile device management tool (MDM)
+
+There are many tools out there that do those things, private or open source, so why another tool?
+
+Well, why another car model, why another IA, why another programming language? Because there are different points of view and ways to approach a similar need.
+
+OpenUEM tries to offer a new way to answer the question that we, as sysadmins, face every day: how can I do my job easier?
+
+I have been a sysadmin for several years and the networks I’ve managed can be considered small to medium-sized. The organizations that I worked with either had no budget, so you were on your own, or were forced to buy expensive tools that were underused and too big for real needs.
+
+OpenUEM is an open-source project that you can use for free. OpenUEM is based on open-source or free tools and protocols that are battle-tested or backed up by companies. You can use VNC or RDP for remote assistance, SFTP to transfer files, Windows information is gathered thanks to WMI, Linux information is gathered using hwinfo, Windows apps and settings are managed using Winget…, Linux apps can be installed with Flatpak. All managed by OpenUEM web console.
+
+If you are the IT administrator of a small company, you may not have spare equipment to install a management tool. If in the future your network grows, you may be concerned about how to migrate the functionality.
+
+OpenUEM can be installed in a humble desktop machine with Windows 10 Home, Debian/Ubuntu Linux or any Docker powered environment. If you run a medium-sized or large company, you can use beefier machines and share the load as OpenUEM has been designed to have [distributed components](/docs/Introduction/architecture).
