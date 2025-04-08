@@ -16,10 +16,12 @@ keywords:
 
 # Server
 
-## 0.5.0 ()
+## 0.5.0 (08/04/2025)
 
+- Feat: support for Linux endpoints (Debian/Ubuntu right now) from agent version 0.4.0
 - Feat: enable or disable debug mode for an agent on demand
 - Feat: show percentage for disk usage for the current bar
+- Feat: several UI enhancements
 
 ## 0.4.1 (20/03/2025)
 
@@ -57,6 +59,6 @@ keywords:
 - Fix: table agents, go to page 1 after we change values that are filtered like status keeping the filters applied. Affects: console
 - Fix: enable, disable and admit actions are not pushed to history to avoid back and forth issues
 
-## 0.1.0
+## 0.1.0 (16/01/2025)
 
 This is the first release of the OpenUEM server.

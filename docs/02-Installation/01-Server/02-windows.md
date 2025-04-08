@@ -29,11 +29,11 @@ Visit the [Downloads section](/docs/06-Downloads/01-windows.md) and choose the d
 Download your preferred version and note that you can check if the checksum matches using Powershell's Get-FileHash:
 
 ```(powershell)
-Get-FileHash openuem-server-setup-0.4.1.exe
+Get-FileHash openuem-server-setup-0.5.0.exe
 
 Algorithm       Hash                                                                   Path
 ---------       ----                                                                   ----
-SHA256          2AD5D64CC8E0B07472AE93698882F5DD3028D25F3C2C32E9A16DA7525FDD36DC       C:\Users\doncicuto\Downloads\openuem....
+SHA256          B52BFFE95FFD3778F6129AC31444AA960AF12C96D9D1D5F20D984B23FD60CEB4       C:\Users\doncicuto\Downloads\openuem....
 ```
 
 ## 2. Install OpenUEM server

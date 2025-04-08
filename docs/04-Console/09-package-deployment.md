@@ -18,8 +18,13 @@ keywords:
 
 # 📦 Package deployment
 
-You can deploy software packages to Windows endpoints using WinGet.
-OpenUEM downloads daily the database of packages available at WinGet’s repository so you can search for those packages.
+You can deploy software packages to Windows endpoints using [WinGet](https://learn.microsoft.com/en-us/windows/package-manager/winget/) and to Linux endpoints using [Flatpak](https://flatpak.org/).
+
+OpenUEM downloads daily the database of packages available at WinGet and FlatHub repositories so you can search for those packages.
+
+:::warning
+Winget should be ready for your host if it has been used for some time, but if you have a fresh installation of Windows 10, winget.exe may not be ready to use on that endpoint although it should be installed automatically in the following days. To get the WinGet executable quicker (winget.exe), you should first update Microsoft Store after opening it and then you may have to update the app called "App Installer". Visit [this link](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab) to locate that app and update it
+:::
 
 ## Install packages
 

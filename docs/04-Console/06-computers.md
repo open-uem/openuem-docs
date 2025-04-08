@@ -144,7 +144,10 @@ The list of printers connected to this computer is displayed in this tab. You ge
 
 ### 2.8 Software
 
-OpenUEM agents inspect the Windows registry to look for installed applications either they are installed on a computer level or by user.
+OpenUEM agents:
+
+- inspect the Windows registry to look for installed applications either they are installed on a computer level or by user
+- use your Linux package manager (apt,zypper,dnf,pacman...) to check which desktop applications have been installed
 
 ![Software's tab](/img/console/software_tab.png)
 
@@ -152,11 +155,16 @@ You’ll find all the applications found with their name, version, publisher, in
 
 ### 2.9 Deploy software
 
-OpenUEM can deploy software to your computers automatically using Winget’s client.
+OpenUEM can deploy software to your computers automatically using Winget’s client in Windows or Flatpak in Linux:
 
-Winget is the Windows Package Manager is available on Windows 11, modern versions of Windows 10, and Windows Server 2025 as a part of the App Installer
+- Winget is the Windows Package Manager that is available on Windows 11, modern versions of Windows 10, and Windows Server 2025 as a part of the App Installer
+- Flatpak is a framework for distributing desktop applications across various Linux distributions. Flatpak is installed with OpenUEM if it's not installed directly by your Linux distribution.
 
-You can search for an available package in Winget’s public repositories.
+:::warning
+Winget should be ready for your host if it has been used for some time, but if you have a fresh installation of Windows 10, winget.exe may not be ready to use on that endpoint although it should be installed automatically in the following days. To get the WinGet executable quicker (winget.exe), you should first update Microsoft Store after opening it and then you may have to update the app called "App Installer". Visit [this link](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab) to locate that app and update it
+:::
+
+You can search for an available package in Winget’s public repositories or Flatpak's [Flathub repository](https://flathub.org/). Depending on the agent's operating system the right repository will be searched.
 
 ![Deploy software from the computers view](/img/console/computer_deploy_software.png)
 
@@ -169,18 +177,29 @@ The request will be send to the agent no matter if the computer is not running a
 ![Installation in progress](/img/console/installation_in_progress.png)
 
 After a few minutes you’ll see that the package has been installed and that the installation date is shown.
+
+:::warning
+If the package could not be installed you'll see an error message next to the package. In that case you can try to reinstall the package clicking on the green pakage icon or remove the package using the red package icon.
+:::
+
 You can **update** that package later **or remove** it from the computer using the available icons.
 
 ![Package deployed](/img/console/package_deployed.png)
 
 ### 2.10 Remote Assistance
 
-OpenUEM allows you to open a remote assistance session using VNC if these requirements are fulfilled:
+OpenUEM allows you to open a remote assistance session using VNC or RDP if these requirements are fulfilled:
 
-- The computer has a supported VNC server installed
+- The computer has a supported VNC/RDP server installed
 - The agent received the server.cer and server.key files when the [agent was admitted](/docs/Console/agents#1-agents-life-cycle) or when you requested to [regenerate them](/docs/Console/agents#2-more-actions)
 
-If VNC connectivity is available, you can click on the **Open session in a new tab** button.
+:::note
+If you connect to a Windows machine, VNC will be used as, right now, OpenUEM cannot use RDP shadow connections to see what the connected user is doing.
+
+If you connect to a Linux machine, there are two possibilities. If the machine uses a Wayland display server, RDP will be used to provide the remote assistance. If the machine uses an X11 display server, VNC will be used.  
+:::
+
+If RDP/VNC connectivity is available, you can click on the **Open session in a new tab** button.
 
 ![Remote assistance](/img/console/remote_assistance.png)
 
@@ -188,19 +207,27 @@ In the new tab that is opened you must click now on the **Connect** button.
 
 ![VNC Connect](/img/console/vnc_connect.png)
 
-This action will trigger, if the agent is ready and running, that the user’s default browser will open a new window showing a PIN which is the password that is set every time we connect with the VNC server.
+In a Windows endpoint, this action will trigger, if the agent is ready and running, that the user’s default browser will open a new window showing a PIN which is the password that is set every time we connect with the VNC server.
 
-![VNC PIN shown to the user](/img/console/vnc_pin_shown.png)
+![VNC PIN shown to the user in Windows](/img/console/vnc_pin_shown.png)
 
-The user must inform us which is the pin to open the VNC session. We must introduce the pin in the field available and click on the **Authenticate** button.
+In a Linux endpoint a notification message will be shown (with a 30 seconds timeout).
 
-![Introduce the PIN](/img/console/introduce_pin.png)
+![VNC PIN shown to the user in Linux](/img/console/linux_vnc_pin_shown.png)
+
+The user must inform us which is the pin to open the VNC/RDP session.
 
 :::tip
 By default, OpenUEM shows the PIN to the user to offer privacy to the user, as we can’t know the pin unless the user tells us. If you prefer to skip this step you can go to Admin -> General Settings -> Request VNC PIN to user and disable this behavior. In any case, the PIN which is the VNC password will be changed every time a connection is made. See the [Security section](/docs/Introduction/security) for more information.
 
 ![VNC Settings](/img/console/vnc_settings.png)
 :::
+
+# 2.10.1 VNC session
+
+In a VNC connection we must introduce the pin in the field available and click on the **Authenticate** button.
+
+![Introduce the PIN](/img/console/introduce_pin.png)
 
 If the VNC connection can be established, we’ll see the user’s screen.
 
@@ -214,6 +241,24 @@ If the VNC screen is too big, try to zoom on your browser or press F11 to get yo
 
 :::warning
 The NoVNC proxy may have an issue with the services mmc snap-in (maybe you can find this issue with other snap-ins). If you click on that window you may stop seeing the mouse cursor moving through the page. In that case, it's enough to fix the issue if the services windows is minimized.
+:::
+
+# 2.10.2 RDP session (🎯 0.5.0)
+
+When an RDP session is initiated, the session will not appear in your web browser, you must click on the **Generate RDP connection** to download an RDP file that will allow you to connect to the remote desktop using the pin as the password to connect with the openuem user.
+
+![RDP Session warning](/img/console/rdp_session_warning.png)
+
+:::note
+RDP uses the TCP 3389 port by default, make sure that your firewall doesn't block this port
+:::
+
+The RDP file can be used with your favorite RDP client like Windows Remote Desktop and Remmina by clicking on it, or from the CLI with clients like XFreeRDP...
+
+![RDP Session with XFreeRDP](/img/console/rdp_session_xfreerdp.png)
+
+:::danger
+Once you decide to close the RDP session, you’ll close your RDP client’s window but note that to perform an ordered close (the RDP service is stopped, the credentials are cleared, the service is disabled...) you’ll have to click on the **Disconnect** button.
 :::
 
 ### 2.11 Power Management (🎯 0.2.0)

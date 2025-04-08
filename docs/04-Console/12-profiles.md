@@ -18,7 +18,7 @@ keywords:
 
 # Profiles (🎯 new feature in 0.4.0)
 
-OpenUEM profiles allows you to group several configuration tasks that will be applied to your endpoints **by defining a desired state**.
+OpenUEM profiles allows you to group several configuration tasks that will be applied to your **Windows endpoints by defining a desired state**. Profiles will be available for Linux agents soon.
 
 Right now, you can install or uninstall packages with WinGet, manage registry keys, local users and local groups.
 
@@ -38,7 +38,7 @@ Now, **select on which endpoints you want this profile to be applied to**. You c
 
 ## Add tasks to a profile
 
-**A profile is a group of tasks that you want to be applied by the agents to the endpoints**. You must add some tasks to define the desired state for your endpoint. 
+**A profile is a group of tasks that you want to be applied by the agents to the endpoints**. You must add some tasks to define the desired state for your endpoint.
 
 :::info
 The tasks that you create will be executed in order, and if one of those tasks fail, the agent will try to apply the rest of the defined tasks as the target is to reach your desired state
@@ -68,7 +68,7 @@ You can increase the frequency that agents check for profiles in [Admin -> Gener
 
 ## Checking if the profile was applied successfully
 
-As the profile may apply to several endpoints you must be aware of problems found to apply them. 
+As the profile may apply to several endpoints you must be aware of problems found to apply them.
 
 In the profiles view you’ll see if some errors were found with a warning sign.
 

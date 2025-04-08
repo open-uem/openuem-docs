@@ -26,7 +26,7 @@ The log in page looks like this:
 
 ![Console LogIn](/img/console/login.png)
 
-To log in to the console, you'll need to have a user certificate installed in your browser. In the server setup for Windows or Linux, if you've selected to auto generate the certificates, an admin certificate will be created and placed under certificates\user and will both the CA certificate and the user certificate should be imported automatically.
+To log in to the console, you'll need to have a user certificate installed in your browser. In the server setup for Windows or Linux, if you've selected to auto generate the certificates, an admin certificate will be created and placed under certificates\user and both the CA certificate and the user certificate should be imported automatically.
 
 The certificate comes in a PFX file that you can import using the password that you've set in the setup or if you leave it empty you'll have to use the `changeit` password.
 

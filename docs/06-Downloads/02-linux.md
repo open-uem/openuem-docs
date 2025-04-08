@@ -22,4 +22,6 @@ keywords:
 
 # 1. Debian/Linux
 
-You can use OpenUEM apt repository to download OpenUEM. Visit [this section](/docs/Installation/Server/linux#1-adding-the-repository)
+You can use OpenUEM apt repository to download OpenUEM server and agent. Visit [this section](/docs/Installation/Server/linux#1-adding-the-repository)
+
+Alternatively, visit the [repository](https://apt.openuem.eu/pool/main/) to download the files by hand

@@ -16,14 +16,16 @@ keywords:
 
 # 🗺️ Roadmap
 
-OpenUEM will have the following improvements soon (in no order):
+OpenUEM will have the following improvements soon (in no particular order):
 
 - **Report tool** that generates PDF files
 - **Add roles** that can manage selections of your assets
 - Provide network printers information (toner status, pages printed...)
-- Back up files using [**Restic**](https://restic.net/)
-- A **Debian/Ubuntu Linux Agent**
-- **Alma Linux Agent**
-- Install OpenUEM components in Alma Linux
+- Back up files using [**Kopia**](https://kopia.io/)
+- Apply configuration profiles to Linux endpoints using Ansible
+- Install OpenUEM components in RedHat, OpenSUSE and Arch based distributions
+- Agents for RedHat, OpenSUSE and Arch based distributions
+- MDM support for Android devices
+- Mac OSX support
 
 Do you miss something vital? Please, open a discussion on GitHub and let’s see what can be done.

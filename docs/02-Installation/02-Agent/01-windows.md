@@ -1,5 +1,5 @@
 ---
-title: 🕵️ Windows Agent
+title: 🪟 Windows Agent
 description: How to install OpenUEM agent in Windows
 keywords:
   [
@@ -35,7 +35,7 @@ Get-FileHash openuem-agent-setup.exe
 
 Algorithm       Hash                                                                   Path
 ---------       ----                                                                   ----
-SHA256          82FDD3CDE80AE51A021AF66E8FC7D1A007DF698431D61926D9490E518DE648E8       C:\Users\doncicuto\Downloads\openuem....
+SHA256          7ADA9A85216C520AC0CBB71638D1872498A44D768C0E9C45B78EE86A0103F432       C:\Users\doncicuto\Downloads\openuem....
 ```
 
 ## 2. Install the agent
@@ -152,7 +152,7 @@ If you don't see the agent in the console something may have gone wrong. You can
 
 In the logs folder you should check the `openuem-log.txt` that should explain the possible error:
 
-- Maybe your NATS server is not running
+- Maybe your NATS server or the Agent Worker (or both) is not running
 - Maybe you specified the wrong path for the required certificates. You can copy the certificates by hand using the required names or uninstall the agent and install it again.
 - Maybe you specified the wrong name for the NATS server or the port. You can edit the `config\openuem.ini` file and change the domain name or port and restart the OpenUEM Agent service.
 

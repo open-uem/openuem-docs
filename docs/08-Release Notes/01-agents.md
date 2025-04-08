@@ -18,6 +18,11 @@ keywords:
 
 ## 0.4.0
 
+:::info
+OpenUEM Linux agents require at least OpenUEM Server 0.5.0 to show Linux specific information
+:::
+
+- Feat: support for Debian/Ubuntu agents
 - Feat: enable or disable debug mode for an agent on demand
 
 ## 0.3.1
