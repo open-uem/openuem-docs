@@ -146,7 +146,7 @@ After the agent installation, if everything goes fine you should see the agent i
 
 ![Admit agent](/img/agent/admit_agent.png)
 
-If you don't see the agent in the console something may have gone wrong. You can visit the agent folder located at C:\Program Files\OpenUEM Agent and check the logs or the certificates folder.
+If you don't see the agent in the console something may have gone wrong. You can visit the agent folder located at C:\Program Files\OpenUEM Agent and check the logs or the certificates folder. If the connection with the agent is possible, you can use the ["Show agent's log"](/docs/Console/agents#2-more-actions) in the console Agents view to see the logs from the console.
 
 ![Agent installation](/img/agent/agent_folders.png)
 
