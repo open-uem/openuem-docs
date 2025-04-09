@@ -16,6 +16,10 @@ keywords:
 
 # Server
 
+## 0.6.0 (08/04/2025)
+
+- Feat: show an icon to identify agents that hasn't contacted in the last 24 hours
+
 ## 0.5.0 (08/04/2025)
 
 - Feat: support for Linux endpoints (Debian/Ubuntu right now) from agent version 0.4.0
