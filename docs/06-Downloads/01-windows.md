@@ -18,7 +18,11 @@ keywords:
 
 # 🪟 Windows downloads
 
-This page contains the links and checksums associated with the windows installers
+This page contains the links and checksums associated with the windows installers.
+
+You can download OpenUEM agent and server for Windows from OpenUEM's download site or from Sourceforge too:
+
+[![Download OpenUEM](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/openuem/files/latest/download)
 
 ## 🕵 Agent (latest version)
 
