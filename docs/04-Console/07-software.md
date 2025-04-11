@@ -25,7 +25,7 @@ In this section you’ll see all the software that has been found by OpenUEM age
 
 ![All software](/img/console/all_software.png)
 
-## Reports (🎯 0.2.0)
+## Reports
 
 You can generate a PDF report that lists your software and preserves your filters and sorting using the PDF button in the section header.
 

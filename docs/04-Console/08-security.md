@@ -35,7 +35,7 @@ Also, you can browse the windows updates history.
 
 ![Windows updates history](/img/console/windows_updates_history.png)
 
-## Reports (🎯 0.2.0)
+## Reports
 
 You can generate a PDF report that lists your antivirus systems and security updates and preserves your filters and sorting using the PDF button in the section header.
 

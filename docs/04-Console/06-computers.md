@@ -164,6 +164,10 @@ OpenUEM can deploy software to your computers automatically using Winget’s cli
 Winget should be ready for your host if it has been used for some time, but if you have a fresh installation of Windows 10, winget.exe may not be ready to use on that endpoint although it should be installed automatically in the following days. To get the WinGet executable quicker (winget.exe), you should first update Microsoft Store after opening it and then you may have to update the app called "App Installer". Visit [this link](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab) to locate that app and update it
 :::
 
+:::danger
+Due to a bug (2025/04/11) or [issue](https://github.com/microsoft/winget-cli/issues/5366) with Microsoft's CDN the WinGet client could not get the local copy of metadata queried by WinGet. If you encounter deployment errors, you may have to run `winget source update` to force WinGet to update its source
+:::
+
 You can search for an available package in Winget’s public repositories or Flatpak's [Flathub repository](https://flathub.org/). Depending on the agent's operating system the right repository will be searched.
 
 ![Deploy software from the computers view](/img/console/computer_deploy_software.png)
@@ -261,7 +265,7 @@ The RDP file can be used with your favorite RDP client like Windows Remote Deskt
 Once you decide to close the RDP session, you’ll close your RDP client’s window but note that to perform an ordered close (the RDP service is stopped, the credentials are cleared, the service is disabled...) you’ll have to click on the **Disconnect** button.
 :::
 
-### 2.11 Power Management (🎯 0.2.0)
+### 2.11 Power Management
 
 You can schedule a computer's power off or reboot action. Also, you can send a Wake On LAN magic packet that will boot the computer up, if the computer is in the same LAN as the console server, and if the computer has been configured to boot with WOL (UEFI setting and/or updated network drivers).
 
@@ -291,7 +295,7 @@ Once you create metadata, you’ll see it is available for every endpoint.
 
 ![Metadata](/img/console/metadata.png)
 
-## 3. PDF Report (🎯 0.2.0)
+## 3. PDF Report
 
 You can generate a PDF report that lists your computers and preserves your filters and sorting using the PDF button in the section header.
 

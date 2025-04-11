@@ -34,7 +34,7 @@ You can download OpenUEM agent and server for Windows from OpenUEM's download si
 
 | Type   | Version | Arch  | Link                                                                            | Checksum                                                                 |
 | ------ | ------- | ----- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Server | 0.5.0   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.5.0.exe) | SHA256: B52BFFE95FFD3778F6129AC31444AA960AF12C96D9D1D5F20D984B23FD60CEB4 |
+| Server | 0.5.1   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.5.1.exe) | SHA256: 8915A04228C3DEE3780AD36AEB43721DB2368BD08D096F28338024C4C8498E4C |
 
 :::warning
 As OpenUEM is a new project, Microsoft Edge can warn you that the file to be downloaded cannot be trusted by Microsoft as it's a file that is not downloaded commonly and you'll have to force the browser to keep that file to download it. Hopefully, soon, this warning will disappear as a report has been sent to Microsoft.
@@ -56,6 +56,7 @@ As OpenUEM is a new project, Microsoft Edge can warn you that the file to be dow
 
 | Type   | Version | Arch  | Link                                                                            | Checksum                                                                 |
 | ------ | ------- | ----- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Server | 0.5.0   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.5.0.exe) | SHA256: B52BFFE95FFD3778F6129AC31444AA960AF12C96D9D1D5F20D984B23FD60CEB4 |
 | Server | 0.4.1   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.4.1.exe) | SHA256: 2AD5D64CC8E0B07472AE93698882F5DD3028D25F3C2C32E9A16DA7525FDD36DC |
 | Server | 0.4.0   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.4.0.exe) | SHA256: 68BA28F593867C4B6A1E75191887893B574EA959A67189672D214FDFE8B07985 |
 | Server | 0.3.0   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.3.0.exe) | SHA256: D607EC1E7A5C4F3F46A4393E0FCB3D9A5B81711971CE11F732749CE0A8CFF4C2 |

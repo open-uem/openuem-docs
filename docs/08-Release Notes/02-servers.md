@@ -16,9 +16,9 @@ keywords:
 
 # Server
 
-## 0.6.0 (08/04/2025)
+## 0.5.1 (11/04/2025)
 
-- Feat: show an icon to identify agents that hasn't contacted in the last 24 hours
+- Fix: an issue with Microsoft CDN was preventing WinGet database file to be downloaded, a new URL has been added as a workaround
 
 ## 0.5.0 (08/04/2025)
 

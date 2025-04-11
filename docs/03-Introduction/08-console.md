@@ -28,5 +28,5 @@ The console allows you to perform the following actions:
 - Browse an endpoint's information gathered by an agent
 - Start a VNC remote assistance session
 - Browse the files contained in an endpoint's logical disks
-- Deploy a package to an endpoint using Winget. You can also uninstalled packages deployed by OpenUEM
+- Deploy a package to an endpoint using Winget or Flatpak. You can also uninstalled packages deployed by OpenUEM
 - Get statistics and check the status of the different OpenUEM components
