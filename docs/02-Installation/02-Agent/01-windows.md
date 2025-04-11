@@ -78,7 +78,7 @@ Here's an example:
 
 ```(bash)
 
-openuem-agent-setup.exe /server=lothlorien.local.openuem.eu:4433 /sftp=2022 /vnc=1443 VERYSILENT
+openuem-agent-setup.exe /server=lothlorien.local.openuem.eu:4433 /sftp=2022 /vnc=1443 /VERYSILENT
 
 ```
 
