@@ -87,7 +87,7 @@ After the agent installation, if everything goes fine you should see the agent i
 
 ![Admit agent](/img/agent/debian_admit_agent.png)
 
-If you don't see the agent in the console something may have gone wrong. You can have a look at the agent's log located at `/var/log/openuem-agent/openuem-agent.log`.
+If you don't see the agent in the console something may have gone wrong. You can have a look at the agent's log located at `/var/log/openuem-agent/openuem-agent.log`. If the connection with the agent is possible, you can use the ["Show agent's log"](/docs/Console/agents#2-more-actions) in the console Agents view to see the logs from the console.
 
 ![Agent installation](/img/agent/debian_agent_logs.png)
 

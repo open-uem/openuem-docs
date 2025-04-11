@@ -67,11 +67,11 @@ If the agent is in the **"Enabled""** state, you have the following actions:
 - Regenerate a certificate. A request is made to generate new certificates for the agent's SFTP and VNC proxy servers.
 - Force restart. If you think that the agent may not be working fine or that it could have been hung up, you can try to force a restart of the service.
 
-
 The following actions are available no matter which state is:
 
 - Delete. You can delete the agent but note that, unless you uninstall the agent, it'll keep trying to send new information.
 - Enable/Disable debug mode (🎯 0.5.0). You can enable or disable the debug mode for the agent. Debug mode shows more verbose log messages.
+- Show agent's log (🎯 0.6.0). The agents log are downloaded using SFTP so you can [browse them in the console](/docs/Console/agents#5-agents-logs--060)
 
 :::note
 If you enable the debug mode for the agent, the size of the log file may get bigger quickly so a warning will be shown next to the hostname if the debug mode has been enabled
@@ -80,11 +80,9 @@ If you enable the debug mode for the agent, the size of the log file may get big
 
 :::
 
-
 Finally, if you click on the hostname associated with the agent you'll visit the Computers view
 
-
-## 3. PDF Report (🎯 0.2.0)
+## 3. PDF Report
 
 You can generate a PDF report that lists your agents and preserves your filters and sorting using the PDF button in the section header.
 
@@ -94,10 +92,16 @@ Here’s a sample of the generated report.
 
 ![Agents report sample](/img/console/agents_report_sample.png)
 
-## 4. Remote agents (🎯 0.3.0)
+## 4. Remote agents
 
 OpenUEM uses DNS and the reported active IP address to identify agents that are not located in our LAN, assuming that the associated endpoints are used by remote workers.
 
 OpenUEM uses a plane icon to indicate that the agent is in a remote location. This is important because remote file browsing, remote assistance and WOL (Wake On Lan) are currently not possible as those endpoints are not reachable from the LAN.
 
 ![Agents remote location](/img/console/remote_location.png)
+
+## 5. Agent's logs (🎯 0.6.0)
+
+By using the "Show agent's log" a new view should be opened that will allow you to browse the agent's service log and the updater's service log. You can select which log category you want to show from the logs.
+
+![Agents remote location](/img/console/agents_logs.png)
