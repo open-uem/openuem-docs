@@ -18,7 +18,7 @@ keywords:
 
 # 🐧 Debian/Ubuntu Linux
 
-The OpenUEM server components can be installed on a Debian/Ubuntu machine using .deb packages available in OpenUEM repository.
+The OpenUEM server components can be installed on a Debian 12/Ubuntu 24.04 machine using .deb packages available in OpenUEM repository.
 
 ## 1. Adding the repository
 
