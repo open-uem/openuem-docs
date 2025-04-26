@@ -16,7 +16,7 @@ keywords:
   ]
 ---
 
-# Profiles (🎯 new feature in 0.4.0)
+# Profiles
 
 OpenUEM profiles allows you to group several configuration tasks that will be applied to your **Windows endpoints by defining a desired state**. Profiles will be available for Linux agents soon.
 

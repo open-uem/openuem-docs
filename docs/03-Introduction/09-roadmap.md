@@ -18,14 +18,15 @@ keywords:
 
 OpenUEM will have the following improvements soon (in no particular order):
 
-- **Report tool** that generates PDF files
 - **Add roles** that can manage selections of your assets
 - Provide network printers information (toner status, pages printed...)
 - Back up files using [**Kopia**](https://kopia.io/)
+- Back up the Postgres database
 - Apply configuration profiles to Linux endpoints using Ansible
+- Galery of common tasks to apply to your agents using well-known registry keys (for example, turn off Windows Copilot)
 - Install OpenUEM components in RedHat, OpenSUSE and Arch based distributions
 - Agents for RedHat, OpenSUSE and Arch based distributions
+- Agents for Mac OSX support
 - MDM support for Android devices
-- Mac OSX support
 
 Do you miss something vital? Please, open a discussion on GitHub and let’s see what can be done.

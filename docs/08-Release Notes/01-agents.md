@@ -16,6 +16,15 @@ keywords:
 
 # Agents
 
+## 0.5.0
+
+- Feat: enable or disable remote assistance service on demand
+- Feat: enable or disable SFTP service on demand
+- Feat: uninstall agent on demand
+- Feat: retrieve RAM memory slots info and manufacture dates for displays
+- Fix: uninstall of openuem-agent-worker removed accidentally when openuem-agent is uninstalled on Linux
+- Fix: support for Debian 11 and Ubuntu 20.04 agents
+
 ## 0.4.0
 
 :::info

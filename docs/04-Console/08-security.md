@@ -37,7 +37,7 @@ Also, you can browse the windows updates history.
 
 ## Reports
 
-You can generate a PDF report that lists your antivirus systems and security updates and preserves your filters and sorting using the PDF button in the section header.
+You can generate a PDF/CSV report that lists your antivirus systems and security updates and preserves your filters and sorting using the PDF/CSV buttons in the section header.
 
 ![Antivirus report button](/img/console/antivirus_report_button.png)
 

@@ -27,7 +27,7 @@ In this section you’ll see all the software that has been found by OpenUEM age
 
 ## Reports
 
-You can generate a PDF report that lists your software and preserves your filters and sorting using the PDF button in the section header.
+You can generate a PDF/CSV report that lists your software and preserves your filters and sorting using the PDF/CSV buttons in the section header.
 
 ![Software report button](/img/console/software_report_button.png)
 

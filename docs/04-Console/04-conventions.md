@@ -19,11 +19,17 @@ keywords:
 
 Before we talk about the different sections, let’s discuss some conventions about the user interface.
 
-## 1. Tables
+## 1. Dark mode
+
+If you find the default theme too bright you can enable the dark mode by clicking on the moon/sun icon located at the top of the screen
+
+![Dark mode](/img/console/dark_mode.png)
+
+## 2. Tables
 
 Most of the information in OpenUEM is displayed on tables with columns and rows.
 
-### 1.1 Sorting and filtering
+### 2.1 Sorting and filtering
 
 Next to a column’s name you can find two icons.
 
@@ -36,7 +42,7 @@ If a filter is applied you should find a button above the table that allows you 
 
 ![Clear filters](/img/console/clear_filters.png)
 
-### 1.2 Items selection
+### 2.2 Items selection
 
 Some tables offer the possibility to select several items:
 
@@ -51,7 +57,7 @@ The number of selected items is updated with every selection and can be found ne
 
 ![Items selected](/img/console/items_selected.png)
 
-### 1.3 Pagination
+### 2.3 Pagination
 
 Information can be paginated.
 
@@ -63,7 +69,7 @@ You navigate through the pages using the navigation bar. Next to it, you'll find
 
 ![Pagination example](/img/console/pagination.png)
 
-## 2. Automatic refresh
+## 3. Automatic refresh
 
 Some pages are refreshed automatically where you'll find the following button. You can click on that button to perform a manual refresh.
 
@@ -75,12 +81,12 @@ By default, the refresh time is set to 5 minutes. You can change that time in Ad
 
 Now, let's start with the Agents section.
 
-## 3. More actions
+## 4. More actions
 
 If you find three dots in table’s rows, that’s a button that offers more actions to perform on the element enclosed in that row.
 
 ![Three dots](/img/console/three_dots.png)
 
-## 4. Go back
+## 5. Go back
 
 You can use the back button of your browser to go back to a previous page or section. OpenUEM is not a [Single Page Application](https://developer.mozilla.org/en-US/docs/Glossary/SPA) and uses [HTMX](https://htmx.org/) to build an user interface with hypertext.

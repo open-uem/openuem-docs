@@ -142,6 +142,11 @@ drop table "shares" cascade;
 drop table "system_updates" cascade;
 drop table "updates" cascade;
 drop table "servers" cascade;
+drop table "memory_slots" cascade;
+drop table "profile_issues" cascade;
+drop table "tasks" cascade;
+drop table "profiles" cascade;
+drop table "winget_config_exclusion" cascade;
 
 \q
 ```

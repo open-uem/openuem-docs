@@ -16,6 +16,22 @@ keywords:
 
 # Server
 
+## 0.6.0 (26/04/2025)
+
+- Feat: When you delete and agent from the console you can choose to: delete the agent from the console and uninstall it from the endpoint, delete the agent from the console but keep it installed in the endpoint, uninstall the agent but keep the information in the console
+- Feat: Export views in CSV format
+- Fix: package search for WinGet tasks
+- Feat: add dark theme
+- Feat: filter agents that haven't contacted in the las 24 hours
+- Feat: setting to admit automatically agents
+- Feat: setting to enable/disable remote agents detection
+- Feat: show RAM memory info (used slots)
+- Feat: show monitor's week and year of manufacture
+- Feat: setting to enable/disable remote assistance globally
+- Feat: setting to enable/disable SFTP service globally
+- Feat: agent's settings view to enable/disable remote assistance, sftp service and/or debug mode per agent
+- Fix: notifications and certifications messages are redelivered when Docker containers are regenerated
+
 ## 0.5.1 (11/04/2025)
 
 - Fix: an issue with Microsoft CDN was preventing WinGet database file to be downloaded, a new URL has been added as a workaround

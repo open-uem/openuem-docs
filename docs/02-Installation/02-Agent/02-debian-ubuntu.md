@@ -19,7 +19,7 @@ keywords:
 
 OpenUEM agents are responsible for inspecting your endpoints information and offer additional services like file browsing and VNC connections.
 
-This page explains how you can install an agent in a Debian 12/Ubuntu 24.04 (or higher) system.
+This page explains how you can install an agent in a Debian 11/Ubuntu 20.04 (or higher) system.
 
 ## 1. Download the Debian/Ubuntu installer
 

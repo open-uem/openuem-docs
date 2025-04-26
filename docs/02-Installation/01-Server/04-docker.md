@@ -63,6 +63,7 @@ Here are the possible environment variables that can appear in the .env file.
 | CONSOLE_PORT         | The port used by the console                                                  | no       | 1323                                           |
 | AUTH_PORT            | The port used by the auth server                                              | no       | 1324                                           |
 | JWT_KEY              | The key used to encrypt JWT tokens for user registration                      | no       | averylongsecret                                |
+| TZ                   | The timezone used by OpenUEM containers                                       | yes      | Europe/Madrid                                  |
 
 :::note
 server.example.com should be resolved by your DNS service if you want remote agents to be able to contact OpenUEM components

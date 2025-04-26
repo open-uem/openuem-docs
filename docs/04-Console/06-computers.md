@@ -295,9 +295,9 @@ Once you create metadata, you’ll see it is available for every endpoint.
 
 ![Metadata](/img/console/metadata.png)
 
-## 3. PDF Report
+## 3. PDF/CSV Report
 
-You can generate a PDF report that lists your computers and preserves your filters and sorting using the PDF button in the section header.
+You can generate a PDF/CSV report that lists your computers and preserves your filters and sorting using the PDF/CSV buttons in the section header.
 
 ![Computers report button](/img/console/computers_report_button.png)
 

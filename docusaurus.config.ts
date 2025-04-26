@@ -4,7 +4,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "OpenUEM",
-  tagline: "An Open-Source Unified Endpoint Manager that is self-hosted and lets you manage your IT assets thanks to its agents",
+  tagline:
+    "An Open-Source Unified Endpoint Manager that is self-hosted and lets you manage your IT assets thanks to its agents",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -59,31 +60,40 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
         sitemap: {
-          lastmod: 'date',
-          changefreq: 'daily',
+          lastmod: "date",
+          changefreq: "daily",
           priority: 0.5,
-          ignorePatterns: ['/tags/**'],
-          filename: 'sitemap.xml',
+          ignorePatterns: ["/tags/**"],
+          filename: "sitemap.xml",
           createSitemapItems: async (params) => {
-            const {defaultCreateSitemapItems, ...rest} = params;
+            const { defaultCreateSitemapItems, ...rest } = params;
             const items = await defaultCreateSitemapItems(rest);
-            return items.filter((item) => !item.url.includes('/page/'));
+            return items.filter((item) => !item.url.includes("/page/"));
           },
         },
       } satisfies Preset.Options,
     ],
   ],
 
-  plugins: [
-    'docusaurus-plugin-matomo',
-  ],
+  plugins: ["docusaurus-plugin-matomo"],
 
   themeConfig: {
     metadata: [
-      {name: 'keywords', content: 'operating systems, assets manager, uem, unified endpoint manager, rmm, remote monitoring and management'},
-      {name: 'twitter:card', content: 'An Open-Source Unified Endpoint Manager that is self-hosted and lets you manage your IT assets thanks to its agents'},
-      {name: 'twitter:site', content: '@open-uem'},
-      {name: 'twitter:image', content: "https://openuem.eu/img/openuem_logo.png"},
+      {
+        name: "keywords",
+        content:
+          "operating systems, assets manager, uem, unified endpoint manager, rmm, remote monitoring and management",
+      },
+      {
+        name: "twitter:card",
+        content:
+          "An Open-Source Unified Endpoint Manager that is self-hosted and lets you manage your IT assets thanks to its agents",
+      },
+      { name: "twitter:site", content: "@open-uem" },
+      {
+        name: "twitter:image",
+        content: "https://openuem.eu/img/openuem_logo.png",
+      },
     ],
     // Replace with your project's social card
     image: "img/openuem-social-card.jpg",
@@ -101,20 +111,20 @@ const config: Config = {
           label: "Docs",
         },
         { to: "/blog", label: "Blog", position: "left" },
-        { 
-          type: 'dropdown',
-          label: "Downloads", 
+        {
+          type: "dropdown",
+          label: "Downloads",
           position: "left",
           items: [
             {
-              label: 'Windows',
-              to: "/docs/Downloads/windows", 
+              label: "Windows",
+              to: "/docs/Downloads/windows",
             },
             {
-              label: 'Linux',
-              to: "/docs/Downloads/linux", 
+              label: "Linux",
+              to: "/docs/Downloads/linux",
             },
-          ]
+          ],
         },
         {
           href: "https://github.com/open-uem",
@@ -137,8 +147,13 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "https://bsky.app/profile/openuem.bsky.social",
+          href: "https://bsky.app/profile/openuem.eu",
           label: "Bluesky",
+          position: "right",
+        },
+        {
+          href: "https://mastodon.social/@openuem",
+          label: "Mastodon",
           position: "right",
         },
       ],
@@ -152,24 +167,24 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
     matomo: {
-      matomoUrl: 'https://matomo.comovoy.eu/',
-      siteId: '5',
-      phpLoader: 'matomo.php',
-      jsLoader: 'matomo.js',
+      matomoUrl: "https://matomo.comovoy.eu/",
+      siteId: "5",
+      phpLoader: "matomo.php",
+      jsLoader: "matomo.js",
     },
     algolia: {
       // The application ID provided by Algolia
-      appId: 'YLKH48EMAE',
+      appId: "YLKH48EMAE",
 
       // Public API key: it is safe to commit it
-      apiKey: '7c6e0e9f40336cb85a96413a04d85663',
+      apiKey: "7c6e0e9f40336cb85a96413a04d85663",
 
-      indexName: 'openuem',
+      indexName: "openuem",
 
       contextualSearch: true,
 
       // Optional: path for search page that enabled by default (`false` to disable it)
-      searchPagePath: 'search',
+      searchPagePath: "search",
 
       // Optional: whether the insights feature is enabled or not on Docsearch (`false` by default)
       insights: false,
