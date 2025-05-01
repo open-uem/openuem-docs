@@ -30,6 +30,15 @@ To log in to the console, you'll need to have a user certificate installed in yo
 
 The certificate comes in a PFX file that you can import using the password that you've set in the setup or if you leave it empty you'll have to use the `changeit` password.
 
+:::note
+If you use Mac and find problems importing the user's pfx certificate to your Chrome browers or Keychain, like invalid password, you may have to convert the PFX file opening a MacOS terminal and executing the following commands:
+```
+openssl pkcs12 -in admin.pfx -out admin.pem
+openssl pkcs12 -export -in admin.pem -out new_admin.pfx -legacy
+```
+Then import the new pfx file 
+:::
+
 When you click the log in button you'll have to select the certificate. If no certificate is shown check if you've imported the certificate to the Personal certificates store. You can use the certificates section in the [Docker guide](/docs/Installation/Server/docker#4-trust-in-digital-certificates-created)
 
 ![Select Certificate](/img/console/select_certificate.png)
