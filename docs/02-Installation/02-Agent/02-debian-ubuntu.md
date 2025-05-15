@@ -63,6 +63,18 @@ The Agent can use a VNC Proxy if you install a [supported VNC server](/docs/Adva
 If your endpoint has a firewall, you must enable the incoming traffic to the SFTP and VNC Proxy ports from OpenUEM console
 :::
 
+If you want that your endpoint is associated to an organization and site that you've created in OpenUEM console (🎯 Version 0.7.0) you can specify the IDs (numbers) for both organization and site, or leave the fields empty to use the default organization and site. 
+
+You can get the ID of the organization from the [organization's list](/docs/05-Administration/10-organizations.md) 
+
+![Debian site ID](/img/agent/debian_site.png)
+
+You can get the ID of the site from the [site's list](/docs/05-Administration/11-sites.md).
+
+![Debian org ID](/img/agent/debian_org.png)
+
+
+
 ## 3. Agent post-install steps
 
 The agent requires some certificates to secure connections between the agent and the rest of OpenUEM components. You must place the required certificates under the `/etc/openuem-agent/certificates` folder **with administrator privileges**. You should find the certificates and private keys in the folder where the OpenUEM Server/Docker was installed.

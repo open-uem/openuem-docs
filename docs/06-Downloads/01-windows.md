@@ -28,16 +28,16 @@ You can download OpenUEM agent and server for Windows from OpenUEM's download si
 
 | Type  | Version | Arch  | Link                                                                                        | Checksum                                                                 |
 | ----- | ------- | ----- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Agent | 0.5.0   | amd64 | [Download](https://downloads.openuem.eu/agents/0.5.0/windows/amd64/openuem-agent-setup.exe) | SHA256: F30888FA0DBE3AEB07A4A8B98166FCDC5845EC8E6959E747C2D8F233DE74DF24 |
+| Agent | 0.6.0   | amd64 | [Download](https://downloads.openuem.eu/agents/0.6.0/windows/amd64/openuem-agent-setup.exe) | SHA256: 3BFF3C353672D61C9C554E2BFC159CA09DE3E1AB6E525B24952F9BCF44A3FB5F |
 
 ## 🖥 Server (latest version)
 
 | Type   | Version | Arch  | Link                                                                            | Checksum                                                                 |
 | ------ | ------- | ----- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Server | 0.6.0   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.6.0.exe) | SHA256: A453AEE4849CC4BFF279F284D2DFCE2E0702CF79CBD12D6DA4B1AA73C1F17E90 |
+| Server | 0.7.0   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.7.0.exe) | SHA256: E1F8F6EFDC93230C5AE6A34C991B91F4B034D2613C6F817E11FE8CD5D9FA92BE |
 
 :::warning
-As OpenUEM is a new project, Microsoft Edge can warn you that the file to be downloaded cannot be trusted by Microsoft as it's a file that is not downloaded commonly and you'll have to force the browser to keep that file to download it. Hopefully, soon, this warning will disappear as a report has been sent to Microsoft.
+As OpenUEM is a new project, Microsoft Edge and/or Microsoft SmartScreen can warn you that the file to be downloaded cannot be trusted by Microsoft as it's a file that is not downloaded commonly and you'll have to force the browser to keep that file to download it or force SmartScreen to allow execution. Hopefully, soon, this warning will disappear as a report has been sent to Microsoft.
 :::
 
 ## Previous versions
@@ -46,6 +46,8 @@ As OpenUEM is a new project, Microsoft Edge can warn you that the file to be dow
 
 | Type  | Version | Arch  | Link                                                                                        | Checksum                                                                 |
 | ----- | ------- | ----- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| Server | 0.6.0   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.6.0.exe) | SHA256: A453AEE4849CC4BFF279F284D2DFCE2E0702CF79CBD12D6DA4B1AA73C1F17E90 |
+| Agent | 0.5.0   | amd64 | [Download](https://downloads.openuem.eu/agents/0.5.0/windows/amd64/openuem-agent-setup.exe) | SHA256: F30888FA0DBE3AEB07A4A8B98166FCDC5845EC8E6959E747C2D8F233DE74DF24 |
 | Agent | 0.4.0   | amd64 | [Download](https://downloads.openuem.eu/agents/0.4.0/windows/amd64/openuem-agent-setup.exe) | SHA256: 7ADA9A85216C520AC0CBB71638D1872498A44D768C0E9C45B78EE86A0103F432 |
 | Agent | 0.3.1   | amd64 | [Download](https://downloads.openuem.eu/agents/0.3.1/windows/amd64/openuem-agent-setup.exe) | SHA256: 540EAFC16A0C22D244BBE363DD911230E90ED63540690388FD20FE9AD47EA81C |
 | Agent | 0.3.0   | amd64 | [Download](https://downloads.openuem.eu/agents/0.3.0/windows/amd64/openuem-agent-setup.exe) | SHA256: 0EEAD79D6869B30FFD7416776C4BC8F4C44BDCA9103B3B2E1BEAEE999F0CE75A |

@@ -16,6 +16,19 @@ keywords:
 
 # Agents
 
+## 0.6.0
+
+Released: 15/05/2025
+
+:::danger
+Due to a bug found in the agent updater, you won't be able to update 0.5.0 agents from the console (0.4.0 agents and lower are not affected) and you'll have to update the agents by hand or using a script to deploy it. The 0.6.0 windows installer can be run to upgrade the 0.5.0 agent. You can also use the debian repositorio to use apt on the affected endpoints to update the debian/ubuntu agent.
+:::
+
+- Feat: get processor info if more than one windows processor is found
+- Feat: agents can set a default printer and remove a printer for Linux and Windows
+- Feat: add tenant and site to INI and report
+- Feat: use dnf to get system update info
+
 ## 0.5.0
 
 - Feat: enable or disable remote assistance service on demand
