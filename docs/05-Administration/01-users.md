@@ -20,6 +20,10 @@ keywords:
 
 OpenUEM allows you to add users that can log in to the console and work as administrators.
 
+:::tip
+This section is only available for the Global config
+:::
+
 :::note
 OpenUEM will have roles and there’s an open issue for that feature in the project’s roadmap
 :::

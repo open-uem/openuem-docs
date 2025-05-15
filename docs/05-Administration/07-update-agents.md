@@ -18,6 +18,10 @@ keywords:
 
 # 📲 Update Agents
 
+:::tip
+This section is only available for an organization’s config
+:::
+
 You can update OpenUEM agents as soon as a new version is released.
 
 OpenUEM console checks if there’s a new release for your agents and displays a message for you to know.

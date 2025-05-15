@@ -40,7 +40,7 @@ By clicking on the three dots button, you can show a menu with possible actions
 If you click on the hostname or use the view action, you’ll visit the computer’s details.
 
 :::tip
-OpenUEM (🎯 0.3.0) uses DNS and the reported active IP address to identify endpoints that are not located in our LAN, assuming that the associated endpoints are used by remote workers.
+OpenUEM uses DNS and the reported active IP address to identify endpoints that are not located in our LAN, assuming that the associated endpoints are used by remote workers.
 
 OpenUEM uses a plane icon to indicate that the agent is in a remote location. This is important because remote file browsing, remote assistance and WOL (Wake On Lan) are currently not possible as those endpoints are not reachable from the LAN.
 :::
@@ -49,25 +49,37 @@ OpenUEM uses a plane icon to indicate that the agent is in a remote location. Th
 
 The information reported by an agent is distributed in several tabs so it’s easier for you to browse the information. Let’s see what is shown and what you can do.
 
-### 2.1 Hardware
+### 2.1 Overview (🎯 0.7.0)
+
+A new overview tab is available to summarize important information about your endpoint like the security status and an operating system briefing.
+
+![Hardware](/img/console/computer_overview.png)
+
+You can give also a description for the endpoint and the type of endpoint (desktop, laptop, tablet...)
+
+:::info
+From this view we can specify on which organization and site we want to have this endpoint
+:::
+
+### 2.2 Hardware
 
 As the name suggests, you’ll have some hardware information about the manufacturer, model, serial number, processor and memory.
 
 ![Hardware](/img/console/hardware.png)
 
-### 2.2 Operating System
+### 2.3 Operating System
 
 Here, you’ll find information about the operating system like version, description, architecture, **the username that is logged in**, installation date and the last time the system was booted up.
 
 ![Operating system](/img/console/os.png)
 
-### 2.3 Monitors
+### 2.4 Monitors
 
 The monitors tab displays which monitors have been connected to the computer including the manufacturer, model and serial number.
 
 ![Monitors](/img/console/monitors.png)
 
-### 2.4 Logical disks
+### 2.5 Logical disks
 
 This tab displays the logical disks that are available on the computer. You can check the label applied, the volume name, the file system type, the disk usage, the total size and the remaining space.
 
@@ -122,13 +134,13 @@ Also, next to each file or folder you can find the three dots button with a menu
 
 ![File list actions](/img/console/file_browser_actions.png)
 
-### 2.5 Shares
+### 2.6 Shares
 
 This tab shows the resources being shared and exported by this computer
 
 ![Shares](/img/console/shares.png)
 
-### 2.6 Network adapters
+### 2.7 Network adapters
 
 You can inspect the network adapters connected to a computer by visiting this tab. The agent reports the name of the adapter, its MAC address, the IP address, the subnet, the default gateway, if DHCP is enabled and the speed of the adapter.
 
@@ -136,13 +148,15 @@ You can inspect the network adapters connected to a computer by visiting this ta
 
 Also, if you move the mouse over the DNS icon you’ll get information about the DNS servers.
 
-### 2.7 Printers
+### 2.8 Printers
 
 The list of printers connected to this computer is displayed in this tab. You get the printer’s name, the port’s name, if the printer is the default printer and if the printer is a network printer.
 
 ![Printers](/img/console/printers.png)
 
-### 2.8 Software
+From version 0.7.0 onwards, and if agents are at least 0.6.0, you can set a printer as default or remove it from the endpoint
+
+### 2.9 Software
 
 OpenUEM agents:
 
@@ -153,7 +167,7 @@ OpenUEM agents:
 
 You’ll find all the applications found with their name, version, publisher, installation date (if found) and an icon (if possible) that helps you to identify the vendor.
 
-### 2.9 Deploy software
+### 2.10 Deploy software
 
 OpenUEM can deploy software to your computers automatically using Winget’s client in Windows or Flatpak in Linux:
 
@@ -190,7 +204,7 @@ You can **update** that package later **or remove** it from the computer using t
 
 ![Package deployed](/img/console/package_deployed.png)
 
-### 2.10 Remote Assistance
+### 2.11 Remote Assistance
 
 OpenUEM allows you to open a remote assistance session using VNC or RDP if these requirements are fulfilled:
 
@@ -227,7 +241,7 @@ By default, OpenUEM shows the PIN to the user to offer privacy to the user, as w
 ![VNC Settings](/img/console/vnc_settings.png)
 :::
 
-# 2.10.1 VNC session
+# 2.11.1 VNC session
 
 In a VNC connection we must introduce the pin in the field available and click on the **Authenticate** button.
 
@@ -247,7 +261,7 @@ If the VNC screen is too big, try to zoom on your browser or press F11 to get yo
 The NoVNC proxy may have an issue with the services mmc snap-in (maybe you can find this issue with other snap-ins). If you click on that window you may stop seeing the mouse cursor moving through the page. In that case, it's enough to fix the issue if the services windows is minimized.
 :::
 
-# 2.10.2 RDP session (🎯 0.5.0)
+# 2.11.2 RDP session (🎯 0.5.0)
 
 When an RDP session is initiated, the session will not appear in your web browser, you must click on the **Generate RDP connection** to download an RDP file that will allow you to connect to the remote desktop using the pin as the password to connect with the openuem user.
 
@@ -265,13 +279,13 @@ The RDP file can be used with your favorite RDP client like Windows Remote Deskt
 Once you decide to close the RDP session, you’ll close your RDP client’s window but note that to perform an ordered close (the RDP service is stopped, the credentials are cleared, the service is disabled...) you’ll have to click on the **Disconnect** button.
 :::
 
-### 2.11 Power Management
+### 2.12 Power Management
 
 You can schedule a computer's power off or reboot action. Also, you can send a Wake On LAN magic packet that will boot the computer up, if the computer is in the same LAN as the console server, and if the computer has been configured to boot with WOL (UEFI setting and/or updated network drivers).
 
 ![WOL](/img/console/wol.png)
 
-### 2.12 Notes
+### 2.13 Notes
 
 You can take notes about your endpoint using a simple markdown editor. Insert the note, use the buttons to add headings, set bolder text… and save it.
 
@@ -281,7 +295,7 @@ When you visit the note again, you’ll see the preview so if you want to change
 
 ![Edit Note](/img/console/edit_note.png)
 
-### 2.13 Metadata
+### 2.14 Metadata
 
 You can save custom information associated with an endpoint using metadata.
 

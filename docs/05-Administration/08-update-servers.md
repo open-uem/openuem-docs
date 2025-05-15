@@ -18,6 +18,10 @@ keywords:
 
 # 🚀 Update Servers
 
+:::tip
+This section is only available for the Global config
+:::
+
 OpenUEM servers can be updated from the console. The console will send requests for updates to the server updater’s services.
 
 The console checks if a new release is available, and will display a message:

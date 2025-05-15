@@ -18,6 +18,10 @@ keywords:
 
 # 🏷 Tags
 
+:::tip
+This section is only available for an organization’s config
+:::
+
 You can use tags to identify or classify your endpoints. Once you create the tags you can use them from the Agents and Computers views.
 
 ![Tags list](/img/console/tags_settings.png)

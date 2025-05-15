@@ -18,6 +18,10 @@ keywords:
 
 # 📑 Metadata
 
+:::tip
+This section is only available for an organization’s config
+:::
+
 If you want to add custom metadata to your endpoints you can use the metadata section.
 
 ![Metadata settings](/img/console/metadata_settings.png)
