@@ -28,7 +28,7 @@ Existing Debian/Ubuntu agents must be reinstalled manually either using the .deb
 :::
 
 :::danger
-Due to a bug found in the agent updater, you won't be able to update 0.5.0 agents from the console (0.4.0 agents and lower are not affected) and you'll have to update the agents by hand or using a script to deploy it. The 0.6.0 windows installer can be run to upgrade the 0.5.0 agent. You can also use the debian repositorio to use apt on the affected endpoints to update the debian/ubuntu agent.
+Due to a bug found in the agent updater, you won't be able to update 0.5.0 agents from the console (0.4.0 agents and lower are not affected) and you'll have to update the agents by hand or using a script to deploy it. The 0.6.0 windows installer can be run to upgrade the 0.5.0 agent. You can also use the debian repository to use apt on the affected endpoints to update the debian/ubuntu agent.
 :::
 
 - Feat: get processor info if more than one windows processor is found

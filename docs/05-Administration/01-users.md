@@ -28,7 +28,7 @@ This section is only available for the Global config
 OpenUEM will have roles and there’s an open issue for that feature in the project’s roadmap
 :::
 
-As an administrator you can add more users, or you can approve [register requests](/docs/04-Console/10-register.md) that users have requested.
+As an administrator you can add more users, or you can approve [register requests](/docs/04-Console/11-register.md) that users have requested.
 
 :::warning
 Don’t forget to add [SMTP settings](/docs/05-Administration/04-smtp.md) so users can receive emails about the registration
@@ -60,7 +60,7 @@ Once you upload the users file, a certificate will be sent to the user with inst
 
 ## 3. Approve register requests
 
-If you create a new user or a [user has requested to register in OpenUEM](/docs/04-Console/10-register.md) you’ll see the user on the users’ table with the **Review request** warning, waiting to be approved.
+If you create a new user or a [user has requested to register in OpenUEM](/docs/04-Console/11-register.md) you’ll see the user on the users’ table with the **Review request** warning, waiting to be approved.
 
 ![Review user's registry request](/img/console/users_review_request.png)
 
