@@ -20,6 +20,10 @@ keywords:
 
 OpenUEM has many settings that you, as an administrator, can tweak. Just enter the new value and click the disk icon to save it.
 
+:::note
+The **Apply Global Settings** will overwrite the organization’s settings with the global settings
+:::
+
 ![General settings](/img/console/general_settings.png)
 
 Right now, here’s the table of settings and the default value

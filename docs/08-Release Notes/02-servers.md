@@ -16,6 +16,39 @@ keywords:
 
 # Server
 
+## 0.7.0
+
+Released: 15/05/2025
+
+:::warning
+This release introduces multi-tenancy so you should familiarize yourself with the organization and sites
+
+Please read the following sections:
+
+- [Multi-tenancy introduction](/docs/04-Console/02-multi-tenancy.md)
+- [OpenUEM Config Types](/docs/05-Administration/00-config-types.md)
+- [Organizations Section](/docs/05-Administration/10-organizations.md)
+- [Sites Section](/docs/05-Administration/11-sites.md)
+
+If you're migrating OpenUEM from a previous version, all the agents will be associated to a default organization and site that will be created when OpenUEM console starts
+
+:::
+
+- Feat: console must support multi-tenancy
+- Feat: printers can be removed or set as default
+- Feat: create initial endpoint overview
+- Feat: add redhat based icons for reports
+- Fix: don't count linux endpoints for dashboard antivirus status
+- Fix: missing agents stream retention policy
+- Fix: add new brand icons
+- Feat: detect and add rocky linux logo
+- Fix: add site to profile search and remote all sites for profile select
+- Fix: computers report text align
+- Feat: tags and metadata should use site, fix overview select
+- Fix: notes url in computers navbar
+- Fix: windows console issues with linux agent sftp
+- Fix: unknown system update setting status is now treated
+
 ## 0.6.0 (26/04/2025)
 
 - Feat: When you delete and agent from the console you can choose to: delete the agent from the console and uninstall it from the endpoint, delete the agent from the console but keep it installed in the endpoint, uninstall the agent but keep the information in the console

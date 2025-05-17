@@ -35,7 +35,7 @@ Get-FileHash openuem-agent-setup.exe
 
 Algorithm       Hash                                                                   Path
 ---------       ----                                                                   ----
-SHA256          F30888FA0DBE3AEB07A4A8B98166FCDC5845EC8E6959E747C2D8F233DE74DF24       C:\Users\doncicuto\Downloads\openuem....
+SHA256          3BFF3C353672D61C9C554E2BFC159CA09DE3E1AB6E525B24952F9BCF44A3FB5F       C:\Users\doncicuto\Downloads\openuem....
 ```
 
 ## 2. Install the agent
@@ -61,6 +61,8 @@ If you want to use the installer's flags:
 - /cert=path, this is the flag for the public part of SFTP certificate that the console will use to authenticate SFTP connections. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\console\sftp.cer`
 - /key=path, this is the flag for the certificate that allows the agent to connect with the NATS server. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\agents\agent.cer`
 - /sftpcert=path, this is flag for the private key that allows the agent to connect with the NATS server. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\agents\agent.key`
+-/tenantid=id, the ID of the organization that you want this endpoint to belong to. You'll have to add /siteid=id too. You can get the ID of the organization from the [organization's list](/docs/05-Administration/10-organizations.md).
+-/siteid=id, the ID of the site that you want this endpoint to belong to. You'll have to add /tenantid=id too. You can get the ID of the site from the [site's list](/docs/05-Administration/11-sites.md).
 
 Once you've copied the required certificates next to the setup, you'll have to run the setup command **with administrator privileges** using the available flags:
 
@@ -133,6 +135,10 @@ Introduce the location of the OpenUEM CA certificate file (ca.cer)
 And, set the location of the agent certificate (`certificates/agents/agent.cer), the agent private key (certificates/agents/agent.key) and the sftp certificate for the console (certificates/console/sftp.cer)
 
 ![Other certs path](/img/agent/other_certs.png)
+
+If you want that your endpoint is associated to an organization and site that you've created in OpenUEM console (🎯 Version 0.7.0) you can specify the IDs (numbers) or leave the fields empty to use the default organization and site. You can get the ID of the organization from the [organization's list](/docs/05-Administration/10-organizations.md) and the ID of the site from the [site's list](/docs/05-Administration/11-sites.md).
+
+![Other certs path](/img/agent/windows_org_site.png)
 
 Finally, click the Install button and wait for the installation to finish
 

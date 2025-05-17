@@ -16,6 +16,26 @@ keywords:
 
 # Agents
 
+## 0.6.0
+
+Released: 15/05/2025
+
+:::warning
+BREAKING CHANGE in Debian
+
+Existing Debian/Ubuntu agents must be reinstalled manually either using the .deb package or using OpenUEM's apt repo. The reason is that a new dialog will ask for the Organization ID and Site ID that you want OpenUEM to be associated with (should be Org ID 1 and Site ID 1 for the default org and site created automatically by OpenUEM)
+
+:::
+
+:::danger
+Due to a bug found in the agent updater, you won't be able to update 0.5.0 agents from the console (0.4.0 agents and lower are not affected) and you'll have to update the agents by hand or using a script to deploy it. The 0.6.0 windows installer can be run to upgrade the 0.5.0 agent. You can also use the debian repository to use apt on the affected endpoints to update the debian/ubuntu agent.
+:::
+
+- Feat: get processor info if more than one windows processor is found
+- Feat: agents can set a default printer and remove a printer for Linux and Windows
+- Feat: add tenant and site to INI and report
+- Feat: use dnf to get system update info
+
 ## 0.5.0
 
 - Feat: enable or disable remote assistance service on demand

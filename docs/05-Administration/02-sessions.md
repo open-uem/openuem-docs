@@ -18,6 +18,10 @@ keywords:
 
 # 📒 Sessions
 
+:::tip
+This section is only available for the Global config
+:::
+
 When a user logs into OpenUEM a new session is stored in the database. You can browse the sessions identified by the user’s id, the detected browser and OS and its IP address. Also, you can check when the session is going to expire.
 
 ![Sessions](/img/console/sessions.png)

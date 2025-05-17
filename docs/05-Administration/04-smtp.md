@@ -18,6 +18,10 @@ keywords:
 
 # 📧 SMTP Settings
 
+:::tip
+This section is only available for the Global config
+:::
+
 OpenUEM has a [**notification worker**](/docs/Introduction/workers) which is responsible for sending emails to users. This worker requires an administrator to introduce the SMTP settings before it can try to send messages.
 
 ![SMTP Settings](/img/console/smtp_settings.png)
