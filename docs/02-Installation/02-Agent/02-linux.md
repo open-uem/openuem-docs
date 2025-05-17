@@ -10,6 +10,10 @@ keywords:
     rmm,
     debian agent,
     ubuntu agent,
+    redhat agent,
+    fedora agent,
+    alma linux agent,
+    rocky linyx agent,
     unified endpoint manager,
     remote monitoring and management,
   ]
@@ -113,15 +117,19 @@ If you don’t add the OpenUEM repository to your agent, you won’t be able to 
 
 The agent can be installed from the repository using the following command:
 
-`dnf install openuem-agent`
+```(bash)
+dnf install openuem-agent
+```
 
 :::note
 You'll have to accept the GPG public key to install the package from OpenUEM repository
 :::
 
-If you have downloaded the .deb package manually, you can install it using
+If you have downloaded the .rpm package manually, you can install it using
 
-`dnf install ./openuem-agent-0.5.0-1.x86_64.rpm`
+```(bash)
+dnf install ./openuem-agent-0.5.0-1.x86_64.rpm
+```
 
 ### 2.3. Agent post-install steps
 
@@ -149,9 +157,11 @@ VNCProxyPort=
 :::note
 If your endpoint has a firewall, you must enable the incoming traffic to the SFTP and VNC Proxy ports from OpenUEM console. For example if SFTP port is 2022 and VNC proxy port is 1433:
 
+```(bash)
 sudo firewall-cmd --add-port=2022/tcp
 sudo firewall-cmd --add-port=1433/tcp
 sudo firewall-cmd --runtime-to-permanent
+```
 :::
 
 The agent requires some certificates to secure connections between the agent and the rest of OpenUEM components. You must place the required certificates under the `/etc/openuem-agent/certificates` folder **with administrator privileges**. You should find the certificates and private keys in the folder where the OpenUEM Server/Docker was installed.
@@ -162,6 +172,11 @@ These are the certificates required by the OpenUEM agent:
 - sftp.cer, this is the public part of the SFTP certificate that the console will use to authenticate SFTP connections. You should place the file in `/etc/openuem-agent/certificates/sftp.cer`
 - agent.cer, this is the certificate that allows the agent to connect with the NATS server. You should place the certificate in `/etc/openuem-agent/certificates/agent.cer`
 - agent.key, this is the private key that allows the agent to connect with the NATS server. You should find the file in the folder where the OpenUEM Server/Docker was installed under `/etc/openuem-agent/certificates/agent.key`
+
+```(bash)
+sudo mkdir /etc/openuem-agent/certificates
+sudo chown openuem-agent:openuem-agent /etc/openuem-agent/certificates
+```
 
 Once you've copied the required certificates, **you must restart the openuem-agent and openuem-agent-updater services**:
 

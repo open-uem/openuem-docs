@@ -234,9 +234,11 @@ export CONSOLE_SERVER="terminus.openuem.eu"
 export REVERSE_PROXY_SERVER="console.openuem.eu"
 ```
 
-Now enter the `/etc/openuem-server/certificates` where OpenUEM will search for certificates  
+Now let's create the `/etc/openuem-server/certificates` folder where OpenUEM will search for certificates  
 
 ```(bash)
+sudo mkdir -p /etc/openuem-server/certificates/{ca,nats,ocsp,notification-worker,agents-worker,cert-manager-worker,console,updater,agents,users}
+sudo chown -R openuem:openuem /etc/openuem-server/certificates/
 cd /etc/openuem-server/certificates
 ```
 
@@ -248,7 +250,11 @@ It's time to create the CA
 
 ```(bash)
 sudo openuem-cert-manager create-ca --name "OpenUEM CA" --dst ./ca --org "$ORGNAME" --country "$COUNTRY" --province "$ORGPROVINCE" --locality "$ORGLOCALITY" --address "$ORGADDRESS" --years-valid 10
+```
 
+You'll see an output like this:
+
+```(bash)
 2025/05/03 09:50:49 ... generating your CA certificate and private keys
 2025/05/03 09:50:51 ... creating your CA certificate
 2025/05/03 09:50:51 ... saving your CA certificate to ca/ca.cer
@@ -319,7 +325,6 @@ sudo openuem-cert-manager client-cert --name "OpenUEM Updater Client" --dst ./up
 **Agents certificates**
 
 ```(bash)
-sudo mkdir ./agents
 sudo openuem-cert-manager client-cert --name "OpenUEM Agent" --dst ./agents --type="agent" --org "$ORGNAME" --country "$COUNTRY" --province "$ORGPROVINCE" --locality "$ORGLOCALITY" --address "$ORGADDRESS" --years-valid 2 --filename "agent"  --ocsp "http://$OCSP_SERVER:$OCSP_PORT" --description "Agent certificate" --cacert ./ca/ca.cer --cakey ./ca/ca.key --dburl "$DATABASE_URL"
 ```
 **Admin certificate**
@@ -327,7 +332,6 @@ sudo openuem-cert-manager client-cert --name "OpenUEM Agent" --dst ./agents --ty
 Create the admin user client certificate and private key for console access.
 
 ```(bash)
-sudo mkdir ./users
 sudo openuem-cert-manager user-cert --username admin --dst ./users --org "$ORGNAME" --country "$COUNTRY" --province "$ORGPROVINCE" --locality "$ORGLOCALITY" --address "$ORGADDRESS" --years-valid 2 --ocsp "http://$OCSP_SERVER:$OCSP_PORT" --description "OpenUEM Administrator" --cacert ./ca/ca.cer --cakey ./ca/ca.key --dburl "$DATABASE_URL"
 ```
 
@@ -339,10 +343,26 @@ If you need to re-run the previous command note that you must remove the admin u
 
 All OpenUEM components use the /etc/openuem-server/openuem.ini configuration file. You’ll need to add/update the following configuration entries depending on the component that you want to have on that server. 
 
+:::note
+Also, you've to uncomment the entries that matches the components to be used on the server in the Components section
+
+```
+[Components]
+NATS=yes
+OCSP=yes
+AgentWorker=yes
+CertManagerWorker=yes
+NotificationWorker=yes
+Console=yes
+```
+:::
+
+
 **DATABASE**
 
 You have to set the following entries
 
+```
 [DB]
 PostgresHost=localhost
 PostgresPort=5432
@@ -350,6 +370,7 @@ PostgresUser=test
 PostgresPassword=test
 PostgresDatabase=openuem
 PostgresUrl=postgres://test:test@localhost:5432/openuem
+```
 
 **OCSP Responder**
 
