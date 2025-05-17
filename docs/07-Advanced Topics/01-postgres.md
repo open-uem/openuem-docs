@@ -23,7 +23,8 @@ To install the Postgres database server on a Windows or Linux machine please use
 - [Debian](https://www.postgresql.org/download/linux/debian/)
 - [Ubuntu](https://www.postgresql.org/download/linux/ubuntu/)
 - [Fedora](https://www.postgresql.org/download/linux/redhat/)
-- [AlmaLinux](https://www.postgresql.org/download/linux/redhat/)
+- [Alma Linux](https://www.postgresql.org/download/linux/redhat/)
+- [Rocky Linux](https://www.postgresql.org/download/linux/redhat/)
 - [Windows](https://www.postgresql.org/download/windows/)
 
 ## 2. Create the database

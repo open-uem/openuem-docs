@@ -153,7 +153,7 @@ After the installation finishes, you'll see the following message:
 
 ## 2. RedHat based distributions
 
-The OpenUEM server components can be installed on a RedHat based distributions like Fedora and AlmaLinux using .rpm packages available in OpenUEM repository.
+The OpenUEM server components can be installed on a RedHat based distributions like Fedora, Alma Linux and Rocky Linux using .rpm packages available in OpenUEM repository.
 
 ### 2.1 Adding the repository
 

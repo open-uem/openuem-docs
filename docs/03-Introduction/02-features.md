@@ -20,7 +20,7 @@ OpenUEM is a self-hosted solution.
 
 Right now, you can do the following with OpenUEM:
 
-- Agents can be installed on **Windows** and **Debian based distributions** (Debian, Ubuntu and Linux Mint) endpoints
+- Agents and Server components can be installed on **Windows**, **Debian based distributions** (Debian, Ubuntu and Linux Mint), **RedHat based distributions** (Fedora, Alma Linux, Rocky Linux and RedHat) hosts and endpoints
 - **Multi-tenancy is supported**. You can create multiple organizations and sites under the same OpenUEM installation. A default organization and site are created when OpenUEM is installed or migrated (🎯 Version 0.7.0)
 - View **what is installed on your endpoints** (hardware model, memory, logical disks, shared resources, printers, network adapters, software…)
 - Know if your Windows systems have all the **windows updates** applied and browse the updates history

@@ -15,7 +15,7 @@ keywords:
 
 # ⚠️ Requirements
 
-OpenUEM can be installed in Windows (Desktop or Server versions) or Linux (.deb packages or binaries) but there are two requirements:
+OpenUEM can be installed in Windows (Desktop or Server versions) or Linux (.deb and .rpm packages or binaries) but there are two requirements:
 
 - **A Postgres database** with a user and password and sufficient permissions to create schemas in the database must be ready before proceeding with the installation.
 

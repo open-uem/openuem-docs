@@ -18,8 +18,6 @@ keywords:
 
 OpenUEM will have the following improvements soon (in no particular order):
 
-- Create agent for RedHat based distributions (Fedora, Alma Linux, Rocky Linux)
-- Create packages to install OpenUEM server components in RedHat based distributions
 - Apply configuration profiles to Linux endpoints using Ansible
 - Agents for Mac OSX support
 - Implement MSI installation and PowerShell script execution through Windows profiles

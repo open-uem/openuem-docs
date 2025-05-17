@@ -40,4 +40,4 @@ OpenUEM is an open-source project that you can use for free. OpenUEM is based on
 
 If you are the IT administrator of a small company, you may not have spare equipment to install a management tool. If in the future your network grows, you may be concerned about how to migrate the functionality.
 
-OpenUEM can be installed in a humble desktop machine with Windows 10 Home, Debian/Ubuntu Linux or any Docker powered environment. If you run a medium-sized or large company, you can use beefier machines and share the load as OpenUEM has been designed to have [distributed components](/docs/Introduction/architecture).
+OpenUEM can be installed in a humble desktop machine with Windows 10 Home, Debian/Ubuntu Linux, RedHat/Fedora/AlmaLinux/RockyLinux or any Docker powered environment. If you run a medium-sized or large company, you can use beefier machines and share the load as OpenUEM has been designed to have [distributed components](/docs/Introduction/architecture).
