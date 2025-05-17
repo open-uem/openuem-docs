@@ -22,6 +22,8 @@ To install the Postgres database server on a Windows or Linux machine please use
 
 - [Debian](https://www.postgresql.org/download/linux/debian/)
 - [Ubuntu](https://www.postgresql.org/download/linux/ubuntu/)
+- [Fedora](https://www.postgresql.org/download/linux/redhat/)
+- [AlmaLinux](https://www.postgresql.org/download/linux/redhat/)
 - [Windows](https://www.postgresql.org/download/windows/)
 
 ## 2. Create the database
@@ -104,6 +106,57 @@ Click on the **Security** tab and set all privileges to the account.
 ![Assign permissions to database](/img/postgres/postgres_create_database_3.png)
 
 Finally, click on **Save** to create the database.
+
+### 2.3 RedHat/AlmaLinux/Fedora/Rocky Linux
+
+First, start the Postgres database server and enable the service to start at boot:
+
+```(bash)
+sudo systemctl start postgresql-17
+sudo systemctl enable postgresql-17
+```
+
+Then check that the server is running:
+
+```(bash)
+● postgresql-17.service - PostgreSQL 17 database server
+     Loaded: loaded (/usr/lib/systemd/system/postgresql-17.service; enabled; preset: disabled)
+    Drop-In: /usr/lib/systemd/system/service.d
+             └─10-timeout-abort.conf, 50-keep-warm.conf
+     Active: active (running) since Sat 2025-05-03 10:01:03 CEST; 3h 21min ago
+ Invocation: 3c686a353c7941da9bb992061d77acc9
+       Docs: https://www.postgresql.org/docs/17/static/
+
+```
+
+Now, install the postgresql client:
+
+```(bash)
+sudo dnf install postgresql-17
+```
+
+Run the following command to open psql as the postgres user:
+
+```(bash)
+sudo -u postgres psql
+```
+
+From postgres# prompt introduce the following commands, changing the user, password and database name according to your needs:
+
+```(bash)
+CREATE DATABASE openuem;
+CREATE USER test WITH ENCRYPTED PASSWORD 'test';
+GRANT ALL PRIVILEGES ON DATABASE openuem TO test;
+ALTER DATABASE openuem OWNER TO test;
+\q
+```
+
+The OpenUEM database and the associated user should be ready.
+
+:::note
+When you install OpenUEM (server components or agent) you'll have to specify the database url. Following the previous example the database url should be `postgres://test:test@localhost:5432/openuem`
+:::
+
 
 ## 3. Remove the database tables
 
