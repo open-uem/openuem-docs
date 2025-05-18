@@ -45,11 +45,15 @@ If you don’t add the OpenUEM repository to your agent, you won’t be able to 
 
 The agent can be installed from the repository using the following command:
 
-`apt install openuem-agent`
+```
+apt install openuem-agent
+```
 
 If you have downloaded the .deb package manually, you can install it using
 
-`apt install ./openuem-agent_0.4.0_amd64.deb`
+```
+apt install ./openuem-agent_0.6.0_amd64.deb
+``` 
 
 Once the installation starts, you’ll have to answer some questions to configure the agent.
 

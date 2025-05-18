@@ -16,6 +16,13 @@ keywords:
 
 # Server
 
+## 0.7.1
+
+Released: 18/05/2025
+
+- Fix: possible race condition in new installations. If database is not ready, the initial settings are not created and then the default organization is created without settings causing a panic
+- Fix: apply global settings should not be seen in Global Settings, only for organization general settings
+
 ## 0.7.0
 
 Released: 15/05/2025
