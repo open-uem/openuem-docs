@@ -34,7 +34,7 @@ You can download OpenUEM agent and server for Windows from OpenUEM's download si
 
 | Type   | Version | Arch  | Link                                                                            | Checksum                                                                 |
 | ------ | ------- | ----- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Server | 0.7.1   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.7.0.exe) | SHA256: E1B5145F2F697EDB6AE4E37138C3E5F358A820CB12AF16720C89391DB82DFFCE |
+| Server | 0.7.1   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.7.1.exe) | SHA256: E1B5145F2F697EDB6AE4E37138C3E5F358A820CB12AF16720C89391DB82DFFCE |
 
 :::warning
 As OpenUEM is a new project, Microsoft Edge and/or Microsoft SmartScreen can warn you that the file to be downloaded cannot be trusted by Microsoft as it's a file that is not downloaded commonly and you'll have to force the browser to keep that file to download it or force SmartScreen to allow execution. Hopefully, soon, this warning will disappear as a report has been sent to Microsoft.
