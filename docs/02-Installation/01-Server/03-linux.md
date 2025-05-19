@@ -188,14 +188,14 @@ You can install these components in different machines, if you want OpenUEM to r
 For example:
 
 ```(bash)
-dnf install openuem-console
-dnf install openuem-ocsp-responder
-dnf install openuem-nats-service
-dnf install openuem-agent-worker
-dnf install openuem-cert-manager-worker
-dnf install openuem-notification-worker
-dnf install openuem-server-updater
-dnf install openuem-cert-manager 
+sudo dnf install openuem-console
+sudo dnf install openuem-ocsp-responder
+sudo dnf install openuem-nats-service
+sudo dnf install openuem-agent-worker
+sudo dnf install openuem-cert-manager-worker
+sudo dnf install openuem-notification-worker
+sudo dnf install openuem-server-updater
+sudo dnf install openuem-cert-manager 
 ```
 
 :::note
