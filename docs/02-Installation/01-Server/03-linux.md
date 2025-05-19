@@ -183,14 +183,27 @@ The OpenUEM RPM repository has packages for every component and tool required to
 - openuem-server-updater
 - openuem-cert-manager 
 
-You can install these components in different machines, if you want OpenUEM to run in a distributed mode, but if you want to run all the components in the same machine, you can use the openuem-server meta-package to install them all. 
+You can install these components in different machines, if you want OpenUEM to run in a distributed mode, or install them all on the same machine. 
+
+For example:
 
 ```(bash)
-dnf install -y openuem-server
+dnf install openuem-console
+dnf install openuem-ocsp-responder
+dnf install openuem-nats-service
+dnf install openuem-agent-worker
+dnf install openuem-cert-manager-worker
+dnf install openuem-notification-worker
+dnf install openuem-server-updater
+dnf install openuem-cert-manager 
 ```
 
 :::note
 The first time you install packages from OpenUEM's repository you'll have to accept the GPG key
+:::
+
+:::warning
+In any machine that hosts a OpenUEM component you must install the **openuem-server-updater** package
 :::
 
 ### 2.3 Configure OpenUEM 
