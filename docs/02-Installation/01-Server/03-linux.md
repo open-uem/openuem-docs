@@ -151,7 +151,11 @@ After the installation finishes, you'll see the following message:
 
 ![Installation finished](/img/linux/installation_finishes.png)
 
-## 2. RedHat based distributions
+## 2. RedHat based distributions (under development)
+
+:::danger
+The installation of OpenUEM server components in RedHat based distributions is not fully operational, the option to update the server components from the console is not working due to SELinux and some issues are also pending to update the server using dnf update, so please don't use the RPM packages for now and skip the section until this warning is removed.
+:::
 
 The OpenUEM server components can be installed on a RedHat based distributions like Fedora, Alma Linux and Rocky Linux using .rpm packages available in OpenUEM repository.
 
@@ -352,12 +356,20 @@ sudo openuem-cert-manager user-cert --username admin --dst ./users --org "$ORGNA
 If you need to re-run the previous command note that you must remove the admin user row from the table users of your database
 :::
 
-#### 2.3.2 Edit the openuem.ini configuration file
+#### 2.3.2 Create the openuem.ini configuration file
 
-All OpenUEM components use the /etc/openuem-server/openuem.ini configuration file. You’ll need to add/update the following configuration entries depending on the component that you want to have on that server. 
+All OpenUEM components use the /etc/openuem-server/openuem.ini configuration file. Create the openuem.ini file and set permissions:
 
-:::note
-Also, you've to uncomment the entries that matches the components to be used on the server in the Components section
+```
+sudo touch /etc/openuem-server/openuem.ini
+sudo chown openuem:openuem /etc/openuem-server/openuem.ini
+```
+
+Then you’ll need to add the following configuration entries depending on the component that you want to have on that server. 
+
+**Components**
+
+Specify which components are installed on the server, adding the component and the yes value
 
 ```
 [Components]
@@ -368,12 +380,10 @@ CertManagerWorker=yes
 NotificationWorker=yes
 Console=yes
 ```
-:::
-
 
 **DATABASE**
 
-You have to set the following entries
+For database connections, you have to set the following entries
 
 ```
 [DB]
@@ -400,12 +410,37 @@ OCSPPort=8000
 The following information is required so the Cert-Manager worker can generate certificates on demand
 
 ```
+[Certificates]
 OCSPUrls=http://terminus.openuem.eu:8000
 OrgName=OpenUEM
 OrgCountry=ES
 OrgProvince=Valladolid
 OrgLocality=Valladolid
 OrgAddress=Fake St 123
+```
+
+** Certificates **
+
+The following entries must be included in the certificates section
+
+```
+CACert=/etc/openuem-server/certificates/ca/ca.cer
+CAKey=/etc/openuem-server/certificates/ca/ca.key
+NATSCert=/etc/openuem-server/certificates/nats/nats.cer
+NATSKey=/etc/openuem-server/certificates/nats/nats.key
+OCSPCert=/etc/openuem-server/certificates/ocsp/ocsp.cer
+OCSPKey=/etc/openuem-server/certificates/ocsp/ocsp.key
+NotificationWorkerCert=/etc/openuem-server/certificates/notification-worker/worker.cer
+NotificationWorkerKey=/etc/openuem-server/certificates/notification-worker/worker.key
+CertManagerWorkerCert=/etc/openuem-server/certificates/cert-manager-worker/worker.cer
+CertManagerWorkerKey=/etc/openuem-server/certificates/cert-manager-worker/worker.key
+AgentWorkerCert=/etc/openuem-server/certificates/agents-worker/worker.cer
+AgentWorkerKey=/etc/openuem-server/certificates/agents-worker/worker.key
+ConsoleCert=/etc/openuem-server/certificates/console/console.cer
+ConsoleKey=/etc/openuem-server/certificates/console/console.key
+SFTPKey=/etc/openuem-server/certificates/console/sftp.key
+UpdaterCert=/etc/openuem-server/certificates/updater/updater.cer
+UpdaterKey=/etc/openuem-server/certificates/updater/updater.key
 ```
 
 **NATS Service**
@@ -423,7 +458,7 @@ NATSServer=terminus.openuem.eu
 If you run the console service you must the hostname and the port used by the console and authentication servers. Then if you are using the console behind a reverse proxy, you must set the hostname for the reverse proxy server and the port that you'll set in the reverse proxy for authentication.
 
 :::warning
-The reverseproxyserver and reverseproxyauthport must be uncommented even if you're not using a reverse proxy. You should set an empty value for these properties
+The reverseproxyserver and reverseproxyauthport must exist even if you're not using a reverse proxy. You should set an empty value for these properties
 :::
 
 Also you have to set the domain name that you use in your organization and set a key for JWT tokens (32 byte max)
@@ -443,7 +478,7 @@ Key=averylongsecret
 
 **All components**
 
-The following must be added to the NATS section:
+The following must be added to the NATS section in any case:
 
 ```
 NATSServers=terminus.openuem.eu:4433

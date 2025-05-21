@@ -105,6 +105,10 @@ systemctl restart openuem-agent-updater
 
 ## 2. RedHat/Fedora/AlmaLinux
 
+:::danger
+The installation of OpenUEM agents in RedHat based distributions is not fully operational, the option to update the agent components from the console is not working due to SELinux and some issues are also pending to update the agent using dnf update, so please don't use the RPM packages for now and skip the section until this warning is removed.
+:::
+
 You can install an agent in a RedHat based system.
 
 ### 2.1. Download the package
