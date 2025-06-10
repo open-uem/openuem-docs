@@ -151,11 +151,7 @@ After the installation finishes, you'll see the following message:
 
 ![Installation finished](/img/linux/installation_finishes.png)
 
-## 2. RedHat based distributions (under development)
-
-:::danger
-The installation of OpenUEM server components in RedHat based distributions is not fully operational, the option to update the server components from the console is not working due to SELinux and some issues are also pending to update the server using dnf update, so please don't use the RPM packages for now and skip the section until this warning is removed.
-:::
+## 2. RedHat based distributions
 
 The OpenUEM server components can be installed on a RedHat based distributions like Fedora, Alma Linux and Rocky Linux using .rpm packages available in OpenUEM repository.
 
@@ -358,18 +354,13 @@ If you need to re-run the previous command note that you must remove the admin u
 
 #### 2.3.2 Create the openuem.ini configuration file
 
-All OpenUEM components use the /etc/openuem-server/openuem.ini configuration file. Create the openuem.ini file and set permissions:
+All OpenUEM components use the /etc/openuem-server/openuem.ini configuration file. The openuem.ini file is created when the openuem-server-updater package is installed.
 
-```
-sudo touch /etc/openuem-server/openuem.ini
-sudo chown openuem:openuem /etc/openuem-server/openuem.ini
-```
-
-Then you’ll need to add the following configuration entries depending on the component that you want to have on that server. 
+You’ll need to edit the openuem.ini file and set the following configuration entries depending on the components that you want to have on that server. 
 
 **Components**
 
-Specify which components are installed on the server, adding the component and the yes value
+Specify which components are installed on the server, uncommenting (removing the # at the start of the line) the entry for each component:
 
 ```
 [Components]
@@ -419,9 +410,9 @@ OrgLocality=Valladolid
 OrgAddress=Fake St 123
 ```
 
-** Certificates **
+**Certificates**
 
-The following entries must be included in the certificates section
+The following entries must be included un uncommented in the certificates section
 
 ```
 CACert=/etc/openuem-server/certificates/ca/ca.cer
