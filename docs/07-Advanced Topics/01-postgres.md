@@ -31,9 +31,10 @@ To install the Postgres database server on a Windows or Linux machine please use
 
 ### 2.1 Ubuntu/Debian
 
-First, start the Postgres database server and enable the service to start at boot:
+First, install the database, start the Postgres database server and enable the service to start at boot:
 
 ```(bash)
+sudo apt install -y postgresql
 sudo systemctl start postgresql
 sudo systemctl enable postgresql
 ```
@@ -63,6 +64,10 @@ GRANT ALL PRIVILEGES ON DATABASE openuem TO test;
 ALTER DATABASE openuem OWNER TO test;
 \q
 ```
+
+:::warning
+The password cannot contain the # symbol
+:::
 
 The OpenUEM database and the associated user should be ready.
 
@@ -110,30 +115,30 @@ Finally, click on **Save** to create the database.
 
 ### 2.3 RedHat/AlmaLinux/Fedora/Rocky Linux
 
-First, start the Postgres database server and enable the service to start at boot:
+First, initialize the database, start the Postgres database server and enable the service to start at boot:
 
 ```(bash)
-sudo systemctl start postgresql-17
-sudo systemctl enable postgresql-17
+sudo postgresql-setup --initdb
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
 ```
 
 Then check that the server is running:
 
 ```(bash)
-● postgresql-17.service - PostgreSQL 17 database server
-     Loaded: loaded (/usr/lib/systemd/system/postgresql-17.service; enabled; preset: disabled)
+● postgresql.service - PostgreSQL database server
+     Loaded: loaded (/usr/lib/systemd/system/postgresql.service; enabled; preset: disabled)
     Drop-In: /usr/lib/systemd/system/service.d
-             └─10-timeout-abort.conf, 50-keep-warm.conf
-     Active: active (running) since Sat 2025-05-03 10:01:03 CEST; 3h 21min ago
- Invocation: 3c686a353c7941da9bb992061d77acc9
-       Docs: https://www.postgresql.org/docs/17/static/
-
+             └─10-timeout-abort.conf
+     Active: active (running) since Mon 2025-06-16 15:57:44 CEST; 3min 19s ago
+ Invocation: dcd3ad6f23564b9f93e403eeebfd258c
+   Main PID: 44987 (postgres)
 ```
 
 Now, install the postgresql client:
 
 ```(bash)
-sudo dnf install postgresql-17
+sudo dnf install postgresql17
 ```
 
 Run the following command to open psql as the postgres user:
@@ -152,12 +157,18 @@ ALTER DATABASE openuem OWNER TO test;
 \q
 ```
 
+Now according to [Fedora docs](https://docs.fedoraproject.org/en-US/quick-docs/postgresql/) we must edit the `/var/lib/pgsql/data/pg_hba.conf` and
+replace `host all all 127.0.0.1/32 ident` with `host all all 127.0.0.1/32 md5` and restart the service `sudo systemctl restart postgresql`
+
+:::warning
+The password cannot contain the # symbol
+:::
+
 The OpenUEM database and the associated user should be ready.
 
 :::note
 When you install OpenUEM (server components or agent) you'll have to specify the database url. Following the previous example the database url should be `postgres://test:test@localhost:5432/openuem`
 :::
-
 
 ## 3. Remove the database tables
 

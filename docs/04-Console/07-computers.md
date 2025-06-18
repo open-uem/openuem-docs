@@ -169,10 +169,11 @@ You’ll find all the applications found with their name, version, publisher, in
 
 ### 2.10 Deploy software
 
-OpenUEM can deploy software to your computers automatically using Winget’s client in Windows or Flatpak in Linux:
+OpenUEM can deploy software to your computers automatically using Winget’s client in Windows, Flatpak in Linux and HomeBrew in macOS:
 
-- Winget is the Windows Package Manager that is available on Windows 11, modern versions of Windows 10, and Windows Server 2025 as a part of the App Installer
-- Flatpak is a framework for distributing desktop applications across various Linux distributions. Flatpak is installed with OpenUEM if it's not installed directly by your Linux distribution.
+- [Winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/) is the Windows Package Manager that is available on Windows 11, modern versions of Windows 10, and Windows Server 2025 as a part of the App Installer
+- [Flatpak](https://flatpak.org/) is a framework for distributing desktop applications across various Linux distributions. Flatpak is installed with OpenUEM if it's not installed directly by your Linux distribution.
+- [HomeBrew](https://brew.sh/) names itself as the missing package manager for macOS. **HomeBrew must be installed manually by the admin** if you want to deploy packages with OpenUEM
 
 :::warning
 Winget should be ready for your host if it has been used for some time, but if you have a fresh installation of Windows 10, winget.exe may not be ready to use on that endpoint although it should be installed automatically in the following days. To get the WinGet executable quicker (winget.exe), you should first update Microsoft Store after opening it and then you may have to update the app called "App Installer". Visit [this link](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab) to locate that app and update it
@@ -214,7 +215,9 @@ OpenUEM allows you to open a remote assistance session using VNC or RDP if these
 :::note
 If you connect to a Windows machine, VNC will be used as, right now, OpenUEM cannot use RDP shadow connections to see what the connected user is doing.
 
-If you connect to a Linux machine, there are two possibilities. If the machine uses a Wayland display server, RDP will be used to provide the remote assistance. If the machine uses an X11 display server, VNC will be used.  
+If you connect to a Linux machine, there are two possibilities. If the machine uses a Wayland display server, RDP will be used to provide the remote assistance. If the machine uses an X11 display server, VNC will be used.
+
+Remote Assistance using VNC is not currently supported for MacOS endpoints. An [issue is opened](https://github.com/open-uem/openuem-agent/issues/51) to try to fix it:
 :::
 
 If RDP/VNC connectivity is available, you can click on the **Open session in a new tab** button.

@@ -23,7 +23,7 @@ OpenUEM provides a sidebar menu that allows you to visit the following sections:
 - Computers: that allows you to explore the computers information reported by OpenUEM agents.
 - Software: shows the applications found in your organization as reported by OpenUEM agents.
 - Security: provides information about the antivirus systems and windows updates.
-- Deploy: allows you to deploy software to your computers using Winget and Microsoft’s repositories.
+- Deploy: allows you to deploy software to your computers.
 - Profiles: if a site is selected, you will see the Profiles icon that allows you to create configuration profiles for your endpoints
 - Agents: shows the agents that have contacted OpenUEM so you can manage them (enable, disable, run a report, generate certificates…)
 - Admin: allows you to configure OpenUEM (general settings, users, certificates, agents and server updates…)

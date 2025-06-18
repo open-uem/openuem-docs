@@ -28,7 +28,7 @@ Clone the openuem-docker repository:
 git clone https://github.com/open-uem/openuem-docker
 ```
 
-## 2. Create a .env file with environment variables to be used
+## 2. Create .env file with environment variables
 
 Use the file named `.env-example` file to create a `.env` file
 
@@ -38,42 +38,94 @@ The file must be named .env without extension and with a dot before the env word
 
 In the `.env` file, edit the environment variables that docker compose will use to build and get the containers up and running.
 
-:::note
-You can set the Postgres database user and password in the `init.sh` file inside the `postgres\build`
+:::warning
+You should set the Postgres database user and password in the `init.sh` file inside the `postgres\build` as defaults used are dummy, unsafe values
+that should not be used in production
+
+```
+psql -v ON_ERROR_STOP=1 --username "postgres" <<-EOSQL
+  CREATE DATABASE openuem;
+  CREATE USER **YOUR_USER** WITH ENCRYPTED PASSWORD '**YOUR PASSWORD**';
+  GRANT ALL PRIVILEGES ON DATABASE openuem TO **YOUR_USER**;
+  ALTER DATABASE openuem OWNER TO **YOUR_USER**;
+EOSQL
+```
+
 :::
 
 Here are the possible environment variables that can appear in the .env file.
 
-| Name                 | Description                                                                   | Optional | Example value                                  |
-| -------------------- | ----------------------------------------------------------------------------- | -------- | ---------------------------------------------- |
-| SERVER_NAME          | The name of the server where the console is hosted                            | no       | server.example.com                             |
-| POSTGRES_PORT        | The port number where the database service should be found                    | no       | 5432                                           |
-| DATABASE_URL         | The database url in format postgres://user:password@openuem-db-1:port/openuem | no       | postgres://test:test@openuem-db-1:5432/openuem |
-| ORGNAME              | Your organization's name                                                      | no       | OpenUEM                                        |
-| ORGPROVINCE          | Your organization's province                                                  | yes      | Valladolid                                     |
-| ORGLOCALITY          | Your organization's locality                                                  | yes      | Valladolid                                     |
-| ORGADDRESS           | Your organization's address                                                   | yes      | My org's address                               |
-| COUNTRY              | Your organization's country                                                   | no       | ES                                             |
-| OCSP_PORT            | The port used by the OCSP responder                                           | no       | 8000                                           |
-| NATS_PORT            | The port used by the NATS server                                              | no       | 4433                                           |
-| NATS_SERVERS         | The NATS service url                                                          | no       | server.example.com:4433                        |
-| REVERSE_PROXY_SERVER | If you want to use a reverse proxy, set its domain name                       | yes      | console.example.com                            |
-| OCSP                 | The URL for the OCSP responder service                                        | no       | http://server.example.com:8000                 |
-| DOMAIN               | Your DNS domain                                                               | no       | example.com                                    |
-| CONSOLE_PORT         | The port used by the console                                                  | no       | 1323                                           |
-| AUTH_PORT            | The port used by the auth server                                              | no       | 1324                                           |
-| JWT_KEY              | The key used to encrypt JWT tokens for user registration                      | no       | averylongsecret                                |
-| TZ                   | The timezone used by OpenUEM containers                                       | yes      | Europe/Madrid                                  |
+| Name                    | Description                                                                                       | Optional | Example value                                  |
+| ----------------------- | ------------------------------------------------------------------------------------------------- | -------- | ---------------------------------------------- |
+| SERVER_NAME             | The name of the server where the console is hosted                                                | no       | server.example.com                             |
+| POSTGRES_PORT           | The port number where the database service should be found                                        | no       | 5432                                           |
+| DATABASE_URL            | The database url in format postgres://user:password@openuem-db-1:port/openuem                     | no       | postgres://test:test@openuem-db-1:5432/openuem |
+| ORGNAME                 | Your organization's name                                                                          | no       | OpenUEM                                        |
+| ORGPROVINCE             | Your organization's province                                                                      | yes      | Valladolid                                     |
+| ORGLOCALITY             | Your organization's locality                                                                      | yes      | Valladolid                                     |
+| ORGADDRESS              | Your organization's address                                                                       | yes      | My org's address                               |
+| COUNTRY                 | Your organization's country                                                                       | no       | ES                                             |
+| OCSP_PORT               | The port used by the OCSP responder                                                               | no       | 8000                                           |
+| NATS_SERVER             | The domain name used by the NATS server                                                           | no       | The value of SERVER_NAME                       |
+| NATS_PORT               | The port used by the NATS server                                                                  | no       | 4433                                           |
+| NATS_SERVERS            | The NATS service url                                                                              | no       | server.example.com:4433                        |
+| REVERSE_PROXY_SERVER    | If you want to use a reverse proxy, set the domain name that you want to use to visit the console | yes      | console.example.com                            |
+| REVERSE_PROXY_AUTH_PORT | If you want to use a reverse proxy, set the port that will be used to answer for auth             | yes      | 1340                                           |
+| OCSP                    | The URL for the OCSP responder service                                                            | no       | http://server.example.com:8000                 |
+| DOMAIN                  | Your DNS domain                                                                                   | no       | example.com                                    |
+| CONSOLE_PORT            | The port used by the console                                                                      | no       | 1323                                           |
+| AUTH_PORT               | The port used by the auth server                                                                  | no       | 1324                                           |
+| JWT_KEY                 | The key used to encrypt JWT tokens for user registration                                          | no       | averylongsecret                                |
+| TZ                      | The timezone used by OpenUEM containers                                                           | yes      | Europe/Madrid                                  |
 
-:::note
-server.example.com should be resolved by your DNS service if you want remote agents to be able to contact OpenUEM components
+server.example.com should be resolved by your DNS service if you want remote agents to be able to contact OpenUEM components.
+
+:::tip
+If you don't have a DNS you can use extra_hosts in the docker_compose.yml to add entries for the containers as if you were using /etc/hosts
+
+Reference: https://docs.docker.com/reference/compose-file/build/#extra_hosts
+
+![Extra hosts](/img/docker/extra_hosts.png)
 :::
 
 :::danger
 It's strongly recommended to change the JWT key with a random 32 characters long string
 :::
 
-## 3. Launch docker compose command
+## 3. Use a reverse proxy (Optional)
+
+You can run OpenUEM behind a reverse proxy. Caddy can be used and is supported for this deployment with docker compose.
+
+First you must set the REVERSE_PROXY_SERVER and REVERSE_PROXY_AUTH_PORT env variables in the .env file and the REVERSE_PROXY_SERVER domain must be resolved by a DNS server.
+
+Second you must uncomment these lines and watch that the right indentation is set:
+
+```
+  # caddy:
+  #   image: caddy:latest
+  #   restart: always
+  #   profiles: ["caddy"]
+  #   env_file:
+  #     - .env
+  #   ports:
+  #     - "443:443"
+  #     - $REVERSE_PROXY_AUTH_PORT:$REVERSE_PROXY_AUTH_PORT
+  #   volumes:
+  #     - "./caddy/Caddyfile:/etc/caddy/Caddyfile"
+  #     - "./certificates/ca/ca.cer:/etc/caddy/ca.cer"
+  #     - "./certificates/console/proxy.cer:/etc/caddy/proxy.cer"
+  #     - "./certificates/console/proxy.key:/etc/caddy/proxy.key"
+  #     - caddy_data:/data
+  #     - caddy_config:/config
+
+
+  # caddy_data:
+  #   driver: local
+  # caddy_config:
+  #   driver: local
+```
+
+## 4. Launch docker compose command
 
 Where the compose.yaml file and the .env files are located, launch OpenUEM with the following commands:
 
@@ -116,6 +168,18 @@ We should see that all components have started:
  ✔ Container openuem-agents-worker-1 Started
 ```
 
+If you want to use Caddy as a reverse proxy:
+
+```
+docker compose --profile caddy up -d
+```
+
+The Caddy container should be created and started:
+
+```
+ ✔ Container openuem-caddy-1  Started
+```
+
 If we want to stop OpenUEM we should run the following commands:
 
 ```(bash)
@@ -123,27 +187,44 @@ docker compose --profile openuem down
 docker compose --profile init down
 ```
 
-Before we can visit OpenUEM's console, we must import two digital certificates
+If you're using the Caddy option you can stop it with:
+
+```(bash)
+docker compose --profile caddy down
+```
 
 :::warning
-If you find any error trying to launch the services, run the docker compose down commands shown above, remove the volumes and the certificates folder and start again
+If you find any error trying to launch the services, run the docker compose down commands shown above, **remove the volumes and the certificates folder** and start again
 
 ```
+sudo rm -rf certificates
 docker volume rm openuem_jetstream
 docker volume rm openuem_pgdata
+```
+
+And if you use the Caddy option
+
+```
+docker volume rm openuem_caddy_config
+docker volume rm openuem_caddy_data
 ```
 
 Open an issue with all the possible information if you can't start OpenUEM with Docker
 :::
 
-## 4. Trust in digital certificates created
+## 5. Trust in digital certificates created
+
+Before we can visit OpenUEM's console, we must import two digital certificates to our browser, the Certificate Authority certificate (ca.cer) and the user's certificate to log in. You have a guide explaining how to import certificates [here](/docs/Advanced%20Topics/user-certificate)
 
 Next to the compose .yaml file you’ll find a **certificates folder** containing all the certificates that OpenUEM has created and that are [required to run](/docs/Introduction/security).
 
-
-## 5. Visit OpenUEM's Console
+## 6. Visit OpenUEM's Console
 
 Now open `https://SERVER_NAME:CONSOLE_PORT` (replace the values that you've set in your .env file) and you should see OpenUEM's console
+
+:::note
+If you've set a reverse proxy the url should be `https://REVERSE_PROXY_SERVER`
+:::
 
 ![Console LogIn](/img/console/login.png)
 
@@ -153,7 +234,7 @@ Finally, log in user your admin certificate and read how to install and add your
 If you see any certificates error, please ensure that you've imported the right certificates in the right certificate stores of your browser
 :::
 
-## 6. Update
+## 7. Update
 
 To update the Docker containers, use docker compose:
 
@@ -161,4 +242,10 @@ To update the Docker containers, use docker compose:
 docker compose pull
 
 docker compose --profile openuem up --force-recreate -d --build
+```
+
+And if you use the Caddy option
+
+```(bash)
+docker compose --profile caddy up --force-recreate -d
 ```

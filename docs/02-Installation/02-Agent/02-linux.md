@@ -13,7 +13,7 @@ keywords:
     redhat agent,
     fedora agent,
     alma linux agent,
-    rocky linyx agent,
+    rocky linux agent,
     unified endpoint manager,
     remote monitoring and management,
   ]
@@ -21,7 +21,7 @@ keywords:
 
 # 🕵️ Linux Agent
 
-OpenUEM agents are responsible for inspecting your endpoints information and offer additional services like file browsing and VNC connections.
+OpenUEM agents are responsible for inspecting your endpoints information and offer additional services like file browsing, package deployment and VNC connections.
 
 ## 1. Debian/Ubuntu
 
@@ -53,7 +53,7 @@ If you have downloaded the .deb package manually, you can install it using
 
 ```
 apt install ./openuem-agent_0.6.0_amd64.deb
-``` 
+```
 
 Once the installation starts, you’ll have to answer some questions to configure the agent.
 
@@ -73,17 +73,15 @@ The Agent can use a VNC Proxy if you install a [supported VNC server](/docs/Adva
 If your endpoint has a firewall, you must enable the incoming traffic to the SFTP and VNC Proxy ports from OpenUEM console
 :::
 
-If you want that your endpoint is associated to an organization and site that you've created in OpenUEM console (🎯 Version 0.7.0) you can specify the IDs (numbers) for both organization and site, or leave the fields empty to use the default organization and site. 
+If you want that your endpoint is associated to an organization and site that you've created in OpenUEM console (🎯 Version 0.7.0) you can specify the IDs (numbers) for both organization and site, or leave the fields empty to use the default organization and site.
 
-You can get the ID of the organization from the [organization's list](/docs/05-Administration/10-organizations.md) 
+You can get the ID of the organization from the [organization's list](/docs/05-Administration/10-organizations.md)
 
 ![Debian site ID](/img/agent/debian_site.png)
 
 You can get the ID of the site from the [site's list](/docs/05-Administration/11-sites.md).
 
 ![Debian org ID](/img/agent/debian_org.png)
-
-
 
 ### 1.3. Agent post-install steps
 
@@ -122,7 +120,7 @@ If you don’t add the OpenUEM repository to your agent, you won’t be able to 
 The agent can be installed from the repository using the following command:
 
 ```(bash)
-dnf install openuem-agent
+sudo dnf install -y openuem-agent
 ```
 
 :::note
@@ -132,7 +130,7 @@ You'll have to accept the GPG public key to install the package from OpenUEM rep
 If you have downloaded the .rpm package manually, you can install it using
 
 ```(bash)
-dnf install ./openuem-agent-0.6.0-1.x86_64.rpm
+sudo dnf install -y ./openuem-agent-0.6.0-1.x86_64.rpm
 ```
 
 ### 2.3. Agent post-install steps
@@ -158,6 +156,13 @@ The Agent can use a VNC Proxy if you install a [supported VNC server](/docs/Adva
 VNCProxyPort=
 ```
 
+If you want the agent to be stored under a specific organization and site, you can use the properties TenantID and SiteID and assign the IDs that are listed in OpenUEM's console. These settings are optional as the agent will be stored under the default organization and site.
+
+```
+TenantID=1
+SiteID=1
+```
+
 :::note
 If your endpoint has a firewall, you must enable the incoming traffic to the SFTP and VNC Proxy ports from OpenUEM console. For example if SFTP port is 2022 and VNC proxy port is 1433:
 
@@ -166,6 +171,7 @@ sudo firewall-cmd --add-port=2022/tcp
 sudo firewall-cmd --add-port=1433/tcp
 sudo firewall-cmd --runtime-to-permanent
 ```
+
 :::
 
 The agent requires some certificates to secure connections between the agent and the rest of OpenUEM components. You must place the required certificates under the `/etc/openuem-agent/certificates` folder **with administrator privileges**. You should find the certificates and private keys in the folder where the OpenUEM Server/Docker was installed.
@@ -204,5 +210,11 @@ In the logs you should find ERROR messages that should explain the problem:
 - Maybe your NATS server or the Agent Worker (or both) is not running or the Agent.
 - Maybe you missed to copy a required certificates.
 - Maybe you specified the wrong name for the NATS server or the port. You can edit the `/etc/openuem-agent/openuem.ini` file and change the domain name or port and restart the OpenUEM Agent service.
+
+If you see an error that says "agent has no IP address, report won't be sent..." you can add an entry specifying the IP Address assigned to the bridge in the Agent section. This is common if your agent is installed on an endpoint that uses a bridge to provide access to the network which is common in servers that host several VMs.
+
+```
+IPAddress = x.x.x.x
+```
 
 Need more help?, [Open an issue](https://github.com/open-uem/openuem-console/issues/new/choose) in GitHub or send a message in [Discord!](https://discord.com/invite/UQNBuNej5u)

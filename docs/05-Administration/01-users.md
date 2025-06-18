@@ -66,7 +66,7 @@ If you create a new user or a [user has requested to register in OpenUEM](/docs/
 
 Click on the three dots button to generate a digital certificate, accepting the request from the user.
 
-The certificate will be sent to the user, and you’ll see that the state will change to **Certificate sent**. The message will include the user certificate that has to be [imported](/docs/02-Installation/01-Server/04-docker.md#4-trust-in-digital-certificates-created) to the users's browser and the CA certificate that has to be imported as trusted authority too.
+The certificate will be sent to the user, and you’ll see that the state will change to **Certificate sent**. The message will include the user certificate that has to be [imported](/docs/Advanced%20Topics/user-certificate) to the users's browser and the CA certificate that has to be imported as trusted authority too.
 
 ![Certificate message](/img/console/certificate_message.png)
 

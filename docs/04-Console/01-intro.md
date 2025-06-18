@@ -26,22 +26,17 @@ The log in page looks like this:
 
 ![Console LogIn](/img/console/login.png)
 
-To log in to the console, you'll need to have a user certificate installed in your browser. In the server setup for Windows or Linux, if you've selected to auto generate the certificates, an admin certificate will be created and placed under certificates\user and both the CA certificate and the user certificate should be imported automatically.
-
-The certificate comes in a PFX file that you can import using the password that you've set in the setup or if you leave it empty you'll have to use the `changeit` password.
-
-:::note
-If you use Mac and find problems importing the user's pfx certificate to your Chrome browers or Keychain, like invalid password, you may have to convert the PFX file opening a MacOS terminal and executing the following commands:
-```
-openssl pkcs12 -in admin.pfx -out admin.pem
-openssl pkcs12 -export -in admin.pem -out new_admin.pfx -legacy
-```
-Then import the new pfx file 
+:::warning
+If you see a security warning your browser may not trust in the Certification Authority. Please visit the [guide](/docs/Advanced%20Topics/user-certificate) to import certificates
 :::
 
-When you click the log in button you'll have to select the certificate. If no certificate is shown check if you've imported the certificate to the Personal certificates store. You can use the certificates section in the [Docker guide](/docs/Installation/Server/docker#4-trust-in-digital-certificates-created)
+To log in to the console, you'll need to have a user certificate installed in your browser. In the server setup for Windows or Linux, if you've selected to auto generate the certificates, an admin certificate will be created and placed under certificates\user and both the CA certificate and the user certificate should be imported automatically.
 
 ![Select Certificate](/img/console/select_certificate.png)
+
+:::warning
+When you click the log in button you'll have to select the certificate. If no certificate is shown check if you've imported the certificate to the Personal certificates store. Please visit the [guide](/docs/Advanced%20Topics/user-certificate) to import certificates
+:::
 
 If authentication works fine, you'll see the **Dashboard** which is documented in the next section.
 

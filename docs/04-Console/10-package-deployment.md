@@ -18,12 +18,16 @@ keywords:
 
 # 📦 Package deployment
 
-You can deploy software packages to Windows endpoints using [WinGet](https://learn.microsoft.com/en-us/windows/package-manager/winget/) and to Linux endpoints using [Flatpak](https://flatpak.org/).
+You can deploy software packages to Windows endpoints using [WinGet](https://learn.microsoft.com/en-us/windows/package-manager/winget/),to Linux endpoints using [Flatpak](https://flatpak.org/) and to MacOS endpoints using [HomeBrew](https://brew.sh/)
 
-OpenUEM downloads daily the database of packages available at WinGet and FlatHub repositories so you can search for those packages.
+OpenUEM downloads daily the database of packages available at WinGet, FlatHub and HomeBrew (casks and formulae) repositories so you can search for those packages.
 
 :::warning
 Winget should be ready for your host if it has been used for some time, but if you have a fresh installation of Windows 10, winget.exe may not be ready to use on that endpoint although it should be installed automatically in the following days. To get the WinGet executable quicker (winget.exe), you should first update Microsoft Store after opening it and then you may have to update the app called "App Installer". Visit [this link](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab) to locate that app and update it
+:::
+
+:::warning
+HomeBrew (brew.sh) must be installed manually, as OpenUEM agent cannot install it as a dependency.
 :::
 
 ## Install packages

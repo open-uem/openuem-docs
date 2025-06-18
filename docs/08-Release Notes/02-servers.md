@@ -16,6 +16,19 @@ keywords:
 
 # Server
 
+## 0.8.0
+
+Released: 18/06/2025
+
+- Feat: support for OpenUEM agents for MacOS
+- Feat: ARM64 packages for Debian/Ubuntu are added to repositories
+- Fix: debian installer now honors the domain name set for ocsp and nats servers
+- Fix: flatpak database contained some wrong .desktop ids that blocked installations for some apps like Zoom
+- Fix: computer type and description was overwritten by new reports
+- Fix: wrong redirect when user logs in and using reverse proxy
+- Fix: avoid autocomplete for package deployment inputs
+- Feat: new icons for manufacturers and software
+
 ## 0.7.1
 
 Released: 18/05/2025

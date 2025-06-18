@@ -16,6 +16,14 @@ keywords:
 
 # Agents
 
+## 0.7.0
+
+Released: 18/06/2025
+
+- Feat: new MacOS agent for both Intel and Apple Silicon. My thanks to @ParkTheCar and @JDCT for helping me debug and test the client for Apple Silicon
+- Feat: ARM64 package for Debian/Ubuntu. Thanks to @trobbelke for testing the client
+- Fix: if display/xauth envs not fetched flatpak install goes on
+
 ## 0.6.0
 
 Released: 15/05/2025

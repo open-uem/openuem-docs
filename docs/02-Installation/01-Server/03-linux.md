@@ -18,6 +18,10 @@ keywords:
 
 # 🐧 Linux
 
+A Postgres database with a user and password and sufficient permissions to create schemas in the database must be ready before proceeding with the installation.
+
+If you need help to install and configure the Postgres database server please visit the [Advanced Topics -> Postgres](/docs/Advanced%20Topics/postgres) section.
+
 ## 1. Debian based distributions
 
 The OpenUEM server components can be installed on a Debian 12/Ubuntu 24.04 machine using .deb packages available in OpenUEM repository.
@@ -29,13 +33,22 @@ The Debian/Ubuntu repository and its contents are signed with a GPG public key
 To download the public GPG key and add it to the keyring use the following command:
 
 ```(bash)
+sudo apt install -y curl
 curl -fsSL https://apt.openuem.eu/pgp-key.public | sudo gpg --dearmor -o /usr/share/keyrings/openuem.gpg
 ```
 
 Now, to add the repository, run the following command:
 
+For amd64 architecture:
+
 ```(bash)
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/openuem.gpg] https://apt.openuem.eu stable main" | sudo tee /etc/apt/sources.list.d/openuem.list
+```
+
+For arm64 architecture:
+
+```(bash)
+echo "deb [arch=arm64 signed-by=/usr/share/keyrings/openuem.gpg] https://apt.openuem.eu stable main" | sudo tee /etc/apt/sources.list.d/openuem.list
 ```
 
 Update the repositories:
@@ -49,7 +62,7 @@ sudo apt update -y
 Start the installation running:
 
 ```(bash)
-sudo apt install openuem-server
+sudo apt install -y openuem-server
 ```
 
 You'll have to answer some questions about configuration
@@ -146,7 +159,6 @@ Installation may take some minutes if it must generate certificates so if you se
 A user **openuem** will be created during the installation. Only this unprivileged user (or root user, of course) will have access to the config file, digital certificates and logs.
 :::
 
-
 After the installation finishes, you'll see the following message:
 
 ![Installation finished](/img/linux/installation_finishes.png)
@@ -172,7 +184,7 @@ gpgkey=https://rpm.openuem.eu/pgp-key.public" > /etc/yum.repos.d/openuem.repo'
 
 ### 2.2 Install OpenUEM components
 
-The OpenUEM RPM repository has packages for every component and tool required to run an OpenUEM server: 
+The OpenUEM RPM repository has packages for every component and tool required to run an OpenUEM server:
 
 - openuem-console
 - openuem-ocsp-responder
@@ -181,21 +193,21 @@ The OpenUEM RPM repository has packages for every component and tool required to
 - openuem-cert-manager-worker
 - openuem-notification-worker
 - openuem-server-updater
-- openuem-cert-manager 
+- openuem-cert-manager
 
-You can install these components in different machines, if you want OpenUEM to run in a distributed mode, or install them all on the same machine. 
+You can install these components in different machines, if you want OpenUEM to run in a distributed mode, or install them all on the same machine.
 
 For example:
 
 ```(bash)
-sudo dnf install openuem-console
-sudo dnf install openuem-ocsp-responder
-sudo dnf install openuem-nats-service
-sudo dnf install openuem-agent-worker
-sudo dnf install openuem-cert-manager-worker
-sudo dnf install openuem-notification-worker
-sudo dnf install openuem-server-updater
-sudo dnf install openuem-cert-manager 
+sudo dnf install -y openuem-console
+sudo dnf install -y openuem-ocsp-responder
+sudo dnf install -y openuem-nats-service
+sudo dnf install -y openuem-agent-worker
+sudo dnf install -y openuem-cert-manager-worker
+sudo dnf install -y openuem-notification-worker
+sudo dnf install -y openuem-server-updater
+sudo dnf install -y openuem-cert-manager
 ```
 
 :::note
@@ -206,20 +218,20 @@ The first time you install packages from OpenUEM's repository you'll have to acc
 In any machine that hosts a OpenUEM component you must install the **openuem-server-updater** package
 :::
 
-### 2.3 Configure OpenUEM 
+### 2.3 Configure OpenUEM
 
-Once you install the packages, you’ll have to perform some or all of the following configuration steps. 
+Once you install the packages, you’ll have to perform some or all of the following configuration steps.
 
-#### 2.3.1 Create OpenUEM certificates 
+#### 2.3.1 Create OpenUEM certificates
 
 If you don’t own your own Certificate Authority (CA) you’ll have to create a CA and generate certificates for all the components. The `openuem-cert-manager` tool (installed by the package with the same name) can be used to perform those tasks, but you may use tools like [Cloudflare’s CFSSL](https://github.com/cloudflare/cfssl) to generate them.
 
 Before you use the `openuem-cert-manager` tool you should create the following environment variables:
 
-- ORGNAME: the name of your organization 
+- ORGNAME: the name of your organization
 - COUNTRY: two-letter country code of the country where your organization is located ([ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2))
-- ORGPROVINCE: the province where your organization is located 
-- ORGLOCALITY: the locality where your organization is located 
+- ORGPROVINCE: the province where your organization is located
+- ORGLOCALITY: the locality where your organization is located
 - ORGADDRESS: the address of your organization
 - DATABASE_URL: the URL to connect with your database postgres://user:password@localhost:5432/openuem
 - NATS_SERVER: the hostname of the server that contains the NATS service
@@ -231,7 +243,7 @@ If you're going to host the console service behind a reverse proxy you'll have t
 
 - REVERSE_PROXY_SERVER
 
-For example: 
+For example:
 
 ```(bash)
 export ORGNAME=OpenUEM
@@ -247,7 +259,7 @@ export CONSOLE_SERVER="terminus.openuem.eu"
 export REVERSE_PROXY_SERVER="console.openuem.eu"
 ```
 
-Now let's create the `/etc/openuem-server/certificates` folder where OpenUEM will search for certificates  
+Now let's create the `/etc/openuem-server/certificates` folder where OpenUEM will search for certificates
 
 ```(bash)
 sudo mkdir -p /etc/openuem-server/certificates/{ca,nats,ocsp,notification-worker,agents-worker,cert-manager-worker,console,updater,agents,users}
@@ -298,7 +310,7 @@ sudo openuem-cert-manager client-cert --name "OpenUEM Notification Worker" --dst
 **Agent Worker certificates:**
 
 ```(bash)
-sudo openuem-cert-manager client-cert --name "OpenUEM Agent Worker" --dst ./agents-worker --type="worker" --org "$ORGNAME" --country "$COUNTRY" --province "$ORGPROVINCE" --locality "$ORGLOCALITY" --address "$ORGADDRESS" --years-valid 2 --filename "worker" --ocsp "http://$OCSP_SERVER:$OCSP_PORT"  --description "Agent Worker's certificate" --cacert ./ca/ca.cer --cakey ./ca/ca.key --dburl "$DATABASE_URL" 
+sudo openuem-cert-manager client-cert --name "OpenUEM Agent Worker" --dst ./agents-worker --type="worker" --org "$ORGNAME" --country "$COUNTRY" --province "$ORGPROVINCE" --locality "$ORGLOCALITY" --address "$ORGADDRESS" --years-valid 2 --filename "worker" --ocsp "http://$OCSP_SERVER:$OCSP_PORT"  --description "Agent Worker's certificate" --cacert ./ca/ca.cer --cakey ./ca/ca.key --dburl "$DATABASE_URL"
 ```
 
 **Cert-Manager Worker certificates:**
@@ -312,7 +324,7 @@ sudo openuem-cert-manager client-cert --name "OpenUEM Cert-Manager Worker" --dst
 You'll have to create a certificate for every console server that you want to use
 
 ```(bash)
-sudo openuem-cert-manager server-cert --name "OpenUEM Console" --dst ./console --type="console" --client-too --dns-names "$CONSOLE_SERVER" --org "$ORGNAME" --country "$COUNTRY" --province "$ORGPROVINCE" --locality "$ORGLOCALITY" --address "$ORGADDRESS" --years-valid 2 --filename "console" --ocsp "http://$OCSP_SERVER:$OCSP_PORT" --description "Console certificate" --cacert ./ca/ca.cer --cakey ./ca/ca.key --dburl "$DATABASE_URL" 
+sudo openuem-cert-manager server-cert --name "OpenUEM Console" --dst ./console --type="console" --client-too --dns-names "$CONSOLE_SERVER" --org "$ORGNAME" --country "$COUNTRY" --province "$ORGPROVINCE" --locality "$ORGLOCALITY" --address "$ORGADDRESS" --years-valid 2 --filename "console" --ocsp "http://$OCSP_SERVER:$OCSP_PORT" --description "Console certificate" --cacert ./ca/ca.cer --cakey ./ca/ca.key --dburl "$DATABASE_URL"
 ```
 
 **Console reverse proxy**
@@ -340,6 +352,7 @@ sudo openuem-cert-manager client-cert --name "OpenUEM Updater Client" --dst ./up
 ```(bash)
 sudo openuem-cert-manager client-cert --name "OpenUEM Agent" --dst ./agents --type="agent" --org "$ORGNAME" --country "$COUNTRY" --province "$ORGPROVINCE" --locality "$ORGLOCALITY" --address "$ORGADDRESS" --years-valid 2 --filename "agent"  --ocsp "http://$OCSP_SERVER:$OCSP_PORT" --description "Agent certificate" --cacert ./ca/ca.cer --cakey ./ca/ca.key --dburl "$DATABASE_URL"
 ```
+
 **Admin certificate**
 
 Create the admin user client certificate and private key for console access.
@@ -356,7 +369,7 @@ If you need to re-run the previous command note that you must remove the admin u
 
 All OpenUEM components use the /etc/openuem-server/openuem.ini configuration file. The openuem.ini file is created when the openuem-server-updater package is installed.
 
-You’ll need to edit the openuem.ini file and set the following configuration entries depending on the components that you want to have on that server. 
+You’ll need to edit the openuem.ini file and set the following configuration entries depending on the components that you want to have on that server.
 
 **Components**
 
@@ -493,7 +506,7 @@ sudo systemctl enable --now openuem-console
 
 Once you install and configure OpenUEM it's time to visit the OpenUEM console in your browser.
 
-Before you can access the console you must import the CA certificate and the admin user certificate using [this instructions](/docs/Installation/Server/docker/#4-trust-in-digital-certificates-created)
+Before you can access the console you must import the CA certificate and the admin user certificate using [this instructions](/docs/Advanced%20Topics/user-certificate)
 
 Now open `https://SERVER_NAME:CONSOLE_PORT` (replace the values that you've set during the package configuration) and you should see OpenUEM's console
 

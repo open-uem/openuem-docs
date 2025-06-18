@@ -75,22 +75,20 @@ If the agent is in the **"Enabled""** state, you have the following actions:
 - Show agent's log. The agents log are downloaded using SFTP so you can [browse them in the console](/docs/Console/agents#5-agents-logs) if the SFTP service is enabled for that agent.
 - Settings. If you click on the Settings menu entry a new window will appear allowing you to enable/disable the SFTP service and the Remote Assistance and choose the ports that will be used by those services.You can enable or disable the debug mode for the agent. **Debug mode** shows more verbose log messages. (🎯 0.6.0)
 
+![Agent's settings](/img/console/agent_settings.png)
+
 :::note
 If you enable the debug mode for the agent, the size of the log file may get bigger quickly so a warning will be shown next to the hostname if the debug mode has been enabled
 
 ![Debug mode enabled for agent](/img/console/agent_debug_mode_enabled.png)
+:::
 
-![Agent's settings](/img/console/agent_settings.png)
-
-When you want to delete an agent, you’ll have several options:
-
-- Delete the agent from console and notify the agent that you want to uninstall it (agent must be at least 0.5.0)
-- Delete the agent from console but keep the agent installed. New information will be sent in the next report cycle. Use this for agents lower then 0.4.0. You'll have to uninstall the agent by hand
-- Keep the agent in the console but notify the agent that you want to uninstall it (agent must be at least 0.5.0)
+- Delete: When you want to delete an agent, you’ll have several options:
+  - Delete the agent from console and notify the agent that you want to uninstall it (agent must be at least 0.5.0)
+  - Delete the agent from console but keep the agent installed. New information will be sent in the next report cycle. Use this for agents lower then 0.4.0. You'll have to uninstall the agent by hand
+  - Keep the agent in the console but notify the agent that you want to uninstall it (agent must be at least 0.5.0)
 
 ![Agent's delete options](/img/console/agent_delete_options.png)
-
-:::
 
 Finally, if you click on the hostname associated with the agent you'll visit the Computers view
 
