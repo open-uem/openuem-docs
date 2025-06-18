@@ -52,7 +52,7 @@ apt install openuem-agent
 If you have downloaded the .deb package manually, you can install it using
 
 ```
-apt install ./openuem-agent_0.6.0_amd64.deb
+apt install ./openuem-agent_0.7.0_amd64.deb
 ```
 
 Once the installation starts, you’ll have to answer some questions to configure the agent.
@@ -130,7 +130,7 @@ You'll have to accept the GPG public key to install the package from OpenUEM rep
 If you have downloaded the .rpm package manually, you can install it using
 
 ```(bash)
-sudo dnf install -y ./openuem-agent-0.6.0-1.x86_64.rpm
+sudo dnf install -y ./openuem-agent-0.7.0-1.x86_64.rpm
 ```
 
 ### 2.3. Agent post-install steps

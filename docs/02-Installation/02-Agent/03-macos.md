@@ -52,7 +52,7 @@ The installer will show you some screens and you only have to accept the Apache-
 Also, the agent can be installed from the command-line using the following command:
 
 ```(bash)
-sudo installer -pkg OpenUEMAgent-macos-installer-x64-0.6.0.pkg -target /
+sudo installer -pkg openuem-agent.pkg -target /
 ```
 
 ### 2.3. Agent post-install steps

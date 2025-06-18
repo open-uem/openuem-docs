@@ -28,13 +28,13 @@ You can download OpenUEM agent and server for Windows from OpenUEM's download si
 
 | Type  | Version | Arch  | Link                                                                                        | Checksum                                                                 |
 | ----- | ------- | ----- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Agent | 0.7.0   | amd64 | [Download](https://downloads.openuem.eu/agents/0.6.0/windows/amd64/openuem-agent-setup.exe) | SHA256: 13D43AC00D9EF26BDC1BAA21AB12BE4155A9CCB5B5A4A114D5D5CC36E1258760 |
+| Agent | 0.7.0   | amd64 | [Download](https://downloads.openuem.eu/agents/0.7.0/windows/amd64/openuem-agent-setup.exe) | SHA256: 13D43AC00D9EF26BDC1BAA21AB12BE4155A9CCB5B5A4A114D5D5CC36E1258760 |
 
 ## 🖥 Server (latest version)
 
 | Type   | Version | Arch  | Link                                                                            | Checksum                                                                 |
 | ------ | ------- | ----- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Server | 0.8.0   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.7.1.exe) | SHA256: 307BDD5411255BBE2E840E999DF3CA17DBA4D2EEF041335EDEFECA59F64E1B72 |
+| Server | 0.8.0   | amd64 | [Download](https://downloads.openuem.eu/servers/openuem-server-setup-0.8.0.exe) | SHA256: 307BDD5411255BBE2E840E999DF3CA17DBA4D2EEF041335EDEFECA59F64E1B72 |
 
 :::warning
 As OpenUEM is a new project, Microsoft Edge and/or Microsoft SmartScreen can warn you that the file to be downloaded cannot be trusted by Microsoft as it's a file that is not downloaded commonly and you'll have to force the browser to keep that file to download it or force SmartScreen to allow execution. Hopefully, soon, this warning will disappear as a report has been sent to Microsoft.
