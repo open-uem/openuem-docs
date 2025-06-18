@@ -27,7 +27,7 @@ If you want to deploy packages, you’ll need to install HomeBrew (https://brew.
 
 ### 1. Download the package
 
-You can visit the [Downloads section](/docs/Downloads/macos) located either on the sidebar or on the navbar and select the Windows option to get the download link.
+You can visit the [Downloads section](/docs/Downloads/macos) located either on the sidebar or on the navbar and select the MacOS option to get the download link.
 
 Download your preferred version (arm64 for M1/M2/M3/M4 processors or amd64 for Intel processors) and note that you can check if the checksum matches using sha256sum:
 
@@ -123,7 +123,7 @@ If you don't see the agent in the console something may have gone wrong. You can
 
 In the logs you should find ERROR messages that should explain the problem:
 
-- Maybe your NATS server or the Agent Worker (or both) is not running or the Agent.
+- Maybe your NATS server or the Agent Worker (or both) is not running.
 - Maybe you missed to copy a required certificates.
 - Maybe you specified the wrong name for the NATS server or the port. You can edit the `/Library/OpenUEMAgent/etc/openuem-agent/openuem.ini` file and change the domain name or port and restart the OpenUEM Agent service.
 

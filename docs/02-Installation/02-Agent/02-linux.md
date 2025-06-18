@@ -207,7 +207,7 @@ If you don't see the agent in the console something may have gone wrong. You can
 
 In the logs you should find ERROR messages that should explain the problem:
 
-- Maybe your NATS server or the Agent Worker (or both) is not running or the Agent.
+- Maybe your NATS server or the Agent Worker (or both) is not running.
 - Maybe you missed to copy a required certificates.
 - Maybe you specified the wrong name for the NATS server or the port. You can edit the `/etc/openuem-agent/openuem.ini` file and change the domain name or port and restart the OpenUEM Agent service.
 

@@ -124,6 +124,10 @@ const config: Config = {
               label: "Linux",
               to: "/docs/Downloads/linux",
             },
+            {
+              label: "MacOS",
+              to: "/docs/Downloads/macos",
+            },
           ],
         },
         {
