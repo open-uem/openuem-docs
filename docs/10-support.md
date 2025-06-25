@@ -22,9 +22,9 @@ Please, do open a discussion at [GitHub](https://github.com/orgs/open-uem/discus
 
 If you’ve found a bug, you can open an issue right away on the affected repository
 
-- [Console](https://github.com/openuem-console)
-- [Agent](https://github.com/openuem-agent)
-- [Docker](https://github.com/openuem-docker)
+- [Console](https://github.com/open-uem/openuem-console)
+- [Agent](https://github.com/open-uem/openuem-agent)
+- [Docker](https://github.com/open-uem/openuem-docker)
 
 Any question, bug report or feature request is welcome so thanks for helping the project grow
 
