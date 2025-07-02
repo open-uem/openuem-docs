@@ -51,32 +51,34 @@ psql -v ON_ERROR_STOP=1 --username "postgres" <<-EOSQL
 EOSQL
 ```
 
+**Then you must change the DATABASE_URL** in the .env file to use the username and password accordingly
+
 :::
 
 Here are the possible environment variables that can appear in the .env file.
 
-| Name                    | Description                                                                                       | Optional | Example value                                  |
-| ----------------------- | ------------------------------------------------------------------------------------------------- | -------- | ---------------------------------------------- |
-| SERVER_NAME             | The name of the server where the console is hosted                                                | no       | server.example.com                             |
-| POSTGRES_PORT           | The port number where the database service should be found                                        | no       | 5432                                           |
-| DATABASE_URL            | The database url in format postgres://user:password@openuem-db-1:port/openuem                     | no       | postgres://test:test@openuem-db-1:5432/openuem |
-| ORGNAME                 | Your organization's name                                                                          | no       | OpenUEM                                        |
-| ORGPROVINCE             | Your organization's province                                                                      | yes      | Valladolid                                     |
-| ORGLOCALITY             | Your organization's locality                                                                      | yes      | Valladolid                                     |
-| ORGADDRESS              | Your organization's address                                                                       | yes      | My org's address                               |
-| COUNTRY                 | Your organization's country                                                                       | no       | ES                                             |
-| OCSP_PORT               | The port used by the OCSP responder                                                               | no       | 8000                                           |
-| NATS_SERVER             | The domain name used by the NATS server                                                           | no       | The value of SERVER_NAME                       |
-| NATS_PORT               | The port used by the NATS server                                                                  | no       | 4433                                           |
-| NATS_SERVERS            | The NATS service url                                                                              | no       | server.example.com:4433                        |
-| REVERSE_PROXY_SERVER    | If you want to use a reverse proxy, set the domain name that you want to use to visit the console | yes      | console.example.com                            |
-| REVERSE_PROXY_AUTH_PORT | If you want to use a reverse proxy, set the port that will be used to answer for auth             | yes      | 1340                                           |
-| OCSP                    | The URL for the OCSP responder service                                                            | no       | http://server.example.com:8000                 |
-| DOMAIN                  | Your DNS domain                                                                                   | no       | example.com                                    |
-| CONSOLE_PORT            | The port used by the console                                                                      | no       | 1323                                           |
-| AUTH_PORT               | The port used by the auth server                                                                  | no       | 1324                                           |
-| JWT_KEY                 | The key used to encrypt JWT tokens for user registration                                          | no       | averylongsecret                                |
-| TZ                      | The timezone used by OpenUEM containers                                                           | yes      | Europe/Madrid                                  |
+| Name                    | Description                                                                                                                         | Optional | Example value                                           |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------- |
+| SERVER_NAME             | The name of the server where the console is hosted                                                                                  | no       | server.example.com                                      |
+| POSTGRES_PORT           | The port number where the database service should be found                                                                          | no       | 5432                                                    |
+| DATABASE_URL            | The database url in format postgres://user:password@openuem-db-1:port/openuem                                                       | no       | postgres://test:test@openuem-db-1:5432/openuem          |
+| ORGNAME                 | Your organization's name                                                                                                            | no       | OpenUEM                                                 |
+| ORGPROVINCE             | Your organization's province                                                                                                        | yes      | Valladolid                                              |
+| ORGLOCALITY             | Your organization's locality                                                                                                        | yes      | Valladolid                                              |
+| ORGADDRESS              | Your organization's address                                                                                                         | yes      | My org's address                                        |
+| COUNTRY                 | Your organization's country                                                                                                         | no       | ES                                                      |
+| OCSP_PORT               | The port used by the OCSP responder                                                                                                 | no       | 8000                                                    |
+| NATS_SERVER             | The domain name used by the NATS server                                                                                             | no       | The value of SERVER_NAME                                |
+| NATS_PORT               | The port used by the NATS server                                                                                                    | no       | 4433                                                    |
+| NATS_SERVERS            | The NATS service url                                                                                                                | no       | server.example.com:4433                                 |
+| REVERSE_PROXY_SERVER    | If you want to use a reverse proxy, set the domain name that you want to use to visit the console, **use an empty value otherwise** | no       | console.example.com or **use an empty value otherwise** |
+| REVERSE_PROXY_AUTH_PORT | If you want to use a reverse proxy, set the port that will be used to answer for auth, **use an empty value otherwise**             | no       | 1340 or **use an empty value otherwise**                |
+| OCSP                    | The URL for the OCSP responder service                                                                                              | no       | http://server.example.com:8000                          |
+| DOMAIN                  | Your DNS domain                                                                                                                     | no       | example.com                                             |
+| CONSOLE_PORT            | The port used by the console                                                                                                        | no       | 1323                                                    |
+| AUTH_PORT               | The port used by the auth server                                                                                                    | no       | 1324                                                    |
+| JWT_KEY                 | The key used to encrypt JWT tokens for user registration                                                                            | no       | averylongsecret                                         |
+| TZ                      | The timezone used by OpenUEM containers                                                                                             | yes      | Europe/Madrid                                           |
 
 server.example.com should be resolved by your DNS service if you want remote agents to be able to contact OpenUEM components.
 
@@ -197,6 +199,8 @@ docker compose --profile caddy down
 If you find any error trying to launch the services, run the docker compose down commands shown above, **remove the volumes and the certificates folder** and start again
 
 ```
+docker compose --profile openuem down
+docker compose --profile init down
 sudo rm -rf certificates
 docker volume rm openuem_jetstream
 docker volume rm openuem_pgdata
@@ -249,3 +253,13 @@ And if you use the Caddy option
 ```(bash)
 docker compose --profile caddy up --force-recreate -d
 ```
+
+## 8. Troubleshooting and FAQ
+
+### 8.1 Why I get 401 | Please provide valid credentials when I try to log into OpenUEM console?
+
+OpenUEM requires a user's certificate to log in. That certificate must be imported in the user's browser before trying to log-in. You can import the certificates following [these steps](/docs/Advanced%20Topics/user-certificate)
+
+### 8.2 Why I see messages like _read certificates/console.cer: is a directory_ in docker logs?
+
+That means that certificates were not generated in the initial phase, most probably there's a connection issue with the database container or wrong credentials have been used. Database credentials must match between the DATABASE_URL variable set in the .env file and the file build/postgres/init.sh file.

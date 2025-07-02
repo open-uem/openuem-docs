@@ -44,7 +44,7 @@ The agent can be installed silently from the command-line or using the wizard
 
 ## 2.1 Silent installation from the command-line
 
-The agent requires some certificates that you can either place them next to the installer or use the installer flags to specify the location.
+The agent requires some certificates that you can either place them next to the installer or use the installer flags to specify the location and other settings.
 
 If you want to place the certificates next to the installer, you must place the following certificate and private key files in the same location where the openuem-agent-setup.exe is located:
 
@@ -58,25 +58,20 @@ If you want to place the certificates next to the installer, you must place the 
 If you want to use the installer's flags:
 
 - /cacert=path, this is the flag for the Certification Authority certificate file. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\ca\ca.cer`
-- /cert=path, this is the flag for the public part of SFTP certificate that the console will use to authenticate SFTP connections. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\console\sftp.cer`
-- /key=path, this is the flag for the certificate that allows the agent to connect with the NATS server. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\agents\agent.cer`
-- /sftpcert=path, this is flag for the private key that allows the agent to connect with the NATS server. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\agents\agent.key`
-  -/tenantid=id, the ID of the organization that you want this endpoint to belong to. You'll have to add /siteid=id too. You can get the ID of the organization from the [organization's list](/docs/05-Administration/10-organizations.md).
-  -/siteid=id, the ID of the site that you want this endpoint to belong to. You'll have to add /tenantid=id too. You can get the ID of the site from the [site's list](/docs/05-Administration/11-sites.md).
-
-Once you've copied the required certificates next to the setup, you'll have to run the setup command **with administrator privileges** using the available flags:
+- /cert=path, this is the flag for the certificate that allows the agent to connect with the NATS server. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\agents\agent.cer`
+- /key=path, this is the flag for the private key that allows the agent to connect with the NATS server. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\agents\agent.key`
+- /sftpcert=path, this is the flag for the public part of SFTP certificate that the console will use to authenticate SFTP connections. You should find the file in the folder where the OpenUEM Server/Docker was installed under `certificates\console\sftp.cer`
+- /tenantid=id, the numeric ID of the organization that you want this endpoint to belong to. You'll have to add /siteid=id too. You can get the ID of the organization from the [organization's list](/docs/05-Administration/10-organizations.md)
+- /siteid=id, the numeric ID of the site that you want this endpoint to belong to. You'll have to add /tenantid=id too. You can get the ID of the site from the [site's list](/docs/05-Administration/11-sites.md)
+- /server=domain:port, specify the server's name and port where the NATS server is located
+- /sftp=port, you can set the port that will be used by the SFTP server
+- /vnc=port, you can set the port that will be used by the VNC proxy server
 
 :::note
-
-Change the server's name and port for the /server flag to specify where the NATS server is located
-
-Change the SFTP port using the /sftp flag or the VNC proxy port using the /vnc flag
-
 Don't forget to use the /VERYSILENT flag
-
 :::
 
-Here's an example:
+Once you've copied the required certificates or set the right flags, you'll have to run the setup command **with administrator privileges** using the available flags. Here's an example:
 
 ```(bash)
 
