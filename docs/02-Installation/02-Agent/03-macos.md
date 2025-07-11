@@ -21,9 +21,10 @@ OpenUEM agents are responsible for inspecting your endpoints information and off
 
 You can install an agent in a MacOS system. This agent has been tested in Ventura (Intel) and Sequoia (Intel and Apple Silicon) machines but if you find bugs or errors please open an issue in [GitHub](https://github.com/open-uem/openuem-console/issues/new/choose).
 
-:::note
-If you want to deploy packages, you’ll need to install HomeBrew (https://brew.sh/) first, as OpenUEM uses brew commands to manage packages.
-:::
+## Requirements
+
+1. If you want to deploy packages, **you’ll need to install HomeBrew (https://brew.sh/) first**, as OpenUEM uses brew commands to manage packages
+2. If you want to run configuration [profiles](/docs/04-Console/13-profiles.md) (manage local user and groups, execute shell scripts, install packages with brew...) you must install Ansible. **You can install if from OpenUEM console** (if brew is installed on the machine) or you can install it from the command-line using `brew install ansible`
 
 ### 1. Download the package
 
@@ -63,7 +64,7 @@ Once the package gets installed you’ll have to create the OpenUEM agent config
 sudo mv /Library/OpenUEMAgent/etc/openuem-agent/openuem.ini.example /Library/OpenUEMAgent/etc/openuem-agent/openuem.ini
 ```
 
-Now you must edit the configuration file and change some values.
+**Now you must edit the configuration file and change some values**.
 
 First, you must introduce the OpenUEM NATS server URL in the format server.your.domain:port (if you use a cluster you must introduce a comma between the servers)
 
