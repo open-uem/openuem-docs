@@ -18,9 +18,13 @@ keywords:
 
 # Profiles
 
-OpenUEM profiles allows you to group several configuration tasks that will be applied to your **Windows endpoints by defining a desired state**. Profiles will be available for Linux agents soon.
+OpenUEM profiles allows you to group several configuration tasks that will be applied to your endoints by defining a desired state.
 
-Right now, you can install or uninstall packages with WinGet, manage registry keys, local users and local groups.
+Right now, you can install or uninstall packages with WinGet/Flatpak/Brew, manage registry keys, local users and local groups.
+
+:::tip
+To reach the desired state [WinGet](https://github.com/microsoft/winget-dsc) is used for Windows endpoints and [Ansible](https://docs.ansible.com/) is used for Linux and MacOS endpoints
+:::
 
 You’ll find the profiles section clicking on the main navigation bar icon.
 
