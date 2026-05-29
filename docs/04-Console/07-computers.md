@@ -83,12 +83,21 @@ The monitors tab displays which monitors have been connected to the computer inc
 
 This tab displays the logical disks that are available on the computer. You can check the label applied, the volume name, the file system type, the disk usage, the total size and the remaining space.
 
-![Logical disks](/img/console/logical_disks.png)
+![Logical disks](/img/console/logical_disks.gif)
 
 Also, you can know the **BitLocker status** hovering the mouse over the icon.
 
+On **Windows endpoints**, two additional columns are shown:
+
+- **Drive Type** - indicates whether the drive is fixed (hard-drive icon) or removable (USB icon).
+- **Recovery Key** - for encrypted drives, the BitLocker numerical recovery password is displayed automatically. The key is collected by the agent at every report cycle using PowerShell (`Get-BitLockerVolume`). If the key is rotated by an administrator, the next report cycle will update it. If a recovery key shows "N/A" on an encrypted drive, wait for the next agent report cycle (default: 5 minutes).
+
 :::tip
 BitLocker status is retrieved using WMI and sometimes the query is flaky and can crash showing you an unknown status icon. If you need to know that information quick, you can visit the agents’ view and select the [**Force restart**](/docs/Console/agents#2-more-actions) action menu.
+:::
+
+:::caution
+Recovery keys are stored in plaintext in the database. Ensure the database is only accessible within your trusted network and that database access is properly restricted.
 :::
 
 Now, if you click on the icon in the **File Browser** icon, you’ll open a new window that allows you to browse the logical disk using an SFTP connection.
@@ -217,38 +226,38 @@ You can **update** that package later **or remove** it from the computer using t
 
 ### 2.12 Remote Assistance
 
-OpenUEM allows you to offer remote assistance to your users using one of the following methods: 
+OpenUEM allows you to offer remote assistance to your users using one of the following methods:
 
-- VNC for Windows endpoints and Linux endpoints that use X11 display server and fulfill some additional requirements. 
-- RDP for Linux endpoints that use the Wayland display server, use the Gnome desktop and fulfill some additional requirements. 
-- RustDesk for Windows, Linux and macOS endpoints. 
+- VNC for Windows endpoints and Linux endpoints that use X11 display server and fulfill some additional requirements.
+- RDP for Linux endpoints that use the Wayland display server, use the Gnome desktop and fulfill some additional requirements.
+- RustDesk for Windows, Linux and macOS endpoints.
 
-Let’s examine these methods  
+Let’s examine these methods
 
 #### 2.12.1 VNC
 
-OpenUEM allows you to open a remote assistance session using VNC if these requirements are fulfilled: 
+OpenUEM allows you to open a remote assistance session using VNC if these requirements are fulfilled:
 
-- A user is logged into the remote endpoint 
-- Network connectivity is available (routing and firewall settings) between the computer where the console is opened in a browser, and the remote endpoint. This has been tested in a LAN and in a scenario where a VPN allows the traffic between the browser and the remote endpoint. 
-- The agent has reported an IP address that can be used to connect. 
-- The agent’s hostname, followed by the domain suffix configured globally or for the current site, can be resolved by DNS. 
-- The computer has a supported VNC server installed. For Windows, the supported VNC servers are TightVNC, UltraVNC and TigerVNC. For Linux using an old X11 display manager, the supported VNC server is x11vnc. 
+- A user is logged into the remote endpoint
+- Network connectivity is available (routing and firewall settings) between the computer where the console is opened in a browser, and the remote endpoint. This has been tested in a LAN and in a scenario where a VPN allows the traffic between the browser and the remote endpoint.
+- The agent has reported an IP address that can be used to connect.
+- The agent’s hostname, followed by the domain suffix configured globally or for the current site, can be resolved by DNS.
+- The computer has a supported VNC server installed. For Windows, the supported VNC servers are TightVNC, UltraVNC and TigerVNC. For Linux using an old X11 display manager, the supported VNC server is x11vnc.
 - The agent received the server.cer and server.key files when the [agent was admitted](/docs/Console/agents#1-agents-life-cycle) or when you requested to [regenerate them](/docs/Console/agents#2-more-actions)
 
-OpenUEM will show which checks have passed, and a link to open the remote connection in a new browser tab may show if everything should be ready. 
+OpenUEM will show which checks have passed, and a link to open the remote connection in a new browser tab may show if everything should be ready.
 
 ![VNC checks](/img/console/vnc_checks.png)
 
-In the new tab, a **Connect** button will be displayed. 
+In the new tab, a **Connect** button will be displayed.
 
 ![VNC connect](/img/console/vnc_first_step.png)
 
-When the button is clicked, a request will be sent to the agent to perform the following tasks: 
+When the button is clicked, a request will be sent to the agent to perform the following tasks:
 
 - The noVNC proxy service will be started.
 - The remote VNC service will be started to run in the loopback address.
-- A random PIN will be set. 
+- A random PIN will be set.
 
 The random PIN will be displayed to the user.
 
@@ -268,23 +277,23 @@ In a Linux endpoint a notification message will be shown with a **30 seconds tim
 
 The user must inform us which is the pin to open the VNC session.
 
-While the PIN is displayed to the user, in OpenUEM a dialog to enter the PIN an authenticate the connection will be shown 
+While the PIN is displayed to the user, in OpenUEM a dialog to enter the PIN an authenticate the connection will be shown
 
 ![VNC Authenticate](/img/console/vnc_authenticate.png)
 
-If authentication is successful, we’ll see the VNC session embedded in our browser. 
+If authentication is successful, we’ll see the VNC session embedded in our browser.
 
 ![VNC session connected](/img/console/vnc_connected.png)
 
 :::note
-If you get the **Wrong authentication or server could not be reached** message and you’re sure that you’re using the right PIN, you may have a connectivity issue or the hostname followed by the DNS suffix is not resolved by DNS. You can use the F12 key to open the Developer Tools in your browser. The console tab, and more specifically the network tab, will show which websocket (wss://) connection is trying to be performed and is failing.  
+If you get the **Wrong authentication or server could not be reached** message and you’re sure that you’re using the right PIN, you may have a connectivity issue or the hostname followed by the DNS suffix is not resolved by DNS. You can use the F12 key to open the Developer Tools in your browser. The console tab, and more specifically the network tab, will show which websocket (wss://) connection is trying to be performed and is failing.
 :::
 
-You can click the disconnect button to close the VNC connection. The disconnection will trigger the following tasks: 
+You can click the disconnect button to close the VNC connection. The disconnection will trigger the following tasks:
 
-- The noVNC proxy service will be stopped 
-- The VNC service will be stopped 
-- A random PIN will be set to avoid reconnections with the old PIN 
+- The noVNC proxy service will be stopped
+- The VNC service will be stopped
+- A random PIN will be set to avoid reconnections with the old PIN
 
 :::warning
 The NoVNC proxy may have an issue with the services mmc snap-in (maybe you can find this issue with other snap-ins). If you click on that window you may stop seeing the mouse cursor moving through the page. In that case, it's enough to fix the issue if the services windows is minimized.
@@ -292,26 +301,26 @@ The NoVNC proxy may have an issue with the services mmc snap-in (maybe you can f
 
 #### 2.12.2 RDP
 
-While the RDP protocol is generally used with Windows machines, in OpenUEM the RDP protocol is used when you try to initiate a remote assistance session with an endpoint that uses Gnome and a Wayland display manager. The reason for this is that no VNC servers seem to work with Wayland display managers, and the only way to have a remote desktop in Gnome is by using the Gnome Remote Desktop application which uses the RDP protocol. 
+While the RDP protocol is generally used with Windows machines, in OpenUEM the RDP protocol is used when you try to initiate a remote assistance session with an endpoint that uses Gnome and a Wayland display manager. The reason for this is that no VNC servers seem to work with Wayland display managers, and the only way to have a remote desktop in Gnome is by using the Gnome Remote Desktop application which uses the RDP protocol.
 
-OpenUEM allows you to open a remote assistance session using RDP if these requirements are fulfilled: 
+OpenUEM allows you to open a remote assistance session using RDP if these requirements are fulfilled:
 
-- A user is logged into the remote endpoint 
-- Network connectivity is available (routing and firewall settings) between the computer where the console is opened in a browser, and the remote endpoint. This has been tested in a LAN and in a scenario where a VPN allows the traffic between the browser and the remote endpoint. 
-- The agent has reported an IP address that can be used to connect. 
-- The agent’s hostname, followed by the domain suffix configured globally or for the current site, can be resolved by DNS. 
-- The Linux endpoint has the Gnome Remote Desktop control application (grdctl). 
+- A user is logged into the remote endpoint
+- Network connectivity is available (routing and firewall settings) between the computer where the console is opened in a browser, and the remote endpoint. This has been tested in a LAN and in a scenario where a VPN allows the traffic between the browser and the remote endpoint.
+- The agent has reported an IP address that can be used to connect.
+- The agent’s hostname, followed by the domain suffix configured globally or for the current site, can be resolved by DNS.
+- The Linux endpoint has the Gnome Remote Desktop control application (grdctl).
 - The agent received the server.cer and server.key files when the [agent was admitted](/docs/Console/agents#1-agents-life-cycle) or when you requested to [regenerate them](/docs/Console/agents#2-more-actions)
 
-OpenUEM will show which checks have passed, and a link to open the remote connection in a new browser tab may show if everything should be ready. 
+OpenUEM will show which checks have passed, and a link to open the remote connection in a new browser tab may show if everything should be ready.
 
 ![RDP checks](/img/console/rdp_checks.png)
 
-In the new tab, a **Connect** button will be displayed. 
+In the new tab, a **Connect** button will be displayed.
 
 ![RDP connect](/img/console/rdp_first_step.png)
 
-When the button is clicked, a request will be sent to the agent to perform the following tasks: 
+When the button is clicked, a request will be sent to the agent to perform the following tasks:
 
 - The Gnome Remote Desktop service will be started.
 - A random password will be set
@@ -329,7 +338,7 @@ A notification message will be shown to the user with a **30 seconds timeout**.
 
 ![VNC PIN shown to the user in Linux](/img/console/linux_vnc_pin_shown.png)
 
-A new button to download an RDP file that includes the hostname, and the username will show. That file can be opened with Windows Remote Desktop or Remmina. 
+A new button to download an RDP file that includes the hostname, and the username will show. That file can be opened with Windows Remote Desktop or Remmina.
 
 ![Download RDP file](/img/console/rdp_second_step.png)
 
@@ -347,53 +356,53 @@ Once you decide to close the RDP session, you’ll close your RDP client’s win
 
 #### 2.12.3 RustDesk
 
-[RustDesk](https://rustdesk.com) is an open-source remote desktop solution with self-hosted server options that is a perfect replacement for TeamViewer. 
+[RustDesk](https://rustdesk.com) is an open-source remote desktop solution with self-hosted server options that is a perfect replacement for TeamViewer.
 
-OpenUEM as of version 0.10.0 has a basic integration that can configure remote RustDesk settings based on configurations you add to OpenUEM. These are the settings supported by OpenUEM: 
+OpenUEM as of version 0.10.0 has a basic integration that can configure remote RustDesk settings based on configurations you add to OpenUEM. These are the settings supported by OpenUEM:
 
-- You can add the hostname or IP address of your self-hosted Relay Server. 
-- You can add the hostname or IP address of your self-hosted ID Server. 
+- You can add the hostname or IP address of your self-hosted Relay Server.
+- You can add the hostname or IP address of your self-hosted ID Server.
 - If you use a self-hosted RustDesk server you must specify the content of the public key (usually at /var/lib/rustdesk-server/id_ed25519.pub)
-- You can use a permanent password. In this case, the permanent password will be a random password that will change with each connection. If you don’t set a permanent password your remote user will need to open the RustDesk application and provide you the RustDesk random password. 
-- You can choose to use a direct connection by using the IP address of the remote endpoint. This is a good choice if you work in a LAN, as the connection is peer-to-peer, and you don’t require a server. 
+- You can use a permanent password. In this case, the permanent password will be a random password that will change with each connection. If you don’t set a permanent password your remote user will need to open the RustDesk application and provide you the RustDesk random password.
+- You can choose to use a direct connection by using the IP address of the remote endpoint. This is a good choice if you work in a LAN, as the connection is peer-to-peer, and you don’t require a server.
 - You can specify the IP address that can connect to your remote endpoint using a whitelist.
 
 You can use RustDesk with Windows, Linux and MacOS endpoints, and you can choose to deploy RustDesk from OpenUEM if it's quicker and easier for you.
 
 :::warning
-If you deploy RustDesk using Flatpak from OpenUEM to an endpoint that uses Wayland note that you’ll have to ask your remote user to open the RustDesk application after you initiate the RustDesk connection and before you can open the connection in your RustDesk app. 
+If you deploy RustDesk using Flatpak from OpenUEM to an endpoint that uses Wayland note that you’ll have to ask your remote user to open the RustDesk application after you initiate the RustDesk connection and before you can open the connection in your RustDesk app.
 :::
 
-You can have global RustDesk settings that will be used for all your tenants/organizations in OpenUEM or you can have specific RustDesk settings for an organization. 
+You can have global RustDesk settings that will be used for all your tenants/organizations in OpenUEM or you can have specific RustDesk settings for an organization.
 
 :::tip
-If you don’t want to specify any RustDesk settings and you want to use RustDesk’s public servers, you can as these settings are optional. Your remote user will need to open the RustDesk application to give you the password to connect. 
+If you don’t want to specify any RustDesk settings and you want to use RustDesk’s public servers, you can as these settings are optional. Your remote user will need to open the RustDesk application to give you the password to connect.
 :::
 
-The settings are available at the RustDesk tab: 
+The settings are available at the RustDesk tab:
 
 ![RustDesk settings](/img/console/rustdesk_settings.png)
 
-If you want to use RustDesk’s integration with OpenUEM, you must visit the Remote Assistance tab in the computer’s view. You’ll see a RustDesk’s section. OpenUEM checks if the RustDesk is installed on the remote endpoint and if a user is logged into the system. Note that RustDesk settings are optional, so they are not required. If all the checks pass, you’ll see a button that will allow you to open a new browser tab. 
+If you want to use RustDesk’s integration with OpenUEM, you must visit the Remote Assistance tab in the computer’s view. You’ll see a RustDesk’s section. OpenUEM checks if the RustDesk is installed on the remote endpoint and if a user is logged into the system. Note that RustDesk settings are optional, so they are not required. If all the checks pass, you’ll see a button that will allow you to open a new browser tab.
 
 ![RustDesk checks](/img/console/rustdesk_checks.png)
 
-In the new window, you’ll find a button to **Initiate a RustDesk session**. That button, when clicked, will connect to the remote endpoint and make the configuration changes to reflect the OpenUEM settings.   
+In the new window, you’ll find a button to **Initiate a RustDesk session**. That button, when clicked, will connect to the remote endpoint and make the configuration changes to reflect the OpenUEM settings.
 
 ![RustDesk initiate session](/img/console/rustdesk_init.png)
 
 :::tip
-If a previous setting for RustDesk exists (a non OpenUEM configuration), the agent will create a backup of those settings to avoid conflicts. 
+If a previous setting for RustDesk exists (a non OpenUEM configuration), the agent will create a backup of those settings to avoid conflicts.
 :::
 
-If the connection can be established, new data will be shown in the current tab.  
+If the connection can be established, new data will be shown in the current tab.
 
 ![RustDesk connection ready](/img/console/rustdesk_ready.png)
 
 The first card provides you with links (rustdesk:// URIs) to open the RustDesk that is installed on your computer with the parameters to connect (ID, IP Address, permanent password...) or a link to open RustDesk web client (in this case no parameters can be passed).
 
 :::tip
-In Gnome Linux you can associate the rustdesk:// URIs adding the following lines to the $HOME/.config/mimeapps.list file 
+In Gnome Linux you can associate the rustdesk:// URIs adding the following lines to the $HOME/.config/mimeapps.list file
 
 ```
 [Added Associations]
@@ -403,16 +412,16 @@ x-scheme-handler/rustdesk=com.rustdesk.RustDesk.desktop
 
 ![RustDesk connection links](/img/console/rustdesk_card_1.png)
 
-The second card contains credentials and additional information that you can use to configure your RustDesk local or web app to establish the connection with the remote RustDesk endpoint. 
+The second card contains credentials and additional information that you can use to configure your RustDesk local or web app to establish the connection with the remote RustDesk endpoint.
 
 ![RustDesk credentials](/img/console/rustdesk_card_2.png)
 
-The third card contains a button to close the remote RustDesk app and revert to the previous configuration that RustDesk may have had.  
+The third card contains a button to close the remote RustDesk app and revert to the previous configuration that RustDesk may have had.
 
 ![RustDesk credentials](/img/console/rustdesk_card_3.png)
 
 :::warning
-If you forget to use this button, the backup files will remain untouched until you use that button after you initialize a new connection. 
+If you forget to use this button, the backup files will remain untouched until you use that button after you initialize a new connection.
 :::
 
 
@@ -455,48 +464,48 @@ Once you create metadata, you’ll see it is available for every endpoint.
 
 ### 2.16 NetBird
 
-[NetBird](https://netbird.io/) is an open-source, zero-trust networking platform that creates secure, peer-to-peer mesh networks using WireGuard technology to connect devices directly and securely, eliminating complex VPN gateways, firewall rules, and central servers for remote access to internal resources, home labs, or cloud infrastructure. 
+[NetBird](https://netbird.io/) is an open-source, zero-trust networking platform that creates secure, peer-to-peer mesh networks using WireGuard technology to connect devices directly and securely, eliminating complex VPN gateways, firewall rules, and central servers for remote access to internal resources, home labs, or cloud infrastructure.
 
-OpenUEM can install, setup, and perform a basic configuration for NetBird agents. You will be able to manage your NetBird agents on demand, so you can benefit from this private network solution. 
+OpenUEM can install, setup, and perform a basic configuration for NetBird agents. You will be able to manage your NetBird agents on demand, so you can benefit from this private network solution.
 
-To enable the NetBird integration, you must visit the settings section of your organization. There you’ll find a NetBird tab. 
+To enable the NetBird integration, you must visit the settings section of your organization. There you’ll find a NetBird tab.
 
-![NetBird Settings](/img/console/netbird_settings.png) 
+![NetBird Settings](/img/console/netbird_settings.png)
 
-In this tab you must provide the following information: 
+In this tab you must provide the following information:
 
 - Management URL. If you use a self-hosted NetBird instance, specify the management url
-- Access Token. OpenUEM requires a token that will be used to read groups, create one-off setup keys 
+- Access Token. OpenUEM requires a token that will be used to read groups, create one-off setup keys
 
-[NetBird](https://docs.netbird.io/manage/public-api) documentation explains how you can create a service user and an associated token 
+[NetBird](https://docs.netbird.io/manage/public-api) documentation explains how you can create a service user and an associated token
 
-Once you add the NetBird API token, you’ll see a new NetBird tab when you visit the details of a computer. 
+Once you add the NetBird API token, you’ll see a new NetBird tab when you visit the details of a computer.
 
-![NetBird Tab](/img/console/netbird_1.png) 
+![NetBird Tab](/img/console/netbird_1.png)
 
-If the OpenUEM agent detects that a NetBird client is installed, you’ll see the information gathered by OpenUEM. If no NetBird client is found, you can install it from the OpenUEM console. Note that the installation is synchronous and takes time, so please wait until the installer script downloads the files. 
+If the OpenUEM agent detects that a NetBird client is installed, you’ll see the information gathered by OpenUEM. If no NetBird client is found, you can install it from the OpenUEM console. Note that the installation is synchronous and takes time, so please wait until the installer script downloads the files.
 
-![NetBird installed](/img/console/netbird_2.png) 
+![NetBird installed](/img/console/netbird_2.png)
 
-If you’ve just installed the NetBird client, you should register the client on your NetBird network. You can specify the group that you want this client to be a member of. The registry action is synchronous, so you should wait for a few moments. 
+If you’ve just installed the NetBird client, you should register the client on your NetBird network. You can specify the group that you want this client to be a member of. The registry action is synchronous, so you should wait for a few moments.
 
-![NetBird register](/img/console/netbird_3.png) 
+![NetBird register](/img/console/netbird_3.png)
 
-If the NetBird client is successfully registered, you should see information gathered from the OpenUEM agent showing that the NetBird client is connected to your network. 
+If the NetBird client is successfully registered, you should see information gathered from the OpenUEM agent showing that the NetBird client is connected to your network.
 
-![NetBird connected](/img/console/netbird_4.png) 
+![NetBird connected](/img/console/netbird_4.png)
 
-There are more NetBird actions that you can execute from the console: 
+There are more NetBird actions that you can execute from the console:
 
-- NetBird Up. This command should establish a connection. If the NetBird client is not registered, a browser window may open to the user, so she can authenticate. 
-- Netbird Down. This command should tear down the NetBird connection.  
-- Delete a peer. You can delete the peer from NetBird if an IP address is shown as that address will be used to identify the NetBird peer using the API.  
-- Uninstall NetBird. The OpenUEM agent will try to uninstall the agent either using winget or by using an uninstall script. It’ll also try to delete the peer, so it’s recommended to run the uninstall command if an IP address is shown in the information section. 
-- Switch to a profile. NetBird can use local profiles that should be created by the user on the remote endpoint (OpenUEM cannot create these profiles). You can switch to one of those profiles from OpenUEM console but note that if the user hadn’t used that profile before, a browser window may open to the user, so she can authenticate. 
+- NetBird Up. This command should establish a connection. If the NetBird client is not registered, a browser window may open to the user, so she can authenticate.
+- Netbird Down. This command should tear down the NetBird connection.
+- Delete a peer. You can delete the peer from NetBird if an IP address is shown as that address will be used to identify the NetBird peer using the API.
+- Uninstall NetBird. The OpenUEM agent will try to uninstall the agent either using winget or by using an uninstall script. It’ll also try to delete the peer, so it’s recommended to run the uninstall command if an IP address is shown in the information section.
+- Switch to a profile. NetBird can use local profiles that should be created by the user on the remote endpoint (OpenUEM cannot create these profiles). You can switch to one of those profiles from OpenUEM console but note that if the user hadn’t used that profile before, a browser window may open to the user, so she can authenticate.
 
-If you need to install and/or register NetBird clients in many endpoints, you can create OpenUEM tasks in a profile that can perform those actions: 
+If you need to install and/or register NetBird clients in many endpoints, you can create OpenUEM tasks in a profile that can perform those actions:
 
-![NetBird Tasks](/img/console/netbird_5.png) 
+![NetBird Tasks](/img/console/netbird_5.png)
 
 ### 2.17 Tasks
 

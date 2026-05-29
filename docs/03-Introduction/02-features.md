@@ -26,7 +26,7 @@ Right now, you can do the following with OpenUEM:
 - Know if your Windows systems have all the **windows updates** applied and browse the updates history
 - Know if your Linux systems have **pending security updates**
 - Check if your **windows antivirus systems** are enabled and up to date
-- Show if **BitLocker** is enabled on your logical disks
+- Show if **BitLocker** is enabled on your logical disks, display the **recovery key** automatically for encrypted drives, and identify whether a drive is **fixed or removable**
 - **Install Windows applications** using Microsoft’s **Winget** and its repositories
 - **Install Linux applications** using **Flatpak** and the **FlatHub** repository
 - **Install MacOS applications** using **Brew**
@@ -36,7 +36,7 @@ Right now, you can do the following with OpenUEM:
 - **Create configuration profiles with automated tasks that can be applied to your Windows endpoints**. You can select packages to install or uninstall using WinGet and manage registry keys, local users and local groups. Also you can run basic PowerShell scripts and manage MSI packages. Use these profiles to perform post-install tasks
 - **Create configuration profiles with automated tasks that can be applied to your Linux endpoints**. You can select packages to install or uninstall using Flatpak, manage local users and local groups and execute basic shell scripts. Use these profiles to perform post-install tasks
 - **Create configuration profiles with automated tasks that can be applied to your MacOS endpoints**. You can select packages to install or uninstall using Brew, manage local users and local groups and execute basic shell scripts. Use these profiles to perform post-install tasks
-- Authenticate users that log in the console using a [supported Identity Provider](/docs/Console/intro#openid-connect) (Authelia, Authentik, Keycloak or Zitadel) 
+- Authenticate users that log in the console using a [supported Identity Provider](/docs/Console/intro#openid-connect) (Authelia, Authentik, Keycloak or Zitadel)
 - Wake computers in your LAN using **WOL**
 - Schedule a computer’s power off or reboot action
 - **Tag your assets** and use the tags for filtering your inventory
