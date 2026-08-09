@@ -100,6 +100,12 @@ If you want to install or uninstall an MSI file using WinGet, you’ll need to s
 
 When you add a task to execute a PowerShell script **you can choose between running the script only once or running it every time the endpoint applies the profile**. If you choose to **run the script once** an entry will be created in the agent’s config file **if the script was successfully executed**, if not **it will run again the next time the profile is applied**.
 
+You can also choose which PowerShell engine runs the script:
+
+- **Windows PowerShell 5.1** (default): the built-in engine present on every Windows endpoint.
+- **PowerShell 7+ (pwsh)**: uses the modern, cross-platform PowerShell engine. If the endpoint doesn't have PowerShell 7+ installed, the task fails with a clear error instead of silently running under 5.1.
+- **Auto**: uses PowerShell 7+ if it's installed on the endpoint, otherwise falls back to Windows PowerShell 5.1.
+
 ## Notes about profiles
 
 ### Max profile running duration
